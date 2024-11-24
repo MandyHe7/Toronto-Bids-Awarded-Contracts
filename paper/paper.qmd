@@ -2,15 +2,15 @@
 title: "My title"
 subtitle: "My subtitle if needed"
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
-date: today
+  - Mandy He
+thanks: "Code and data are available at: https://github.com/MandyHe7/Toronto-Bids-Awarded-Contracts"
+date: November 27 2024
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study investigates supplier equity within Toronto’s public procurement system, focusing on the representation of small businesses and historically underrepresented sectors. Leveraging data from the Toronto Bids Awarded Contracts dataset, the analysis examines award distributions, contract values, and supplier diversity. The study aims to identify potential disparities in supplier representation and evaluate the extent to which public contracts promote equitable opportunities. Recommendations are provided to enhance supplier inclusion and foster a fairer procurement environment, emphasizing transparency, outreach, and support for underrepresented businesses."
 format: pdf
 number-sections: true
 bibliography: references.bib
+toc: true 
 ---
 
 ```{r}
@@ -19,25 +19,25 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# load data
+Contract_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+
 ```
 
 
 # Introduction
 
-Overview paragraph
+Equitable public procurement is a cornerstone of inclusive economic development. The City of Toronto, through its competitive contracting process, allocates significant resources to suppliers for goods and services. These contracts serve as vital economic lifelines, particularly for small businesses and sectors that have traditionally been underrepresented in public procurement. However, ensuring equitable access to these opportunities remains a challenge, as systemic barriers may limit the participation of diverse suppliers.
 
-Estimand paragraph
+This study explores the equity of supplier representation in Toronto’s public contracts, focusing on small businesses and underrepresented sectors. Using the Toronto Bids Awarded Contracts dataset, the research seeks to answer critical questions: Are small businesses and diverse suppliers equitably represented in contract awards? What trends emerge in terms of award amounts and supplier participation? By addressing these questions, the study aims to provide actionable insights to promote fair and inclusive procurement practices.
 
-Results paragraph
+The research contributes to a growing discourse on supplier diversity and public accountability, underscoring the importance of fostering inclusive economic opportunities in municipal contracting. This is particularly relevant in a diverse city like Toronto, where equitable procurement practices can significantly impact local communities and drive sustainable development. Through this investigation, the study highlights current gaps and offers recommendations to strengthen supplier equity in Toronto’s public procurement system.
 
-Why it matters paragraph
-
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
-
+The remainder of this paper is structured as follows. @sec-data will discuss the data used in the study, highlighting key aspects and limitations. @sec-Results will focus on generating graphs using the data presented in @sec-data. @sec-discussion will elaborate on the graphs from @sec-Results, providing interpretations and possible explanations for the findings. 
 
 
 # Data {#sec-data}
@@ -48,6 +48,24 @@ We use the statistical programming language R [@citeR].... Our data [@shelter]..
 
 Overview text
 
+```{r}
+#| label: tbl-Table1
+#| tbl-cap: summary of data
+#| echo: false
+
+
+# Display the table without the 'id' column
+kable(Contract_data,
+  col.names = c(
+    "Year", "Total Decedents",
+    "Avg Age of Death (All)", "Male Decedents",
+    "Avg Age of Death (Male)", "Female Decedents",
+    "Avg Age of Death (Female)", "Trans/NB/2S Decedents",
+    "Avg Age of Death (Trans/NB/2S)"
+  )
+)
+```
+
 ## Measurement
 	
 Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
@@ -57,44 +75,6 @@ Some paragraphs about how we go from a phenomena in the world to an entry in the
 Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
 
 
-
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
-
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
-#| echo: false
-#| warning: false
-#| message: false
-
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
-
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
-```
-
 Talk way more about it. 
 
 ## Predictor variables
@@ -102,11 +82,6 @@ Talk way more about it.
 Add graphs, tables and text.
 
 Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
-
-
-
-
-
 
 
 
@@ -139,42 +114,171 @@ We expect a positive relationship between the size of the wings and time spent a
 We can use maths by including latex between dollar signs, for instance $\theta$.
 
 
+
 # Results
 
-Our results are summarized in @tbl-modelresults.
-
+@fig-bargraph we can see that the graph shows that the biggest amount is awared to RFT. 
 ```{r}
+#| label: fig-bargraph 
+#| fig-cap: Bar graph 
 #| echo: false
-#| eval: true
 #| warning: false
 #| message: false
 
-library(rstanarm)
+# Summarize awarded amounts by RFx Type
+rfx_summary <- Contract_data %>%
+  group_by(RFx_Type) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  arrange(desc(Total_Awarded))
 
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+# Bar plot: Total Awarded Amount by RFx Type
+ggplot(rfx_summary, aes(x = RFx_Type, y = Total_Awarded, fill = RFx_Type)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  scale_y_continuous(labels = dollar_format()) +
+  labs(title = "Total Awarded Amount by RFx Type",
+       x = "RFx Type",
+       y = "Total Awarded Amount ($)") +
+  theme_minimal()
 ```
 
-```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
-#| warning: false
 
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
+The pie chart @fig-PieChart demonstrates a significant disparity, with the majority of contracts awarded to large businesses (marked as FALSE for small business). This indicates that small businesses have minimal representation in the awarding process, suggesting a lack of equity.
+```{r}
+#| label: fig-PieChart
+#| fig-cap: Proportion of Small Business Awards
+#| echo: false
+#| warning: false
+#| message: false
+
+# Pie chart: Proportion of Small Business Awards
+small_business_summary <- Contract_data %>%
+  group_by(Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE))
+
+ggplot(small_business_summary, aes(x = "", y = Total_Awarded, fill = Small_Business)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of Small Business Awards",
+       x = NULL,
+       y = NULL) +
+  theme_void()
+
+```
+
+
+
+Looking at @fig-Boxplot, categories like "Construction Services" and "Professional Services" show a wide range of awarded amounts, with some outliers receiving significantly higher awards. Smaller categories (e.g., "Offer to Purchase") have fewer instances and seem to award comparatively smaller amounts. This indicates potential concentration of funding in certain categories, which may not benefit small businesses.
+```{r}
+#| label: fig-Boxplot
+#| fig-cap: Awarded Amounts by High-Level Category
+#| echo: false
+#| warning: false
+#| message: false
+
+# Box plot: Awarded Amounts by High-Level Category
+ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = High_Level_Category)) +
+  geom_boxplot(show.legend = FALSE) +
+  scale_y_continuous(labels = dollar_format()) +
+  labs(title = "Distribution of Awarded Amounts by Category",
+       x = "Category",
+       y = "Awarded Amount ($)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+
+Not working still need to fix 
+```{r}
+#| label: fig-Time series
+#| fig-cap: Awarded Amounts Over Time
+#| echo: false
+#| warning: false
+#| message: false
+
+# Time series: Awarded Amounts Over Time
+ggplot(Contract_data, aes(x = Award_Date, y = Awarded_Amount, color = Division)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(labels = dollar_format()) +
+  labs(title = "Awarded Amounts Over Time",
+       x = "Award Date",
+       y = "Awarded Amount ($)") +
+  theme_minimal()
+
+```
+
+@fig-bar1, Across most categories, the representation of small businesses is minimal compared to large businesses.Notably, in the "Offer to Purchase" category, there seems to be equal representation of small and large businesses. This could imply specific policies or practices in that category that favor small businesses.
+
+```{r}
+#| label: fig-bar1
+#| fig-cap: Awarded Amounts Over Time
+#| echo: false
+#| warning: false
+#| message: false
+
+
+# Calculate proportions of Small and Large Businesses by High-Level Category
+category_small_large <- Contract_data %>%
+  group_by(High_Level_Category, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
+  ungroup()
+
+# Bar Plot: Proportion of Small vs. Large Businesses by High-Level Category
+ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(title = "Proportion of Small vs. Large Businesses by High-Level Category",
+       x = "High-Level Category",
+       y = "Proportion",
+       fill = "Small Business") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
+```
+
+
+@fig-bar2, we can observe that 
+```{r}
+#| label: fig-bar2
+#| fig-cap: Awarded Amounts Over Time
+#| echo: false
+#| warning: false
+#| message: false
+
+# Calculate proportions of Small and Large Businesses by RFx Type
+rfx_small_large <- Contract_data %>%
+  group_by(RFx_Type, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
+  ungroup()
+
+# Bar Plot: Proportion of Small vs. Large Businesses by RFx Type
+ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(title = "Proportion of Small vs. Large Businesses by RFx Type",
+       x = "RFx Type",
+       y = "Proportion",
+       fill = "Small Business") +
+  theme_minimal()
+
 ```
 
 
 
 
 # Discussion
+
+General Inferences:
+Equity Gaps: There is a clear lack of equity in the distribution of contracts between small and large businesses. Most of the contracts and larger awards seem to favor larger corporations.
+Category-Specific Opportunities: Some categories like "Offer to Purchase" might be worth further investigation to understand what policies support small business equity and whether they can be applied to other categories.
+Implications for Policy: These findings could motivate policy adjustments to enhance opportunities for small businesses across all categories, potentially leading to more diverse supplier representation.
+
 
 ## First discussion point {#sec-first-point}
 
