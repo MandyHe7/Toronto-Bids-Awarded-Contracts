@@ -1,11 +1,13 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 26 September 2024 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Testing and verify that the Clean data is not missing any value and it is ready to use.
+# Author: Mandy He
+# Date: 23 November 2024
+# Contact: mandyxy.he@mail.utoronto.ca
+# License: N/A
+# Pre-requisites: 
+# - The `tidyverse` package must be installed and loaded
+# - 00-simulate_data.R must have been run
+# Any other information needed? Make sure you are in the `starter_folder` rproj
 
 
 #### Workspace setup ####
@@ -16,54 +18,76 @@ data <- read_csv("data/02-analysis_data/analysis_data.csv")
 
 
 #### Test data ####
-# Test that the dataset has 151 rows - there are 151 divisions in Australia
-test_that("dataset has 151 rows", {
-  expect_equal(nrow(analysis_data), 151)
-})
 
-# Test that the dataset has 3 columns
-test_that("dataset has 3 columns", {
-  expect_equal(ncol(analysis_data), 3)
-})
 
-# Test that the 'division' column is character type
-test_that("'division' is character", {
-  expect_type(analysis_data$division, "character")
-})
+# Test 1: Check for missing values in key columns
+missing_values <- colSums(is.na(data))
+cat("Missing Values:\n")
+print(missing_values)
 
-# Test that the 'party' column is character type
-test_that("'party' is character", {
-  expect_type(analysis_data$party, "character")
-})
+# Check if there are missing values in 'Awarded_Amount', 'RFx_Type', 'Award_Date', and 'Document_Number'
+critical_columns <- c("Document_Number", "RFx_Type", "Awarded_Amount", "Award_Date")
+missing_critical <- colSums(is.na(data[, critical_columns]))
+cat("\nMissing values in critical columns:\n")
+print(missing_critical)
 
-# Test that the 'state' column is character type
-test_that("'state' is character", {
-  expect_type(analysis_data$state, "character")
-})
+# Test 2: Check for duplicates in 'Document_Number'
+duplicates_document_number <- any(duplicated(data$Document_Number))
+duplicates_document_number <- any(duplicated(data$unique_id,))
 
-# Test that there are no missing values in the dataset
-test_that("no missing values in dataset", {
-  expect_true(all(!is.na(analysis_data)))
-})
+cat("\nAre there duplicates in 'Document_Number'?", duplicates_document_number, "\n")
+cat("Are there duplicates in 'Unique_ID'?", duplicates_unique_id, "\n")
 
-# Test that 'division' contains unique values (no duplicates)
-test_that("'division' column contains unique values", {
-  expect_equal(length(unique(analysis_data$division)), 151)
-})
 
-# Test that 'state' contains only valid Australian state or territory names
-valid_states <- c("New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", 
-                  "Tasmania", "Northern Territory", "Australian Capital Territory")
-test_that("'state' contains valid Australian state names", {
-  expect_true(all(analysis_data$state %in% valid_states))
-})
+# Test 3: Check the range of 'Awarded_Amount'
+cat("\nRange of 'Awarded_Amount':\n")
+cat("Min:", min(data$Awarded_Amount), "\n")
+cat("Max:", max(data$Awarded_Amount), "\n")
 
-# Test that there are no empty strings in 'division', 'party', or 'state' columns
-test_that("no empty strings in 'division', 'party', or 'state' columns", {
-  expect_false(any(analysis_data$division == "" | analysis_data$party == "" | analysis_data$state == ""))
-})
+min(data$Awarded_Amount)
 
-# Test that the 'party' column contains at least 2 unique values
-test_that("'party' column contains at least 2 unique values", {
-  expect_true(length(unique(analysis_data$party)) >= 2)
-})
+# Check if any values in 'Awarded_Amount' are zero or negative
+invalid_award_amount <- any(data$Awarded_Amount <= 0)
+cat("\nAre there any zero or negative values in 'Awarded_Amount'?", invalid_award_amount, "\n")
+
+
+# Test 4: Check data types of important columns
+cat("\nData Types of Important Columns:\n")
+cat("Award_Date is Date type:", is.Date(as.Date(data$Award_Date)), "\n")
+cat("Awarded_Amount is numeric:", is.numeric(data$Awarded_Amount), "\n")
+cat("RFx_Type is character:", is.character(data$RFx_Type), "\n")
+cat("Successful_Supplier is character:", is.character(data$Successful_Supplier), "\n")
+cat("Division is character:", is.character(data$Division), "\n")
+
+# Test 5: Check if 'Award_Date' is within a valid range (e.g., between 2000 and the current date)
+valid_award_date_range <- all(data$Award_Date >= as.Date("2000-01-01") & data$Award_Date <= Sys.Date())
+
+cat("\nAre all 'Award_Date' values within the valid range?", valid_award_date_range, "\n")
+
+
+# Test 6:Check the unique values for important categorical columns
+cat("\nUnique Values in 'RFx_Type':\n")
+print(unique(data$RFx_Type))
+
+cat("\nUnique Values in 'High_Level_Category':\n")
+print(unique(data$High_Level_Category))
+
+cat("\nUnique Values in 'Division':\n")
+print(unique(data$Division))
+
+cat("\nUnique Values in 'Successful_Supplier':\n")
+print(unique(data$Successful_Supplier))
+
+# Test 7:  Check the proportion of Small Business (TRUE/FALSE)
+small_business_proportion <- table(data$Small_Business)
+cat("\nProportion of Small Business (TRUE/FALSE):\n")
+print(small_business_proportion)
+
+# Test 8: Check for unique Document Numbers
+unique_documents <- length(unique(data$Document_Number))
+total_documents <- nrow(data)
+
+cat("\nAre 'Document_Number' unique?", unique_documents == total_documents, "\n")
+cat("Number of unique 'Document_Number':", unique_documents, "\n")
+cat("Total number of rows:", total_documents, "\n")
+

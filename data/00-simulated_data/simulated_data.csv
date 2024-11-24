@@ -1,152 +1,101 @@
-division,state,party
-Division 1,Victoria,Liberal
-Division 2,New South Wales,Liberal
-Division 3,Tasmania,Liberal
-Division 4,New South Wales,Liberal
-Division 5,Queensland,Liberal
-Division 6,New South Wales,Labor
-Division 7,Victoria,Liberal
-Division 8,Western Australia,Labor
-Division 9,Western Australia,Greens
-Division 10,Queensland,Labor
-Division 11,Queensland,Labor
-Division 12,Northern Territory,Liberal
-Division 13,New South Wales,Labor
-Division 14,Western Australia,Labor
-Division 15,Western Australia,National
-Division 16,Victoria,Liberal
-Division 17,South Australia,Liberal
-Division 18,Victoria,Liberal
-Division 19,Western Australia,Labor
-Division 20,South Australia,Labor
-Division 21,New South Wales,Liberal
-Division 22,Queensland,Greens
-Division 23,New South Wales,Liberal
-Division 24,New South Wales,Liberal
-Division 25,Queensland,Labor
-Division 26,Victoria,National
-Division 27,New South Wales,Liberal
-Division 28,Queensland,Liberal
-Division 29,Tasmania,Liberal
-Division 30,South Australia,Liberal
-Division 31,New South Wales,Liberal
-Division 32,Victoria,Labor
-Division 33,Tasmania,Liberal
-Division 34,New South Wales,Liberal
-Division 35,Western Australia,Labor
-Division 36,New South Wales,Liberal
-Division 37,Tasmania,Greens
-Division 38,Tasmania,Labor
-Division 39,Victoria,Greens
-Division 40,South Australia,Labor
-Division 41,New South Wales,Other
-Division 42,New South Wales,Other
-Division 43,Tasmania,Labor
-Division 44,Tasmania,National
-Division 45,Queensland,Liberal
-Division 46,Australian Capital Territory,Other
-Division 47,Queensland,Labor
-Division 48,Queensland,Other
-Division 49,South Australia,Liberal
-Division 50,Victoria,National
-Division 51,South Australia,Liberal
-Division 52,Victoria,Labor
-Division 53,South Australia,National
-Division 54,Queensland,Liberal
-Division 55,Queensland,Labor
-Division 56,South Australia,Liberal
-Division 57,New South Wales,Other
-Division 58,Northern Territory,Liberal
-Division 59,New South Wales,Labor
-Division 60,Western Australia,Labor
-Division 61,New South Wales,Liberal
-Division 62,South Australia,Liberal
-Division 63,Queensland,Labor
-Division 64,Tasmania,Labor
-Division 65,South Australia,Labor
-Division 66,Victoria,Labor
-Division 67,Queensland,Liberal
-Division 68,Queensland,Liberal
-Division 69,Tasmania,Labor
-Division 70,South Australia,National
-Division 71,Australian Capital Territory,Labor
-Division 72,Western Australia,Labor
-Division 73,Queensland,National
-Division 74,Victoria,Labor
-Division 75,Western Australia,Labor
-Division 76,Tasmania,Labor
-Division 77,Queensland,Liberal
-Division 78,Western Australia,Liberal
-Division 79,Queensland,Labor
-Division 80,Queensland,Liberal
-Division 81,Victoria,Labor
-Division 82,New South Wales,Liberal
-Division 83,Victoria,Liberal
-Division 84,Queensland,National
-Division 85,Western Australia,Liberal
-Division 86,New South Wales,Labor
-Division 87,Queensland,Liberal
-Division 88,New South Wales,Liberal
-Division 89,Tasmania,Liberal
-Division 90,South Australia,Labor
-Division 91,Victoria,Liberal
-Division 92,New South Wales,Labor
-Division 93,Tasmania,Labor
-Division 94,South Australia,Labor
-Division 95,Victoria,Liberal
-Division 96,Victoria,Labor
-Division 97,Western Australia,Liberal
-Division 98,Queensland,Liberal
-Division 99,South Australia,Liberal
-Division 100,New South Wales,Labor
-Division 101,South Australia,Labor
-Division 102,New South Wales,Labor
-Division 103,Victoria,Labor
-Division 104,Victoria,Labor
-Division 105,South Australia,Other
-Division 106,Western Australia,Labor
-Division 107,Tasmania,Liberal
-Division 108,Victoria,Labor
-Division 109,Queensland,Liberal
-Division 110,Victoria,Labor
-Division 111,Australian Capital Territory,Labor
-Division 112,Victoria,Liberal
-Division 113,Victoria,Liberal
-Division 114,Victoria,Liberal
-Division 115,Tasmania,Labor
-Division 116,Victoria,Labor
-Division 117,New South Wales,Labor
-Division 118,Victoria,Labor
-Division 119,Victoria,Greens
-Division 120,Northern Territory,Labor
-Division 121,South Australia,Liberal
-Division 122,New South Wales,Liberal
-Division 123,New South Wales,Labor
-Division 124,New South Wales,Liberal
-Division 125,New South Wales,National
-Division 126,New South Wales,Labor
-Division 127,Queensland,Labor
-Division 128,New South Wales,Other
-Division 129,Queensland,Labor
-Division 130,Australian Capital Territory,Liberal
-Division 131,Tasmania,Greens
-Division 132,New South Wales,National
-Division 133,New South Wales,Labor
-Division 134,Northern Territory,Labor
-Division 135,South Australia,National
-Division 136,Victoria,Labor
-Division 137,Tasmania,National
-Division 138,South Australia,Liberal
-Division 139,New South Wales,Labor
-Division 140,Victoria,Other
-Division 141,Queensland,Greens
-Division 142,Victoria,National
-Division 143,Western Australia,Labor
-Division 144,Victoria,Labor
-Division 145,Queensland,Liberal
-Division 146,Tasmania,Liberal
-Division 147,South Australia,Liberal
-Division 148,Victoria,Labor
-Division 149,New South Wales,National
-Division 150,New South Wales,Labor
-Division 151,Victoria,Liberal
+Document_Number,RFx_Type,High_Level_Category,Successful_Supplier,Awarded_Amount,Award_Date,Division,Small_Business
+Doc3951063187,RFSQ,Goods & Services,2489960 ONTARIO INC,1862705.2230294794,2022-09-22,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",FALSE
+Doc3883709991,RFP,Goods & Services,Joe Pace & Sons,36383605.2872939,2023-02-07,Purchasing & Materials Management,FALSE
+Doc4359641804,RFSQ,Professional Services,Howden Roots LLC,17782113.004825078,2023-09-10,City Planning,FALSE
+Doc4104126185,RFSQ,Construction Services,ARALIA INTERIOR PLANTSCAPING  INC,23522513.153380714,2022-12-11,"Corporate Real Estate Management,Shelter, Support & Housing Administration",TRUE
+Doc3597441618,RFQ,Goods & Services,Midome Construction Services Inc,5260119.013604708,2023-11-11,Court Services,TRUE
+Doc3934508596,RFP,Goods & Services,"Bell Canada o/a Bell, BCE Inc.",45603410.91314331,2022-05-31,Corporate Real Estate Management,TRUE
+Doc4031969151,RFQ,Goods and Services,PTR PAVING INC,17680882.152402773,2024-10-31,Toronto Building,TRUE
+Doc4247073892,RFP,Goods & Services,AECOM Canada Ltd.,24593486.885074526,2023-06-23,Engineering & Construction Services - Capital Works Delivery,FALSE
+Doc4277122039,RFQ,Professional Services,MORRISON HERSHFIELD LTD,2071040.6575817615,2022-08-23,"Technology Services,Transportation Services",FALSE
+Doc4470673376,RFQ,Offer to Purchase,WM WELLER TREE SERVICE LTD,46153420.95331289,2024-11-04,City Planning,TRUE
+Doc3597441618,RFP,Goods & Services,Ridge Road Training & Consulting Inc.,24383070.210344158,2023-01-07,"Fire Services,Fleet Services,Toronto Paramedic Services",FALSE
+Doc3722909802,RFP,Professional Services,SSG,48097014.90891166,2022-10-30,"Corporate Real Estate Management,Shelter, Support & Housing Administration",FALSE
+Doc4087325475,RFSQ,Offer to Purchase,GATESTONE & CO INC,4092503.4428946674,2022-05-01,Municipal Licensing & Standards,TRUE
+Doc3778035206,RFQ,Goods & Services,WM WELLER TREE SERVICE LTD,25182864.453992806,2024-03-14,Economic Development & Culture,TRUE
+Doc4468015736,RFQ,Construction Services,READ JONES CHRISTOFFERSEN LTD,36837689.62463364,2024-08-16,Toronto Water,TRUE
+Doc3918674405,RFP,Goods and Services,ATA ARCHITECTS INC,40580097.98056446,2022-05-06,"Social Development, Finance & Administration",FALSE
+Doc4024276481,RFQ,Professional Services,GRASCAN CONSTRUCTION LTD,15766130.5393558,2024-08-22,Solid Waste Management Services,TRUE
+Doc3610971650,RFQ,Offer to Purchase,INTERNATIONAL NAME PLATE SUPPLIES LIMITED,36216906.089219265,2024-01-20,Children's Services,FALSE
+Doc4629883456,RFQ,Goods & Services,Dye & Durham Corporation,23813557.03319423,2022-09-15,Engineering & Construction Services - Capital Works Delivery,TRUE
+Doc4288902389,RFP,Offer to Purchase,CANETA RESEARCH INC,5392779.355286621,2023-01-16,Finance & Treasury Services,FALSE
+Doc4006632375,RFP,Offer to Purchase,LISHEY METAL FABRICATION LTD,18424530.567601323,2023-09-15,Children's Services,TRUE
+Doc3850138283,RFSQ,Goods and Services,Metro Freightliner Hamilton Inc. o/a Metro Truck Group,25178379.835095257,2022-03-08,"Technology Services,Transportation Services",FALSE
+Doc4291231363,RFSQ,Goods & Services,Dole Contracting,44850805.48829865,2022-05-20,Engineering & Construction Services - Capital Works Delivery,FALSE
+Doc3846791801,RFP,Goods & Services,Maple-Crete Inc.,22491509.425919503,2022-04-12,Solid Waste Management Services,FALSE
+Doc4359357632,RFP,Professional Services,Office Central Inc.,17345547.2830683,2024-04-12,City Manager's Office,FALSE
+Doc4107019103,RFP,Professional Services,Garage Supply Contracting Inc.,1302860.570140183,2024-03-31,Engineering & Construction Services - Engineering Services,FALSE
+Doc4024276481,RFSQ,Professional Services,Joe Pace & Sons,7185697.332955897,2024-10-19,NA,FALSE
+Doc4413383564,RFP,Goods and Services,DE VROOMEN BULB CANADA INC,44138478.82556729,2024-05-08,Employment & Social Services,TRUE
+Doc4021925808,RFP,Professional Services,O-Two Medical Technologies Inc.,27451673.05076029,2023-03-08,"Parks, Forestry & Recreation",TRUE
+Doc4454159621,RFSQ,Goods and Services,MOON-MATZ LTD,40720713.476534,2024-03-02,Toronto Public Health,TRUE
+Doc4561503552,RFQ,Professional Services,CDMV Inc.,19582604.4594869,2022-01-14,Corporate Real Estate Management,FALSE
+Doc4051355928,RFP,Offer to Purchase,VAUGHAN PAVING LTD,43953027.30577532,2023-05-16,"Parks, Forestry & Recreation",FALSE
+Doc3674226184,RFQ,Construction Services,Aon Solutions Canada Inc.,27760543.77388209,2023-04-06,Revenue Services,FALSE
+Doc3997770153,RFSQ,Construction Services,Sutherland-Schultz Ltd.,14160068.866447546,2023-12-10,Toronto Water,FALSE
+Doc3814081357,RFSQ,Goods and Services,NATIONAL CREDIT RECOVERY INC,41671377.884806134,2023-10-21,"Social Development, Finance & Administration",TRUE
+Doc3602895745,RFSQ,Goods and Services,RV ANDERSON ASSOCIATES LTD,26070429.170154966,2024-08-01,Housing Secretariat,TRUE
+Doc3865067327,RFSQ,Professional Services,Kooy Brothers Lawn Equipment LTD,38603217.14787278,2023-03-05,Seniors Services and Long-Term Care,TRUE
+Doc3694194042,RFQ,Professional Services,"Bell Canada o/a Bell, BCE Inc.",6982221.7635810375,2023-08-12,City Manager's Office,FALSE
+Doc3483062371,RFSQ,Professional Services,Gillam Group Inc.,34908831.637352705,2022-11-08,City Clerk's Office,TRUE
+Doc4419211645,RFP,Construction Services,INSITUFORM TECHNOLOGIES LTD,41520646.517165005,2022-08-16,"City Planning,Technology Services",TRUE
+Doc4044299808,RFP,Construction Services,INLAND LIFERAFTS & MARINE LTD,41675766.39575418,2023-03-17,"Fire Services,Municipal Licensing & Standards,Parks, Forestry & Recreation,Seniors Services and Long-Term Care,Toronto Paramedic Services",TRUE
+Doc4394844139,RFQ,Goods and Services,DOUGLAS POWERTECH ENTERPRISES INC.,19237016.027909704,2024-01-23,Economic Development & Culture,FALSE
+Doc3923013040,RFP,Construction Services,DUTCHMASTER NURSERY,16333576.225792058,2023-04-27,Toronto Water,FALSE
+Doc4414439337,RFQ,Professional Services,DRAKE INTERNATIONAL INC,34408503.17198783,2024-01-19,Corporate Real Estate Management,FALSE
+Doc3790262987,RFP,Construction Services,MISTER CHEMICAL LTD,9579027.360654436,2022-09-30,"Technology Services,Transportation Services",FALSE
+Doc4543204216,RFQ,Professional Services,Pine Valley Corp,37309574.38971382,2022-06-08,Children's Services,FALSE
+Doc4001854894,RFQ,Professional Services,ADVANCE SOLUTIONS CORPORATION,7342123.157111928,2022-08-11,City Clerk's Office,FALSE
+Doc4577962498,RFQ,Goods and Services,WALKER ENVIRONMENTAL GROUP INC,14559700.13840124,2024-02-16,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",FALSE
+Doc4419641221,RFSQ,Offer to Purchase,WM WELLER TREE SERVICE LTD,15322964.417748153,2022-08-10,Fleet Services,TRUE
+Doc3714174258,RFSQ,Professional Services,Kroll Consulting Canada Co.,17267648.522625677,2023-12-21,NA,FALSE
+Doc4157422445,RFP,Offer to Purchase,D CRUPI AND SONS,3690973.742166534,2022-11-30,Corporate Real Estate Management,FALSE
+Doc4419641221,RFP,Goods & Services,Duron Ontario,40429534.92572997,2023-02-26,Economic Development & Culture,TRUE
+Doc4115631087,RFSQ,Construction Services,1246175 Ontario Limited o/a Active Mechanical Services,29955527.842743322,2022-01-01,"Technology Services,Transportation Services",FALSE
+Doc3932901536,RFP,Construction Services,Clearway Construction Inc,22771982.053644024,2022-03-11,"Fire Services,Municipal Licensing & Standards,Parks, Forestry & Recreation,Seniors Services and Long-Term Care,Toronto Paramedic Services",FALSE
+Doc4392014769,RFSQ,Offer to Purchase,GK CHEMICAL SPECIALTIES CO,26535139.49236367,2023-01-21,Fire Services,FALSE
+Doc4273922673,RFQ,Professional Services,PTR Paving inc.,5522253.693663515,2023-01-20,Information & Technology,TRUE
+Doc3923013040,RFSQ,Construction Services,CBV COLLECTION SERVICES LTD,28531826.353631914,2024-01-12,"Social Development, Finance & Administration",FALSE
+Doc3792180788,RFSQ,Construction Services,Continental Carbon Group Inc.,9869167.55605489,2022-03-02,Information & Technology,FALSE
+Doc4006632375,RFSQ,Goods & Services,DAFCO FILTRATION GROUP CORPORATION,25240460.683824494,2024-02-03,Engineering & Construction Services - Engineering Services,FALSE
+Doc4686211466,RFSQ,Goods & Services,Culture Check Inc.,33583524.035522714,2023-12-11,"Corporate Real Estate Management,Shelter, Support & Housing Administration",FALSE
+Doc3937572365,RFSQ,Professional Services,Dependable Emergency Vehicles,41994053.704082035,2022-06-19,"Technology Services,Transportation Services",TRUE
+Doc4218530551,RFSQ,Construction Services,Davey Tree Expert Co,43412649.79692642,2022-04-20,Engineering & Construction Services - Capital Works Delivery,FALSE
+Doc3668065184,RFP,Offer to Purchase,Black & McDonald Ltd.,38343948.10744561,2023-03-21,Transportation Services,FALSE
+Doc4092233201,RFQ,Goods & Services,GM BLUEPLAN ENGINEERING LIMITED,36490544.50704716,2022-11-16,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",TRUE
+Doc4247073892,RFP,Goods & Services,A&F Di Carlo Construction Inc.,15515966.030070558,2022-04-20,Purchasing & Materials Management,FALSE
+Doc3756696071,RFP,Goods & Services,AECOM Canada Ltd.,22098252.915078774,2022-01-09,City Manager's Office,TRUE
+Doc4227642481,RFSQ,Goods and Services,COLIO ESTATE WINES INC,11094313.882407732,2023-12-25,"Shelter, Support & Housing Administration",FALSE
+Doc3393128038,RFP,Professional Services,MULTIVIEW LOCATES INC,39870973.24884962,2024-04-24,Court Services,FALSE
+Doc3869968460,RFSQ,Goods & Services,Safetek Emergency Vehicles Ltd.,10738740.758039057,2022-07-31,City Clerk's Office,FALSE
+Doc3739766347,RFQ,Goods & Services,BIO NUCLEAR DIAGNOSTICS INC,19743078.331113793,2024-08-08,Office of the Chief Information SecurityÂ Officer (CISO),FALSE
+Doc3781209681,RFQ,Goods & Services,KONGATS ARCHITECTS,41326681.08236976,2023-02-19,Engineering & Construction Services - Capital Works Delivery,FALSE
+Doc4445229954,RFSQ,Offer to Purchase,UTILITY FORCE INC,39853601.57850664,2022-06-10,Engineering & Construction Services - Capital Works Delivery,FALSE
+Doc3819431950,RFSQ,Goods & Services,Triumph Roofing & Sheet Metal Inc.,49653690.24593383,2023-02-15,Transportation Services,TRUE
+Doc4572428154,RFQ,Offer to Purchase,IL Duca contracting Inc.,33302032.622043043,2023-03-02,Purchasing & Materials Management,FALSE
+Doc4066811187,RFQ,Goods and Services,DRAKE INTERNATIONAL INC,17009825.008455664,2023-10-17,Facilities Management,FALSE
+Doc3968966388,RFSQ,Goods and Services,Trans Canada Construction,48772882.0258053,2023-02-03,Revenue Services,TRUE
+Doc4096217399,RFQ,Offer to Purchase,CDMV Inc.,21017816.981766373,2024-04-08,"Social Development, Finance & Administration",FALSE
+Doc4014898448,RFQ,Goods and Services,WSP CANADA INC,17149737.70279903,2022-08-07,"City Planning,Technology Services",FALSE
+Doc4235384096,RFP,Goods & Services,JOE PACE & SONS CONTRACTING INC,24675626.127864234,2022-07-25,People & Equity,FALSE
+Doc3793973081,RFSQ,Construction Services,Canadian Hearing Services,26349104.190827347,2024-08-01,Toronto Water,TRUE
+Doc3873905324,RFQ,Construction Services,1913574 Ontario Inc. oa Royal Oak Tree Services Inc.,2621127.512655221,2022-01-04,Fire Services,FALSE
+Doc3915365177,RFSQ,Offer to Purchase,Combined Metal Industries Inc.,16726804.845849983,2023-02-17,Toronto Public Health,FALSE
+Doc3704322859,RFSQ,Construction Services,SPERIDIAN TECHNOLOGIES CANADA INC,28282926.645246334,2022-12-22,Toronto Public Health,TRUE
+Doc4408423701,RFP,Professional Services,TRH SERVICES (BRANDON BIOMED INC),20962308.49227868,2024-06-12,Finance & Treasury Services,FALSE
+Doc3978905389,RFSQ,Goods and Services,Canada Construction Limited,30302512.645954266,2024-02-23,Facilities Management,TRUE
+Doc4001403150,RFP,Offer to Purchase,DAMEN SHIPBUILDING 5 B.V.,27809573.465026915,2022-10-09,Toronto Water,TRUE
+Doc4222047669,RFP,Offer to Purchase,Firechek Protection Services Inc.,40084132.29056168,2024-03-01,People & Equity,FALSE
+Doc4430037985,RFSQ,Goods & Services,NET ZERO ENERGY INC.,15371237.980551086,2022-03-05,"Social Development, Finance & Administration",FALSE
+Doc3982873048,RFQ,Goods & Services,NRB Modular Solutions,30314044.136204757,2023-04-24,Office of the Chief Information SecurityÂ Officer (CISO),TRUE
+Doc4728197603,RFP,Offer to Purchase,Alliance Verdi Civil Inc,1244729.7592880204,2023-06-26,Corporate Real Estate Management,FALSE
+Doc4532966165,RFQ,Goods and Services,Shutter Professionals Inc.,44483339.53821566,2023-09-30,Facilities Management,FALSE
+Doc4097545206,RFP,Construction Services,O2 PLANNING + DESIGN,44561384.67916753,2022-04-22,Seniors Services and Long-Term Care,TRUE
+Doc3816975592,RFP,Goods & Services,Grascan Construction Ltd,24709147.068555467,2022-02-21,Technology Services,FALSE
+Doc4104126185,RFP,Goods & Services,Testmark Laboratories Ltd,8383016.091771424,2024-06-25,Employment & Social Services,TRUE
+Doc3383644334,RFSQ,Goods and Services,Mid - Ontario Truck Center,31910599.085967988,2024-06-18,"Corporate Real Estate Management,Shelter, Support & Housing Administration",FALSE
+Doc3952713027,RFQ,Goods and Services,Davroc Testing laboratories Inc.,10276975.287590176,2024-03-23,Municipal Licensing & Standards,TRUE
+Doc4209172596,RFP,Goods and Services,Power King Exhaust Cleaning,12378098.908462562,2022-02-18,Engineering & Construction Services,TRUE
+Doc3685082826,RFQ,Offer to Purchase,D MARTINO CONSTRUCTION LTD,28715649.466612376,2023-12-09,"Social Development, Finance & Administration",FALSE
+Doc4607679427,RFP,Goods & Services,ROMA FENCE LTD,38175964.746274985,2022-09-12,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",TRUE
+Doc3865027173,RFQ,Construction Services,RUSH TRUCK CENTER OF CANADA,2220565.287861973,2022-10-18,Information & Technology,TRUE
