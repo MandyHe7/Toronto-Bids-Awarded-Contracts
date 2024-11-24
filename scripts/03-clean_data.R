@@ -53,8 +53,8 @@ contract_cleaned <- contract_cleaned %>%
     Division
   )
 
-# Step 7: Optional - Classify small businesses based on Awarded_Amount (threshold example: 100,000)
-small_business_threshold <- 100000  # Define the threshold for small business classification
+# Step 7: Optional - Classify small businesses based on Awarded_Amount (threshold example: 500,000)
+small_business_threshold <- 500000  # Define the threshold for small business classification
 contract_cleaned <- contract_cleaned %>%
   mutate(Small_Business = ifelse(Awarded_Amount <= small_business_threshold, TRUE, FALSE))
 
@@ -67,3 +67,4 @@ write_csv(contract_cleaned, "data/02-analysis_data/analysis_data.csv")
 # Preview the cleaned data
 head(contract_cleaned)
 
+median(contract_cleaned$Awarded_Amount)
