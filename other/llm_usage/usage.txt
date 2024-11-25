@@ -335,6 +335,50 @@ cat("Total number of rows:", total_documents, "\n")
 
 
 
+Citation Usage: 
+
+You said:
+cite this r package in bib for me: lubridate
+ChatGPT said:
+ChatGPT
+To cite the lubridate R package, you can use the following BibTeX entry:
+
+bibtex
+Copy code
+@Manual{lubridate,
+  title = {lubridate: Make Dealing with Dates a Little Easier},
+  author = {Hadley Wickham and Garrett Grolemund},
+  year = {2023},
+  note = {R package version 1.9.2},
+  url = {https://CRAN.R-project.org/package=lubridate}
+}
+This entry includes the authors, package name, year of the latest release, version, and a link to the CRAN page. You may want to adjust the version number to reflect the one you are using.
+
+
+
+You said:
+cite this one as well: scales
+ChatGPT said:
+ChatGPT
+Here’s the BibTeX citation for the scales R package:
+
+bibtex
+Copy code
+@Manual{scales,
+  title = {scales: Scale Functions for Visualization},
+  author = {Hadley Wickham and Winston Chang},
+  year = {2023},
+  note = {R package version 1.2.1},
+  url = {https://CRAN.R-project.org/package=scales}
+}
+Again, adjust the version number if you're using a different one. This citation includes the package name, authors, year, and the URL to the CRAN page.
+
+
+
+
+
+
+
 
 
 
