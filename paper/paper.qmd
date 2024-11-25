@@ -22,6 +22,8 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(scales)
+library(lubridate)
+library(knitr)
 
 # load data
 Contract_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
@@ -44,44 +46,70 @@ The remainder of this paper is structured as follows. @sec-data will discuss the
 
 ## Overview
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+The data used in this paper is access from Open Data Toronto and the particular data set used was the Toronto Bids Awarded Contracts [@toronto_tobids]. To analysis the data and creating graphs using the data, following package that was build in the statistical programming language R [@citeR] was used: tidyverse (@tidyverse), dplyr (@dplyr), lubridate (@lubridate), scales (@scales), knitr (@knitr), and ggplot2 (@ggplot2). LLM (@openai2023chatgpt) was also use in term of helping with coding in R to graph data, simulating data, cleaning data, and revising writing. 
 
-Overview text
+@tbl-Table1 is a preview of the clean data that will be used through out the analysis of this paper. 
 
 ```{r}
 #| label: tbl-Table1
-#| tbl-cap: summary of data
+#| tbl-cap: Data Preview
 #| echo: false
+#| warning: false
+#| message: false
 
 
-# Display the table without the 'id' column
-kable(Contract_data,
-  col.names = c(
-    "Year", "Total Decedents",
-    "Avg Age of Death (All)", "Male Decedents",
-    "Avg Age of Death (Male)", "Female Decedents",
-    "Avg Age of Death (Female)", "Trans/NB/2S Decedents",
-    "Avg Age of Death (Trans/NB/2S)"
-  )
-)
+# Display the table preview
+kable(head(Contract_data), 
+      caption = "Data Preview", 
+      align = 'l', 
+      col.names = c("Unique ID", "Document Number", "RFx Type", 
+                    "High Level Category", "Successful Supplier", 
+                    "Awarded Amount ($)", "Award Date", 
+                    "Division", "Small Business"))
 ```
 
 ## Measurement
 	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+To understand how a real-world phenomenon transitions into a structured dataset, it is essential to examine the lifecycle of data collection, organization, and analysis. In the case of the Toronto Bids Awarded Contracts dataset, the phenomenon begins with the City's procurement process—a critical operation where goods, services, and construction are solicited and acquired to meet public needs. This process involves multiple stages, from identifying the need for procurement, issuing requests for proposals or tenders, evaluating bids, and awarding contracts to successful suppliers. Each of these steps reflects a real-world activity that, when documented, forms the foundation for the dataset.
 
+The transition starts with the City identifying a need, such as infrastructure development, service improvement, or administrative support. This leads to the creation of a solicitation document, outlining the scope of work, evaluation criteria, and requirements. Suppliers submit their bids, and the City evaluates them based on predefined criteria, such as cost, quality, and adherence to specifications. Once a contract is awarded, key details—including the awarded amount, supplier name, and the division requesting the procurement—are recorded.
+
+This information is entered into the City's procurement management system, capturing the structured attributes necessary for documentation and analysis. For instance, details like the solicitation type (e.g., RFP, RFQ), high-level category (e.g., Construction Services, Professional Services), and award date are meticulously logged. To enhance the dataset's utility, additional attributes such as the division involved, buyer contact information, and a summary of the solicitation are included. The creation of a dummy variable, such as the classification of small businesses, involves further data processing to derive new insights from raw attributes like the awarded amount.
+
+Ultimately, the dataset represents a structured snapshot of a complex real-world process. Each entry reflects decisions, negotiations, and activities that unfolded in the real world, carefully abstracted into numerical and categorical variables. This process of translation allows researchers, policymakers, and the public to analyze the data to uncover patterns, monitor equity, and assess the efficiency and fairness of the City's procurement system. The dataset, while detailed, is always an abstraction—capturing key facets of the phenomenon while omitting others deemed less relevant to the analysis.
 ## Outcome variables
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
-
-
-Talk way more about it. 
 
 ## Predictor variables
 
-Add graphs, tables and text.
+The dataset includes information on competitive procurement processes and awarded contracts by the City of Toronto. Key variables are:
 
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+- Unique Row Identifier (_id): A unique identifier for each record in the Open Data database.
+
+- Composite Key (unique_id): A unique identifier combining related procurement details.
+
+- Document Number: A reference number used by the City to track the solicitation during the procurement process.
+
+- RFx Type (Solicitation Type): The procurement method used for the solicitation, such as Request for Proposal (RFP), Request for Quotation (RFQ), Tender (RFT), and others. This indicates the process used to seek bids or proposals from suppliers.
+
+- High-Level Category: Groups the goods or services being procured, such as Goods and Services, Professional Services, or Construction Services.
+
+- Successful Supplier: The name of the supplier awarded the contract.
+
+- Awarded Amount: The total monetary value awarded to the supplier for the contract.
+
+- Award Date: The date the contract between the City and the supplier was finalized.
+
+- Division: The City Division requesting the procurement. The awarded supplier will have a contract with this division.
+
+- Buyer Details: Includes the buyer's name, email, and phone number as the primary purchasing contact for the solicitation or contract.
+
+- Solicitation Document Description: A summary of the solicitation, providing additional context about the procurement request.
+
+In addition, there was a small business classification was created for its role in the analysis.
+
+- Small Business (Dummy Variable): A binary variable indicating whether a supplier qualifies as a small business. Businesses with awarded contract amounts under $500,000 are classified as small (TRUE), while others are classified as large (FALSE).
+
 
 
 
@@ -117,7 +145,7 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 
 # Results
 
-@fig-bargraph we can see that the graph shows that the biggest amount is awared to RFT. 
+The "RFT" type accounts for the highest awarded amount @fig-bargraph, exceeding $1.2 billion. This indicates that tenders dominate procurement expenditure in Toronto’s public contracts. This could reflect a preference for competitive, price-driven bidding processes for large-scale projects like construction and infrastructure.
 ```{r}
 #| label: fig-bargraph 
 #| fig-cap: Bar graph 
@@ -189,23 +217,76 @@ ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = Hi
 ```
 
 
-Not working still need to fix 
+Looking at @fig-Timeseries, large businesses consistently receive significantly higher awarded amounts compared to small businesses. The awarded amounts to small businesses remain relatively stable over time, showing minimal fluctuation. This highlights the dominance of large businesses in the procurement process.
 ```{r}
-#| label: fig-Time series
+#| label: fig-Timeseries
 #| fig-cap: Awarded Amounts Over Time
 #| echo: false
 #| warning: false
 #| message: false
 
-# Time series: Awarded Amounts Over Time
-ggplot(Contract_data, aes(x = Award_Date, y = Awarded_Amount, color = Division)) +
-  geom_line() +
-  geom_point() +
-  scale_y_continuous(labels = dollar_format()) +
-  labs(title = "Awarded Amounts Over Time",
-       x = "Award Date",
-       y = "Awarded Amount ($)") +
-  theme_minimal()
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+
+# Summarize awarded amounts by month and business type
+time_series_data <- Contract_data %>%
+  mutate(Month = floor_date(Award_Date, "month")) %>%
+  group_by(Month, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  ungroup()
+
+# Plot the time series
+ggplot(time_series_data, aes(x = Month, y = Total_Awarded, color = Small_Business)) +
+  geom_line(size = 1.2) +
+  labs(title = "Awarded Amount to Small vs. Large Businesses Over Time",
+       x = "Time (Monthly)",
+       y = "Total Awarded Amount ($)",
+       color = "Business Type") +
+  theme_minimal() +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+@fig-TimeseriesSmall, the scatterplot shows awarded amounts to small businesses distributed across time, with no clear upward or downward trend. The shaded confidence interval around the regression line suggests high uncertainty in predicting changes over time. Overall, there is no strong evidence of growth or decline in the awarded amounts to small businesses.
+```{r}
+
+#| label: fig-TimeseriesSmall
+#| fig-cap: Awarded Amounts Over Time
+#| echo: false
+#| warning: false
+#| message: false
+
+small_business_data <- Contract_data %>% 
+  filter(Small_Business == TRUE) %>% 
+  mutate(Month = floor_date(Award_Date, "month"))
+
+# Aggregate awarded amounts by month for small businesses
+regression_data <- small_business_data %>%
+  group_by(Month) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  ungroup()
+
+# Add a numeric time variable for regression
+regression_data$Time <- as.numeric(regression_data$Month)
+
+# Fit a linear regression model
+model <- lm(Total_Awarded ~ Time, data = regression_data)
+summary(model)
+
+# Plot the results
+ggplot(regression_data, aes(x = Month, y = Total_Awarded)) +
+  geom_point(color = "blue", size = 2) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  labs(title = "Regression Analysis: Awarded Amount to Small Businesses Over Time",
+       x = "Time (Monthly)",
+       y = "Total Awarded Amount ($)") +
+  theme_minimal() +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ```
 
@@ -242,7 +323,8 @@ ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill =
 ```
 
 
-@fig-bar2, we can observe that 
+@fig-bar2, we can observe that for "RFT," where the largest contracts are awarded, small businesses are virtually excluded. Similarly, "RFQ" and "RFP" see small businesses struggling to compete against larger counterparts.
+
 ```{r}
 #| label: fig-bar2
 #| fig-cap: Awarded Amounts Over Time
@@ -269,7 +351,25 @@ ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)
 
 ```
 
+A logistic regression model can help assess the factors influencing whether a contract is awarded to a small business.
 
+Coefficients indicate how the likelihood of a contract being awarded to a small business changes with variables like Awarded_Amount, RFx_Type, and High_Level_Category.
+Significant p-values for predictors suggest they have an impact on the outcome.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Logistic regression model
+log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
+                 data = Contract_data, family = binomial)
+
+# Summary of the model
+summary(log_model)
+
+
+```
 
 
 # Discussion
@@ -311,47 +411,12 @@ In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. 
 
 In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
 
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
-```
 
 ## Diagnostics
 
 @fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
 
 @fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
-```
 
 
 
