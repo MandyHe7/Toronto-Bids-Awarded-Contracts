@@ -114,38 +114,6 @@ In addition, there was a small business classification was created for its role 
 - Small Business (Dummy Variable): A binary variable indicating whether a supplier qualifies as a small business. Businesses are classified as small (TRUE), while others are classified as large (FALSE) determine by ChatGPT analysis, refer to [Appendix -@sec-appdata] for more detail.
 
 
-
-
-# Model
-
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
-
-## Model set-up
-
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
-
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
-
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
-
-### Model justification
-
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-
 # Results
 
 The pie chart @fig-PieChart demonstrates majority of contracts awarded to small businesses (marked as TRUE for small business). This indicates that small businesses have relative representation in the awarding process, suggesting equity just by looking at proportion.
@@ -179,7 +147,7 @@ RFQ (Request for Quotation) and RFP (Request for Proposal) follow, with awarded 
 Other RFx types (e.g., NRFP, OTP, RFSQ) have minimal awarded amounts, indicating limited use in contract awards.
 ```{r}
 #| label: fig-bargraph 
-#| fig-cap: Bar graph 
+#| fig-cap: Total Awarded Amount by RFx Type
 #| echo: false
 #| warning: false
 #| message: false
@@ -210,7 +178,7 @@ NRFP and OTP show exclusive or near-exclusive awards to Large Businesses, albeit
 
 ```{r}
 #| label: fig-bar2
-#| fig-cap: Awarded Amounts Over Time
+#| fig-cap: Proportion of Small vs. Large Businesses by RFx Type
 #| echo: false
 #| warning: false
 #| message: false
@@ -234,11 +202,43 @@ ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)
 
 ```
 
+This bar graph @fig-bar3 displays the total awarded amounts split between small (TRUE) and large (FALSE) businesses across different RFx types. The results show a stark contrast in how contract awards are distributed. For RFP (Request for Proposal) and RFQ (Request for Quotation), small businesses receive a comparable share of awarded amounts, indicating these procurement types may be more accessible to smaller enterprises. However, for RFT (Request for Tender), which accounts for the largest total awarded amount, the majority of awards go to large businesses. In contrast, RFx types such as NRFP (Non-Request for Proposal) and RFSQ (Request for Supplier Qualification) have minimal total awarded amounts and show varying levels of small business participation.
+
+
+```{r}
+#| label: fig-bar3
+#| fig-cap: Total Awarded Amount by Small vs. Large Businesses for each RFx Type
+#| echo: false
+#| warning: false
+#| message: false
+
+# Calculate total awarded amounts by RFx Type and Small Business status
+rfx_award_distribution <- Contract_data %>%
+  group_by(RFx_Type, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  ungroup()
+
+# Bar Plot: Total Awarded Amount by Small vs. Large Businesses for each RFx Type
+ggplot(rfx_award_distribution, aes(x = RFx_Type, y = Total_Awarded, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  labs(title = "Total Awarded Amount by Small vs. Large Businesses for Each RFx Type",
+       x = "RFx Type",
+       y = "Total Awarded Amount ($)",
+       fill = "Small Business") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
 
 
 
+This box plot @fig-Boxplot shows the distribution of awarded contract amounts across various high-level procurement categories, such as Construction Services, Goods & Services, Offer to Purchase, and Professional Services.
+Observations:
+Construction Services has the widest range of contract amounts, with several high-value outliers above $75 million.
+Other categories, like Professional Services and Goods & Services, have much smaller awarded amounts overall, with tighter distributions and fewer high-value outliers.
+Offer to Purchase appears to have minimal representation in terms of awarded amounts.
 
-Looking at @fig-Boxplot, categories like "Construction Services" and "Professional Services" show a wide range of awarded amounts, with some outliers receiving significantly higher awards. Smaller categories (e.g., "Offer to Purchase") have fewer instances and seem to award comparatively smaller amounts. This indicates potential concentration of funding in certain categories, which may not benefit small businesses.
 ```{r}
 #| label: fig-Boxplot
 #| fig-cap: Awarded Amounts by High-Level Category
@@ -250,7 +250,7 @@ Looking at @fig-Boxplot, categories like "Construction Services" and "Profession
 ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = High_Level_Category)) +
   geom_boxplot(show.legend = FALSE) +
   scale_y_continuous(labels = dollar_format()) +
-  labs(title = "Distribution of Awarded Amounts by Category",
+  labs(title = "Distribution of Awarded Amounts by High-Level Category",
        x = "Category",
        y = "Awarded Amount ($)") +
   theme_minimal() +
@@ -259,11 +259,13 @@ ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = Hi
 
 ```
 
-@fig-bar1, Across most categories, the representation of small businesses is minimal compared to large businesses.Notably, in the "Offer to Purchase" category, there seems to be equal representation of small and large businesses. This could imply specific policies or practices in that category that favor small businesses.
-
+This bar chart @fig-bar4 visualizes the proportion of contracts awarded to small businesses (in blue) versus large businesses (in red) across the same high-level procurement categories.
+Observations:
+Construction Services and Professional Services have a significant portion of contracts awarded to large businesses, indicating potential barriers for small business participation.
+In contrast, Goods & Services and Offer to Purchase categories have a higher representation of small businesses, suggesting that these categories are more accessible to smaller enterprises.
 ```{r}
-#| label: fig-bar1
-#| fig-cap: Awarded Amounts Over Time
+#| label: fig-bar4
+#| fig-cap: Proportion of Small vs. Large Businesses by High-Level Category
 #| echo: false
 #| warning: false
 #| message: false
@@ -287,12 +289,42 @@ ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill =
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+```
 
+This graph @fig-bar6 underscores the substantial role small businesses play in construction and professional services, challenging assumptions that large firms consistently dominate high-value contracts. However, the absence of awarded amounts under "Offer to Purchase" suggests the need for further investigation into how this category functions within procurement practices.
+
+```{r}
+#| label: fig-bar6
+#| fig-cap: Total Awarded Amount by Small vs. Large Businesses for each RFx Type
+#| echo: false
+#| warning: false
+#| message: false
+
+# Calculate total awarded amounts by RFx Type and Small Business status
+rfx_award_distribution <- Contract_data %>%
+  group_by(High_Level_Category, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  ungroup()
+
+# Bar Plot: Total Awarded Amount by Small vs. Large Businesses for each RFx Type
+ggplot(rfx_award_distribution, aes(x = High_Level_Category, y = Total_Awarded, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  labs(title = "Total Awarded Amount by Small vs. Large Businesses for Each High Level Category",
+       x = "High Level Category",
+       y = "Total Awarded Amount ($)",
+       fill = "Small Business") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ```
 
+This line graph @fig-Timeseries illustrates the awarded amounts to small (labeled "TRUE") and large (labeled "FALSE") businesses over time (on a monthly basis). Key observations include:
 
-Looking at @fig-Timeseries, large businesses consistently receive significantly higher awarded amounts compared to small businesses. The awarded amounts to small businesses remain relatively stable over time, showing minimal fluctuation. This highlights the dominance of large businesses in the procurement process.
+Dominance of Large Businesses: Large businesses consistently secure higher awarded amounts than small businesses throughout the analyzed time period.
+Fluctuations in Awarded Amounts: Both business types experience fluctuations in awarded amounts over time, with notable peaks for large businesses, particularly in mid-2023 and mid-2024.
+Growth for Small Businesses: Despite lower totals overall, the awarded amounts for small businesses show occasional spikes, indicating their competitive presence in certain months.
+This graph highlights the disparity in procurement awards, suggesting that while small businesses participate, they often face structural disadvantages compared to larger entities.
 ```{r}
 #| label: fig-Timeseries
 #| fig-cap: Awarded Amounts Over Time
@@ -326,7 +358,11 @@ ggplot(time_series_data, aes(x = Month, y = Total_Awarded, color = Small_Busines
 
 ```
 
-@fig-TimeseriesSmall, the scatterplot shows awarded amounts to small businesses distributed across time, with no clear upward or downward trend. The shaded confidence interval around the regression line suggests high uncertainty in predicting changes over time. Overall, there is no strong evidence of growth or decline in the awarded amounts to small businesses.
+This scatter plot with a regression line @fig-TimeseriesSmall focuses on the awarded amounts to small businesses over time and reveals:
+
+Positive Trend: The red regression line shows a gradual increase in awarded amounts to small businesses over time, suggesting a slight improvement in their procurement outcomes.
+Variance in Data: The wide spread of data points around the regression line indicates variability in the awarded amounts, implying that certain months see much higher or lower awards than others.
+This graph suggests an encouraging trend for small businesses but also highlights inconsistency, underscoring the need for policy interventions to ensure sustained growth.
 ```{r}
 
 #| label: fig-TimeseriesSmall
@@ -372,8 +408,11 @@ ggplot(regression_data, aes(x = Month, y = Total_Awarded)) +
 
 A logistic regression model can help assess the factors influencing whether a contract is awarded to a small business.
 
-In regression result @tbl-Table2, coefficients indicate how the likelihood of a contract being awarded to a small business changes with variables like Awarded_Amount, RFx_Type, and High_Level_Category.
-Significant p-values for predictors suggest they have an impact on the outcome.
+In regression result @tbl-Table2, examines how factors like RFx type, high-level category, and awarded amount affect small business contract awards. Key findings include:
+
+Significant Barriers: Larger awarded amounts and categories like "Goods and Services" and "Professional Services" negatively impact small business participation, indicating structural challenges.
+RFx Types: No RFx type shows a statistically significant impact, suggesting that other systemic factors (e.g., eligibility criteria) influence outcomes.
+Implications: The results highlight barriers for small businesses in high-value contracts, emphasizing the need for targeted reforms to improve access and equity in procurement.
 
 ```{r}
 #| label: tbl-Table2
@@ -386,7 +425,6 @@ Significant p-values for predictors suggest they have an impact on the outcome.
 log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
                  data = Contract_data, family = binomial)
 
-summary(log_model)
 # Tidy the model output for a table
 log_model_summary <- broom::tidy(log_model)
 
@@ -415,18 +453,56 @@ log_model_summary %>%
 
 ## Equitable Representation Across RFx Types {#sec-first-point}
 
-The analysis of supplier representation across different RFx types highlights important trends and disparities in Toronto's public procurement system. Small businesses are well-represented in RFQ (Request for Quotation), RFP (Request for Proposal), and RFSQ (Request for Supplier Qualification) processes, suggesting that these procurement methods are more accessible due to potentially lower barriers to entry or more flexible requirements. However, large businesses dominate RFT (Request for Tender) contracts, which account for the majority of procurement spending, exceeding $1.2 billion. This imbalance points to structural challenges for small businesses, as RFT contracts often involve stringent qualification criteria or large-scale projects that may favor larger, more established firms. The limited representation of small businesses in RFTs underscores the need for more equitable procurement practices, particularly in high-value tenders.
+The analysis of supplier representation across different RFx types, as shown in the graphs, highlights significant trends and disparities in Toronto's public procurement system. Small businesses are notably well-represented in RFQ (Request for Quotation), RFP (Request for Proposal), and RFSQ (Request for Supplier Qualification) processes, indicating that these procurement methods may offer more accessible entry points due to lower barriers or more flexible requirements. This is reflected in the proportional graph, where small businesses consistently account for a significant share of awarded contracts in these RFx types.
 
-To address these disparities, targeted policy interventions are necessary. Simplifying bidding requirements for RFT contracts and creating set-aside opportunities for small businesses could help level the playing field. Additionally, encouraging large firms to subcontract with smaller enterprises can foster more inclusive participation. These measures, coupled with enhanced outreach and support programs, can ensure that Toronto’s procurement processes better reflect the principles of equity and inclusivity, offering fair opportunities to businesses of all sizes while optimizing the diversity of its supplier base.
+However, the dominance of large businesses in RFT (Request for Tender) contracts reveals an important equity concern. As illustrated in the total awarded amounts graph, RFT contracts account for the highest share of procurement spending, exceeding $1.2 billion. The majority of these funds are awarded to large businesses, signaling structural barriers for smaller firms. RFT contracts often involve large-scale projects or stringent qualification criteria, which can exclude smaller suppliers who lack the resources or capacity to meet these demands. This limited participation by small businesses in RFTs highlights a critical disparity in the distribution of high-value procurement opportunities.
 
-The analysis reveals that small businesses are well-represented in RFQ (Request for Quotation), RFP (Request for Proposal), and RFSQ (Request for Supplier Qualification) processes, suggesting these procurement types may be more accessible due to lower thresholds or flexible requirements. However, the dominance of large businesses in RFT (Request for Tender) contracts raises equity concerns, as these tenders account for the highest awarded amounts and may limit opportunities for smaller firms. The disparity highlights structural barriers, such as stringent qualification criteria or large-scale project scopes, that could disadvantage small businesses in accessing RFT opportunities. This imbalance underscores the need to reevaluate procurement processes to ensure fair access across all RFx types. Exploring RFT qualification criteria could uncover areas for policy adjustments to enhance inclusivity. Simplifying bidding requirements, introducing targeted outreach programs, and setting aside a portion of high-value tenders for small businesses are actionable strategies to address these challenges. Additionally, encouraging large firms to subcontract with smaller suppliers could further foster equitable participation. By implementing these measures, Toronto’s procurement system can better balance supplier representation, ensuring that public contracts promote equity, inclusion, and diverse economic growth.
+The implications of these findings underscore the urgent need for targeted policy interventions. Simplifying bidding requirements for RFT contracts could lower barriers for small businesses, while creating set-aside opportunities specifically for smaller firms would ensure a more equitable distribution of high-value contracts. Furthermore, policies encouraging larger firms to subcontract with small enterprises could provide an additional pathway for inclusion. Enhanced outreach and support programs—focused on training, guidance, and awareness—would also equip small businesses to compete more effectively in these tenders.
+
+Together, these measures can transform Toronto’s procurement system to better embody the principles of equity and inclusivity. By addressing disparities across RFx types, the city can foster fair opportunities for businesses of all sizes and strengthen the diversity and resilience of its supplier base.
 
 
-##  {#sec-second-point}
+## Supplier Equity Across High-Level Categories {#sec-second-point}
+
+The analysis of awarded contract amounts and supplier participation across high-level procurement categories reveals significant trends relevant to equitable representation in Toronto’s public procurement system.
+
+Disparities in Award Distribution
+@fig-Boxplot, illustrating the distribution of awarded amounts by high-level category, shows that Construction Services dominates procurement in terms of contract value. This category includes numerous high-value outliers exceeding $75 million, reflecting the capital-intensive nature of infrastructure projects. These projects often require substantial financial and operational capacity, favoring larger businesses. In contrast, categories like Goods & Services and Professional Services exhibit tighter distributions with lower average awarded amounts, indicating more equitable contract allocations across businesses of various sizes.
+
+@fig-bar6, which examines total awarded amounts for small and large businesses across high-level categories, highlights the dominance of small businesses in Construction Services, with total awards nearing $1.2 billion, compared to $300 million for large businesses. This suggests that small businesses play a significant role and are highly competitive within this high-value category. Similarly, in Goods & Services, small businesses receive slightly less than $300 million, while large businesses account for less than $150 million, again showing strong representation by small enterprises. The Professional Services category mirrors this trend, with small businesses securing more total awarded amounts than large businesses, which is noteworthy given the specialized nature of this category. The Offer to Purchase category, however, has no awarded amounts, suggesting either limited use within the dataset or an underrepresentation in procurement, which warrants further investigation.
+
+Small vs. Large Business Representation
+ @fig-bar4, showing proportions of small and large businesses by category, reveals that small businesses maintain strong representation in Construction Services, despite its capital-intensive nature. However, in Professional Services, large businesses show a higher proportion of awards, likely due to specialized technical expertise or operational scale. Goods & Services demonstrates a more balanced representation, where small businesses capture a significant share of contracts, reflecting fewer barriers to entry in this category. The lack of activity in the Offer to Purchase category requires further exploration to understand its relevance within procurement.
+
+Implications for Equity in Procurement
+These trends highlight important equity considerations. The strong performance of small businesses in Construction Services challenges assumptions that high-value categories exclusively benefit large firms. Small businesses also exhibit competitive success in Professional Services, disputing the notion that specialized or high-value categories are only accessible to larger companies. Conversely, Goods & Services appears to offer more equitable access to small businesses, further suggesting that lower-value contracts may have fewer entry barriers. However, the Offer to Purchase category, with no awarded amounts, requires deeper examination to determine whether it represents a missed opportunity for small businesses or simply has limited procurement activity.
+
+Recommendations to Address Disparities
+To foster greater equity in procurement across high-level categories:
+
+- Simplify Bidding Requirements: Streamlining requirements for Construction Services and Professional Services could lower entry barriers for small businesses, facilitating more inclusive participation.
+- Introduce Set-Asides: Allocating a portion of contracts in high-value categories for small or diverse suppliers could improve inclusivity.
+- Encourage Subcontracting: Requiring large firms to subcontract work to small businesses distributes economic benefits more broadly.
+- Capacity-Building Programs: Offering technical training, financial assistance, and mentorship for small businesses can empower them to compete in high-value categories.
 
 
-##  {#sec-thrid-point}
+By addressing these challenges, Toronto’s procurement system can better balance representation and ensure fair opportunities for businesses of all sizes and backgrounds. These findings reinforce the importance of refining procurement policies to advance equity and inclusivity across all high-level categories.
 
+## Trends in Small Business and Diverse Supplier Representation {#sec-thrid-point}
+
+The analysis of procurement data sheds light on trends in award amounts and supplier participation, revealing critical insights into the equitable representation of small businesses and diverse suppliers in contract awards.
+
+Unequal Representation in Award Amounts
+The "Total Awarded Amount by Small vs. Large Businesses for Each RFx Type" graph reveals a significant disparity in awarded amounts across procurement types. While small businesses show meaningful participation in RFQ (Request for Quotation) and RFP (Request for Proposal) contracts, large businesses dominate high-value RFT (Request for Tender) contracts. This trend suggests that procurement processes for high-value contracts pose barriers for small businesses, possibly due to complex requirements, higher capital needs, or economies of scale favoring larger firms.
+
+Fluctuating Participation Over Time
+The "Awarded Amount to Small vs. Large Businesses Over Time" graph indicates that small business participation fluctuates significantly, with occasional spikes in awarded amounts. These spikes suggest temporary efforts to engage small businesses in the procurement process, but the lack of consistency indicates systemic challenges in sustaining equitable participation. Large businesses, in contrast, demonstrate a steadier pattern of dominance across time.
+
+Insights from Regression Analysis
+The regression analysis confirms structural inequities. Contracts with higher awarded amounts are less likely to be awarded to small businesses, and certain categories, such as "Professional Services," show a similar bias. While the RFx type itself does not significantly impact the likelihood of small business success, the observed trends point to persistent structural barriers limiting equitable access to high-value opportunities for small and diverse suppliers.
+
+Implications and Recommendations
+These findings highlight a need for targeted reforms in Toronto’s procurement practices. Simplifying bidding requirements, particularly for RFT contracts, and introducing small business set-asides or quotas could address systemic inequities. Further, fostering subcontracting relationships between large and small firms and providing support programs for small businesses can enhance their competitiveness. A more equitable representation of small and diverse suppliers not only aligns with principles of inclusivity but also enriches the procurement ecosystem by encouraging innovation and broader economic participation.
 
 
 ## Weaknesses and next steps
@@ -500,22 +576,6 @@ Jacobs Consultancy Canada Inc
 Stericycle, Ulc
 
 This list is now ready for use in your R code. Let me know if you need it in a specific format! 
-
-# Model details {#sec-model-details}
-
-## Posterior predictive check
-
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
-
-
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
 
 
 \newpage
