@@ -53,10 +53,62 @@ contract_cleaned <- contract_cleaned %>%
     Division
   )
 
-# Step 7: Optional - Classify small businesses based on Awarded_Amount (threshold example: 500,000)
-small_business_threshold <- 500000  # Define the threshold for small business classification
+#### Step 7: Classify small businesses ####
+# List of big businesses (your provided list)
+big_business_list <- c(
+  "Guillevin International Co.",
+  "Sysco",
+  "Sysco Toronto, A Division Of Sysco Canada Inc.",
+  "Stantec Consulting Ltd",
+  "Kpmg Llp",
+  "Kpmg",
+  "Bennett Mechanical Installations",
+  "Fer-Pal Construction Ltd.",
+  "Wsp Canada Inc",
+  "Black And Mcdonald Limited",
+  "Thermo Fisher Scientific",
+  "Sutherland-Schultz Ltd.",
+  "Morrison Hershfield Ltd",
+  "Morrison Hershfield",
+  "Metro Freightliner Hamilton Inc",
+  "Ricoh Canada Inc",
+  "Altus Group Limited",
+  "Kroll Consulting Canada Co.",
+  "Suncorp Valuations",
+  "Logixx Security Inc",
+  "Garda Canada Security Corporation",
+  "Drake International Inc",
+  "Bevertec Cst Inc",
+  "Aecom Canada Ltd",
+  "Stericycle Ulc",
+  "Schindler Elevator Corporation",
+  "Graham Bros. Construction Limited",
+  "Morrison Hershfield Limited",
+  "Softchoice Lp",
+  "Damen Shipbuilding 5 B.v.",
+  "Graham Bros Construction Ltd.",
+  "Gartner Canada",
+  "Parsons Inc",
+  "Jacobs Consultancy Canada Inc",
+  "Stericycle, Ulc"
+)
+
+# Ensure the Successful_Supplier column is character type and remove extra spaces
+contract_cleaned$Successful_Supplier <- str_trim(as.character(contract_cleaned$Successful_Supplier))
+
+# Create a new column for the lowercase version of the Successful_Supplier
+contract_cleaned$Lowercase_Supplier <- tolower(contract_cleaned$Successful_Supplier)
+
+# Perform the comparison to classify as Small_Business
+contract_cleaned$Small_Business <- ifelse(
+  contract_cleaned$Lowercase_Supplier %in% tolower(big_business_list), 
+  FALSE,  # If the supplier (in lowercase) is in the big business list, it's not a small business
+  TRUE    # Otherwise, it's considered a small business
+)
+
+# Optionally, remove the Lowercase_Supplier column after classification
 contract_cleaned <- contract_cleaned %>%
-  mutate(Small_Business = ifelse(Awarded_Amount <= small_business_threshold, TRUE, FALSE))
+  select(-Lowercase_Supplier)
 
 # Step 8: Check for any remaining missing values after the cleaning process
 summary(contract_cleaned)  # Summary of cleaned data
@@ -67,4 +119,4 @@ write_csv(contract_cleaned, "data/02-analysis_data/analysis_data.csv")
 # Preview the cleaned data
 head(contract_cleaned)
 
-median(contract_cleaned$Awarded_Amount)
+

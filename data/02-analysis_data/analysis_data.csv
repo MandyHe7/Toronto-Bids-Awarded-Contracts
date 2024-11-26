@@ -1,35 +1,35 @@
 unique_id,Document_Number,RFx_Type,High_Level_Category,Successful_Supplier,Awarded_Amount,Award_Date,Division,Small_Business
-b347eaf5-9744-44b3-a5d2-a2f9a8a09395_1,Doc3718447124,RFQ,Goods and Services,Asplundh Canada Ulc,5952260.16,2023-07-11,"Parks, Forestry & Recreation",FALSE
-b347eaf5-9744-44b3-a5d2-a2f9a8a09395_2,Doc3718447124,RFQ,Goods and Services,Diamond Tree Care & Consulting Inc.,4941090,2023-07-11,"Parks, Forestry & Recreation",FALSE
-b347eaf5-9744-44b3-a5d2-a2f9a8a09395_3,Doc3718447124,RFQ,Goods and Services,Weller Tree Service Ltd,31395898.38,2023-07-11,"Parks, Forestry & Recreation",FALSE
-b347eaf5-9744-44b3-a5d2-a2f9a8a09395_4,Doc3718447124,RFQ,Goods and Services,Davey Tree Expert Co,12054355.47,2023-07-11,"Parks, Forestry & Recreation",FALSE
-59b756d8-1a3d-4d46-a361-8d7f41fcab63_1,Doc3220681346,RFP,Professional Services,Eplansoft,1580950,2023-05-04,City Manager's Office,FALSE
-e49e2059-4f41-44f9-a24b-83c49b4df1d7_1,Doc3872270278,RFP,Professional Services,Enterprise Rent A Car Canada,7396945.92,2023-10-01,Fleet Services,FALSE
-f01b98d3-94d1-46dc-8408-146efd2239b4_1,Doc3704322859,RFT,Construction Services,1246175 Ontario Limited O/A Active Mechanical Services,3414610.1,2023-03-06,Corporate Real Estate Management,FALSE
-66332222-5a9a-4c57-ab55-8169b5e57570_1,Doc3784053932,RFT,Construction Services,Struct-Con Construction Ltd,862431.92,2023-06-29,Corporate Real Estate Management,FALSE
-5bd55eeb-3387-402d-8652-8f3c7662b186_1,Doc3851217981,RFP,Construction Services,Struct-Con Construction Ltd,821262,2023-12-18,Corporate Real Estate Management,FALSE
+b347eaf5-9744-44b3-a5d2-a2f9a8a09395_1,Doc3718447124,RFQ,Goods and Services,Asplundh Canada Ulc,5952260.16,2023-07-11,"Parks, Forestry & Recreation",TRUE
+b347eaf5-9744-44b3-a5d2-a2f9a8a09395_2,Doc3718447124,RFQ,Goods and Services,Diamond Tree Care & Consulting Inc.,4941090,2023-07-11,"Parks, Forestry & Recreation",TRUE
+b347eaf5-9744-44b3-a5d2-a2f9a8a09395_3,Doc3718447124,RFQ,Goods and Services,Weller Tree Service Ltd,31395898.38,2023-07-11,"Parks, Forestry & Recreation",TRUE
+b347eaf5-9744-44b3-a5d2-a2f9a8a09395_4,Doc3718447124,RFQ,Goods and Services,Davey Tree Expert Co,12054355.47,2023-07-11,"Parks, Forestry & Recreation",TRUE
+59b756d8-1a3d-4d46-a361-8d7f41fcab63_1,Doc3220681346,RFP,Professional Services,Eplansoft,1580950,2023-05-04,City Manager's Office,TRUE
+e49e2059-4f41-44f9-a24b-83c49b4df1d7_1,Doc3872270278,RFP,Professional Services,Enterprise Rent A Car Canada,7396945.92,2023-10-01,Fleet Services,TRUE
+f01b98d3-94d1-46dc-8408-146efd2239b4_1,Doc3704322859,RFT,Construction Services,1246175 Ontario Limited O/A Active Mechanical Services,3414610.1,2023-03-06,Corporate Real Estate Management,TRUE
+66332222-5a9a-4c57-ab55-8169b5e57570_1,Doc3784053932,RFT,Construction Services,Struct-Con Construction Ltd,862431.92,2023-06-29,Corporate Real Estate Management,TRUE
+5bd55eeb-3387-402d-8652-8f3c7662b186_1,Doc3851217981,RFP,Construction Services,Struct-Con Construction Ltd,821262,2023-12-18,Corporate Real Estate Management,TRUE
 ea88f4cf-8fde-4548-9fb2-d488b0a2b5d1_1,Doc3887078310,RFT,Construction Services,Ag Reat Construction Co Ltd,439620,2023-07-24,Corporate Real Estate Management,TRUE
-4b5f1184-493b-4abf-912d-f960dc6a3fc3_1,Doc3951063187,RFP,Construction Services,Phoenix Restoration Inc.,3968335,2023-12-05,Corporate Real Estate Management,FALSE
-e1ea7b3b-3d09-4f98-85dd-ec0815095ada_1,Doc4053485379,RFT,Construction Services,Joe Pace & Sons Contracting Inc,1101469,2023-08-02,Employment & Social Services,FALSE
-f24c9099-41a1-41ff-b3a2-db25e0d7e367_1,Doc4146032905,RFT,Construction Services,Rossclair Contractors Inc,15356110.92,2024-04-03,"Corporate Real Estate Management,Shelter, Support & Housing Administration",FALSE
-bffe2985-f43a-4764-a7cb-6b3b1292f434_1,Doc4222047669,RFT,Construction Services,Anacond Contracting Inc,2382000,2024-01-25,Corporate Real Estate Management,FALSE
-95067eb9-cfbe-4dd6-b2d2-c91233e8d59a_1,Doc4222047669,RFT,Construction Services,Anacond Contracting Inc,2382000,2024-01-25,Corporate Real Estate Management,FALSE
-b9d28a21-27f6-481a-a948-c75f1a0a1bf9_1,Doc4273922673,RFQ,Construction Services,Active Mechanical Services,16928693,2024-04-05,Corporate Real Estate Management,FALSE
-f02062b0-b1dd-44f8-bc66-8627c63d831f_1,Doc4294367814,RFQ,Construction Services,"State Group Inc, The",4183174.95,2024-03-01,Corporate Real Estate Management,FALSE
-1cba390f-f7f4-4e95-8270-c7433a0a556d_1,Doc4339591498,RFT,Construction Services,Mj Dixon Construction,3342084,2024-04-12,Corporate Real Estate Management,FALSE
+4b5f1184-493b-4abf-912d-f960dc6a3fc3_1,Doc3951063187,RFP,Construction Services,Phoenix Restoration Inc.,3968335,2023-12-05,Corporate Real Estate Management,TRUE
+e1ea7b3b-3d09-4f98-85dd-ec0815095ada_1,Doc4053485379,RFT,Construction Services,Joe Pace & Sons Contracting Inc,1101469,2023-08-02,Employment & Social Services,TRUE
+f24c9099-41a1-41ff-b3a2-db25e0d7e367_1,Doc4146032905,RFT,Construction Services,Rossclair Contractors Inc,15356110.92,2024-04-03,"Corporate Real Estate Management,Shelter, Support & Housing Administration",TRUE
+bffe2985-f43a-4764-a7cb-6b3b1292f434_1,Doc4222047669,RFT,Construction Services,Anacond Contracting Inc,2382000,2024-01-25,Corporate Real Estate Management,TRUE
+95067eb9-cfbe-4dd6-b2d2-c91233e8d59a_1,Doc4222047669,RFT,Construction Services,Anacond Contracting Inc,2382000,2024-01-25,Corporate Real Estate Management,TRUE
+b9d28a21-27f6-481a-a948-c75f1a0a1bf9_1,Doc4273922673,RFQ,Construction Services,Active Mechanical Services,16928693,2024-04-05,Corporate Real Estate Management,TRUE
+f02062b0-b1dd-44f8-bc66-8627c63d831f_1,Doc4294367814,RFQ,Construction Services,"State Group Inc, The",4183174.95,2024-03-01,Corporate Real Estate Management,TRUE
+1cba390f-f7f4-4e95-8270-c7433a0a556d_1,Doc4339591498,RFT,Construction Services,Mj Dixon Construction,3342084,2024-04-12,Corporate Real Estate Management,TRUE
 ac3bc7bc-b1c7-4f9b-8e5f-96b795863ae7_1,Doc3559742620,RFQ,Goods and Services,Season Group,48895.5,2023-05-15,Purchasing & Materials Management,TRUE
-898072d0-4fb6-4461-989c-75c6fa5889fb_1,Doc3644811133,RFQ,Goods and Services,Executive Mat Service Ltd.,606346,2023-06-06,Facilities Management,FALSE
+898072d0-4fb6-4461-989c-75c6fa5889fb_1,Doc3644811133,RFQ,Goods and Services,Executive Mat Service Ltd.,606346,2023-06-06,Facilities Management,TRUE
 898072d0-4fb6-4461-989c-75c6fa5889fb_2,Doc3644811133,RFQ,Goods and Services,Canadian Linen And Uniform Service,333021,2023-06-06,Facilities Management,TRUE
 9bb867c0-9f86-4003-96d8-fc74644e7a99_1,Doc3651438152,RFQ,Goods and Services,Sqm Janitorial Services Inc.,25410,2023-06-02,Fleet Services,TRUE
 55db28a2-7884-4ebf-b811-1d8dc4c83cab_1,Doc3658545225,RFQ,Goods and Services,Flint Packaging Products,130020.5,2022-12-23,Purchasing & Materials Management,TRUE
 75c2139b-879d-4432-bc87-5454e3890ee8_1,Doc3663023471,RFQ,Goods and Services,Blended Perspectives Inc.,98933.2,2022-12-08,Information & Technology,TRUE
 410c0a33-6e9c-4fb5-b55c-a38cd8f42e0a_1,Doc3685082826,RFQ,Goods and Services,Compugen Inc,308602,2023-02-03,Toronto Water,TRUE
-94cbc5e7-3105-400f-9bbc-b3b4739deea3_1,Doc3694847548,RFQ,Goods and Services,The Armstrong Monitoring Corporation,3623389.72,2023-06-05,Corporate Real Estate Management,FALSE
+94cbc5e7-3105-400f-9bbc-b3b4739deea3_1,Doc3694847548,RFQ,Goods and Services,The Armstrong Monitoring Corporation,3623389.72,2023-06-05,Corporate Real Estate Management,TRUE
 9d3be0d7-3208-46b9-b6cd-ea28db2c3374_1,Doc3705834625,RFQ,Goods and Services,Dls Technology Corporation,116555.4,2023-02-03,Technology Services,TRUE
 77e7d7ff-6e86-4af4-80f8-41281cd94f60_1,Doc3705834628,RFQ,Goods and Services,Mid-Ontario Truck Centre,350384,2023-08-09,Fleet Services,TRUE
 77e7d7ff-6e86-4af4-80f8-41281cd94f60_2,Doc3705834628,RFQ,Goods and Services,1106499 Ontario Limited Kiff Auto,164426.23,2023-08-09,Fleet Services,TRUE
-63e7cf83-4309-4527-a95e-9c5543a47c0b_1,Doc3711927335,RFQ,Goods and Services,Wilcox Door Service Inc,4667240,2023-05-08,Corporate Real Estate Management,FALSE
-68f3740d-8406-40cd-9058-d42ab6111bb2_1,Doc3739766347,RFQ,Goods and Services,Kooy Brothers Lawn Equipment Ltd,1311170,2023-03-15,Fleet Services,FALSE
+63e7cf83-4309-4527-a95e-9c5543a47c0b_1,Doc3711927335,RFQ,Goods and Services,Wilcox Door Service Inc,4667240,2023-05-08,Corporate Real Estate Management,TRUE
+68f3740d-8406-40cd-9058-d42ab6111bb2_1,Doc3739766347,RFQ,Goods and Services,Kooy Brothers Lawn Equipment Ltd,1311170,2023-03-15,Fleet Services,TRUE
 db97f307-9a7c-4270-b9e8-9d6fd60b6ca1_1,Doc3742825440,RFQ,Goods and Services,Nexgen Municipal Inc,277053.93,2023-04-26,Fleet Services,TRUE
 db97f307-9a7c-4270-b9e8-9d6fd60b6ca1_2,Doc3742825440,RFQ,Goods and Services,Joe Johnson Equipment,373154.23,2023-04-26,Fleet Services,TRUE
 dc057576-3aad-4431-90a6-ddbd1f5dcd8e_1,Doc3762762006,RFQ,Goods and Services,Gk Chemical Specialties Co,335351,2023-07-14,Purchasing & Materials Management,TRUE
@@ -39,16 +39,16 @@ dc057576-3aad-4431-90a6-ddbd1f5dcd8e_1,Doc3762762006,RFQ,Goods and Services,Gk C
 77c1a3e8-7b33-4a3e-be2f-0ca2aeeff4f7_2,Doc3782989921,RFQ,Goods and Services,Consolidated Automotive Resources Group Ltd. O/A Mastertech Auto Body & Service Centre,10779,2023-07-13,Fleet Services,TRUE
 77c1a3e8-7b33-4a3e-be2f-0ca2aeeff4f7_3,Doc3782989921,RFQ,Goods and Services,Calisi Motors Ltd. O/A Sherway Collision,20339,2023-07-13,Fleet Services,TRUE
 72762d75-e0c6-46db-abb2-31ba9769dced_1,Doc3789114567,RFQ,Goods and Services,O-Two Medical Technologies Inc.,93696.84,2023-10-10,Purchasing & Materials Management,TRUE
-c52c1b35-6819-4b58-8c94-e067912bd9fa_1,Doc3802177840,RFQ,Goods and Services,Bio Nuclear Diagnostics Inc,1468800,2023-11-06,Purchasing & Materials Management,FALSE
-012af415-807f-4c09-901c-e55946144c79_1,Doc3821226770,RFQ,Goods and Services,Dican,813742,2023-07-10,Fleet Services,FALSE
+c52c1b35-6819-4b58-8c94-e067912bd9fa_1,Doc3802177840,RFQ,Goods and Services,Bio Nuclear Diagnostics Inc,1468800,2023-11-06,Purchasing & Materials Management,TRUE
+012af415-807f-4c09-901c-e55946144c79_1,Doc3821226770,RFQ,Goods and Services,Dican,813742,2023-07-10,Fleet Services,TRUE
 e0e65d88-1f87-4907-b03e-27dd396edc67_1,Doc3823001795,RFQ,Goods and Services,Humberview Chevrolet Buick Gmc,200279.12,2024-02-02,Fleet Services,TRUE
 d4fd879a-2a8e-4dce-8769-9f4c95a1981d_1,Doc3835302080,RFQ,Goods and Services,Guillevin International Co,26250,2023-03-29,Purchasing & Materials Management,TRUE
-6a098e45-0d21-411a-8c44-0e70c068894d_1,Doc3866496418,RFQ,Goods and Services,Anronn Electric Motor Repair,2830452,2023-06-07,"Corporate Real Estate Management,Parks, Forestry & Recreation,Solid Waste Management Services",FALSE
-9ba02dd2-1c1a-4684-8f0b-f4bee763f2b8_1,Doc3867153465,RFQ,Goods and Services,"Bell Canada O/A Bell, Bce Inc.",1500000,2023-08-01,Technology Services,FALSE
-6f20594a-3fbf-42ae-bb2a-9f26127f5d4c_1,Doc3867180767,RFQ,Goods and Services,Metro Freightliner Hamilton Inc. O/A Metro Truck Group,627881.13,2023-10-01,"Fire Services,Fleet Services,Toronto Paramedic Services",FALSE
+6a098e45-0d21-411a-8c44-0e70c068894d_1,Doc3866496418,RFQ,Goods and Services,Anronn Electric Motor Repair,2830452,2023-06-07,"Corporate Real Estate Management,Parks, Forestry & Recreation,Solid Waste Management Services",TRUE
+9ba02dd2-1c1a-4684-8f0b-f4bee763f2b8_1,Doc3867153465,RFQ,Goods and Services,"Bell Canada O/A Bell, Bce Inc.",1500000,2023-08-01,Technology Services,TRUE
+6f20594a-3fbf-42ae-bb2a-9f26127f5d4c_1,Doc3867180767,RFQ,Goods and Services,Metro Freightliner Hamilton Inc. O/A Metro Truck Group,627881.13,2023-10-01,"Fire Services,Fleet Services,Toronto Paramedic Services",TRUE
 6f20594a-3fbf-42ae-bb2a-9f26127f5d4c_2,Doc3867180767,RFQ,Goods and Services,Mid-Ontario Diesel Ltd. O/A Mid-Ontario Truck Centre,81394.61,2023-10-01,"Fire Services,Fleet Services,Toronto Paramedic Services",TRUE
 648d4737-c177-4ffc-ad16-f311a0897fbd_1,Doc3872445914,RFQ,Goods and Services,Enex Engraving,2703,2023-08-17,Purchasing & Materials Management,TRUE
-5ad00e18-279a-45f1-9fc1-e0ae03109e33_1,Doc3874199193,RFQ,Goods and Services,"2281610 Ontario Inc,Downtown Ford",5256791,2023-07-17,Fleet Services,FALSE
+5ad00e18-279a-45f1-9fc1-e0ae03109e33_1,Doc3874199193,RFQ,Goods and Services,"2281610 Ontario Inc,Downtown Ford",5256791,2023-07-17,Fleet Services,TRUE
 5c7d5079-34f3-46a8-a3c3-d85507c99336_1,Doc3899798857,RFQ,Goods and Services,Systems Plus,18443.04,2023-06-25,Purchasing & Materials Management,TRUE
 fe91f2f1-43fa-4bdb-b211-c8ff38a369ef_1,Doc3911935597,RFQ,Goods and Services,Supply Line O/A Supplyline Inc.,77975.34,2024-01-12,Purchasing & Materials Management,TRUE
 32091143-4cb1-4ff1-a5b4-8868fe6a7016_1,Doc3937572346,RFQ,Goods and Services,Southern Sanitation O/A Wasteco,214369.02,2023-08-10,Corporate Real Estate Management,TRUE
@@ -59,65 +59,65 @@ fe91f2f1-43fa-4bdb-b211-c8ff38a369ef_1,Doc3911935597,RFQ,Goods and Services,Supp
 4a7999a8-49e0-4c56-a88e-903a0071d72f_1,Doc4013351727,RFQ,Goods and Services,Bench Craft Leather Inc,36349.5,2023-08-28,Purchasing & Materials Management,TRUE
 8c096f69-e006-42fe-9785-3ede28639931_1,Doc4017442613,RFQ,Goods and Services,Amaco Construction Equipment Inc.,450107.07,2023-10-31,Fleet Services,TRUE
 eea29042-ea44-4a5c-aac9-a954cd84b71d_1,Doc4021850934,RFQ,Goods and Services,Downtown Auto Group,145935,2024-02-02,Fleet Services,TRUE
-aff49ec0-2684-42b9-9ec1-ab0eead36d75_1,Doc4022083487,RFQ,Goods and Services,Zamboni Company Limited,1541375,2023-09-02,Fleet Services,FALSE
+aff49ec0-2684-42b9-9ec1-ab0eead36d75_1,Doc4022083487,RFQ,Goods and Services,Zamboni Company Limited,1541375,2023-09-02,Fleet Services,TRUE
 bdc0b884-3746-42ef-b473-5a77c062b684_1,Doc4042320161,RFQ,Goods and Services,Talos Technologies Inc.,258400,2023-11-01,Office of the Chief Information SecurityÂ Officer (CISO),TRUE
-6086d3e2-c3db-4ff5-b922-af81396d55e3_1,Doc4044299808,RFQ,Goods and Services,Ontario Sewer Services Inc,1743525,2023-10-23,Corporate Real Estate Management,FALSE
-ca45559f-211e-46d6-958b-74aea29269a1_1,Doc4061519324,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,20000000,2024-03-12,Technology Services,FALSE
+6086d3e2-c3db-4ff5-b922-af81396d55e3_1,Doc4044299808,RFQ,Goods and Services,Ontario Sewer Services Inc,1743525,2023-10-23,Corporate Real Estate Management,TRUE
+ca45559f-211e-46d6-958b-74aea29269a1_1,Doc4061519324,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,20000000,2024-03-12,Technology Services,TRUE
 09a4e47a-950a-446c-8627-0c4621d86f7f_1,Doc4065677598,RFQ,Goods and Services,Flying Colours International,87526.8,2024-02-23,Purchasing & Materials Management,TRUE
 bbea2704-1d26-4eb0-95cd-52bddac8858f_1,Doc4092233201,RFQ,Goods and Services,Amaco Construction Equipment Inc.,76383.74,2024-02-02,Fleet Services,TRUE
-ce1c74b6-86bf-46d5-9f4b-6997951b1780_1,Doc4098225992,RFQ,Goods and Services,Mid-Ontario Truck Centre,5839528,2024-01-10,Fleet Services,FALSE
+ce1c74b6-86bf-46d5-9f4b-6997951b1780_1,Doc4098225992,RFQ,Goods and Services,Mid-Ontario Truck Centre,5839528,2024-01-10,Fleet Services,TRUE
 a973857d-5c30-45ea-b8c8-49ddac2cfa61_1,Doc4098286599,RFQ,Goods and Services,Douglas Powertech Enterprises Inc.,76266,2024-02-20,Fleet Services,TRUE
 1901d677-bfe9-4d1b-965d-d148351a7ef8_1,Doc4115631087,RFQ,Goods and Services,Stinson Equipment Ltd.,158540,2024-01-17,Fleet Services,TRUE
-d4801145-67b5-49bf-9642-dcdfcaf96f17_1,Doc4121435613,RFQ,Goods and Services,Nexgen Municipal Inc.,6788123.16,2024-01-02,Fleet Services,FALSE
+d4801145-67b5-49bf-9642-dcdfcaf96f17_1,Doc4121435613,RFQ,Goods and Services,Nexgen Municipal Inc.,6788123.16,2024-01-02,Fleet Services,TRUE
 563c471d-4acf-46df-9645-f4ccbf08a45a_1,Doc4125607314,RFQ,Goods and Services,Mcl - Mister Chemical Ltd,427994.78,2024-01-22,Purchasing & Materials Management,TRUE
-ce84ab84-dc9a-400c-8ee4-58e221e4bd61_1,Doc4147420668,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,5500000,2023-12-13,Technology Services,FALSE
+ce84ab84-dc9a-400c-8ee4-58e221e4bd61_1,Doc4147420668,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,5500000,2023-12-13,Technology Services,TRUE
 e7c4d287-c15f-4bb3-863c-1ddde4c16370_1,Doc4147794028,RFQ,Goods and Services,Leica Geosystems Ltd,46810.91,2023-12-12,Engineering & Construction Services,TRUE
-7220ed2c-de4f-4a19-bfa8-7ed0ad034a2d_1,Doc4219986026,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,721085,2024-01-08,"Technology Services,Toronto Water",FALSE
+7220ed2c-de4f-4a19-bfa8-7ed0ad034a2d_1,Doc4219986026,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,721085,2024-01-08,"Technology Services,Toronto Water",TRUE
 8c85c3bf-8608-473f-ae13-fde4a611dfa0_1,Doc4220437372,RFQ,Goods and Services,Solid Caddgroup Inc,72000,2023-12-29,"Technology Services,Transportation Services",TRUE
-718f4026-bac9-4ca2-9d3c-859934c9dfdf_1,Doc4223502235,RFQ,Goods and Services,Rush Truck Centres Of Canada,929274,2024-02-02,Fleet Services,FALSE
+718f4026-bac9-4ca2-9d3c-859934c9dfdf_1,Doc4223502235,RFQ,Goods and Services,Rush Truck Centres Of Canada,929274,2024-02-02,Fleet Services,TRUE
 4bac06fa-6f88-4693-9ec9-02b595dc4b72_1,Doc4229796762,RFQ,Goods and Services,Via Trailers Bolton,36643,2024-01-22,Fleet Services,TRUE
 51f45ad0-b7bc-4655-ae6d-1aeca487b2b6_1,Doc4265277247,RFQ,Goods and Services,Pillar Tapes Ltd,82150.5,2024-05-03,Purchasing & Materials Management,TRUE
 78df6d2f-b4aa-41bb-bf2b-d2d0911ae26a_1,Doc4392014769,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,333429.45,2024-05-16,Technology Services,TRUE
-fa157649-60fb-4807-bae2-1c19090d4f37_1,Doc4419884982,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,855032,2024-05-03,Technology Services,FALSE
+fa157649-60fb-4807-bae2-1c19090d4f37_1,Doc4419884982,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,855032,2024-05-03,Technology Services,TRUE
 5a88174a-54e4-468d-9d64-543c476f2f29_1,Doc3642029322,RFP,Professional Services,Aon Solutions Canada Inc.,105000,2023-01-31,Finance & Treasury Services,TRUE
 1656d6b3-5fa7-4014-b50d-fa284ffcdcaa_1,Doc3688381332,RFP,Professional Services,Speridian Technologies Canada Inc,96000,2023-01-17,Technology Services,TRUE
 04656202-dada-4257-a77b-b268fe55179b_1,Doc3739692143,RFP,Professional Services,Read Jones Christoffersen Ltd,41300,2023-01-06,Corporate Real Estate Management,TRUE
-dd2d801a-7c6f-4dae-bcdd-1e8483ce474e_1,Doc3743106956,RFP,Professional Services,Ipss Inc.,513862.61,2023-02-16,Technology Services,FALSE
+dd2d801a-7c6f-4dae-bcdd-1e8483ce474e_1,Doc3743106956,RFP,Professional Services,Ipss Inc.,513862.61,2023-02-16,Technology Services,TRUE
 825d3ef7-a141-456b-8e54-818b0bede402_1,Doc3756696071,RFP,Professional Services,Quasar Consulting Group Inc,44911,2023-02-15,Real Estate Services,TRUE
 ce137fb5-fceb-4be5-bd20-dc7fe8a44662_1,Doc3780879082,RFP,Professional Services,Cherie Ng Architect Inc,38888,2023-04-28,Corporate Real Estate Management,TRUE
-cbfa3c62-2fdb-4c91-9987-98bac70e9a07_1,Doc3841985700,RFP,Professional Services,Johnson Controls Ltd,844575,2023-07-26,Corporate Real Estate Management,FALSE
-cbfa3c62-2fdb-4c91-9987-98bac70e9a07_2,Doc3841985700,RFP,Professional Services,Vipond Inc,844575,2023-07-26,Corporate Real Estate Management,FALSE
-cbfa3c62-2fdb-4c91-9987-98bac70e9a07_3,Doc3841985700,RFP,Professional Services,Met-Scan Canada Ltd,844575,2023-07-26,Corporate Real Estate Management,FALSE
-cbfa3c62-2fdb-4c91-9987-98bac70e9a07_4,Doc3841985700,RFP,Professional Services,Paladin Technologies Inc,844575,2023-07-26,Corporate Real Estate Management,FALSE
+cbfa3c62-2fdb-4c91-9987-98bac70e9a07_1,Doc3841985700,RFP,Professional Services,Johnson Controls Ltd,844575,2023-07-26,Corporate Real Estate Management,TRUE
+cbfa3c62-2fdb-4c91-9987-98bac70e9a07_2,Doc3841985700,RFP,Professional Services,Vipond Inc,844575,2023-07-26,Corporate Real Estate Management,TRUE
+cbfa3c62-2fdb-4c91-9987-98bac70e9a07_3,Doc3841985700,RFP,Professional Services,Met-Scan Canada Ltd,844575,2023-07-26,Corporate Real Estate Management,TRUE
+cbfa3c62-2fdb-4c91-9987-98bac70e9a07_4,Doc3841985700,RFP,Professional Services,Paladin Technologies Inc,844575,2023-07-26,Corporate Real Estate Management,TRUE
 292974ed-a804-41e9-be16-f0aa1529be44_1,Doc3934508596,RFP,Professional Services,Arup Canada Incorporated,264000,2023-08-21,Environment & Climate,TRUE
-65071a25-a1a4-4811-be12-19ae546205ed_1,Doc3974275608,RFP,Professional Services,Asp Inc,6160189.92,2023-10-27,Corporate Real Estate Management,FALSE
-65071a25-a1a4-4811-be12-19ae546205ed_2,Doc3974275608,RFP,Professional Services,West Egg Group Security Servic,6895162.08,2023-10-27,Corporate Real Estate Management,FALSE
-65071a25-a1a4-4811-be12-19ae546205ed_3,Doc3974275608,RFP,Professional Services,Garda,7677623.2,2023-10-27,Corporate Real Estate Management,FALSE
-7857c5dc-1dfc-486b-89e3-d0147e39d1f7_1,Doc3999532912,RFQ,Professional Services,Keydata Associates Inc,5249323,2023-08-09,Office of the Chief Information SecurityÂ Officer (CISO),FALSE
-3fa460cf-931b-480c-a7c1-cb4e0dd3c674_1,Doc4099862857,RFQ,Professional Services,Kooy Brothers Lawn Equipment Ltd,733243,2024-03-14,Fleet Services,FALSE
+65071a25-a1a4-4811-be12-19ae546205ed_1,Doc3974275608,RFP,Professional Services,Asp Inc,6160189.92,2023-10-27,Corporate Real Estate Management,TRUE
+65071a25-a1a4-4811-be12-19ae546205ed_2,Doc3974275608,RFP,Professional Services,West Egg Group Security Servic,6895162.08,2023-10-27,Corporate Real Estate Management,TRUE
+65071a25-a1a4-4811-be12-19ae546205ed_3,Doc3974275608,RFP,Professional Services,Garda,7677623.2,2023-10-27,Corporate Real Estate Management,TRUE
+7857c5dc-1dfc-486b-89e3-d0147e39d1f7_1,Doc3999532912,RFQ,Professional Services,Keydata Associates Inc,5249323,2023-08-09,Office of the Chief Information SecurityÂ Officer (CISO),TRUE
+3fa460cf-931b-480c-a7c1-cb4e0dd3c674_1,Doc4099862857,RFQ,Professional Services,Kooy Brothers Lawn Equipment Ltd,733243,2024-03-14,Fleet Services,TRUE
 95c0a022-8d1d-4f3f-878b-b95576a6484f_1,Doc4113368823,RFQ,Professional Services,Onx Enterprise Solutions Ltd,100106,2024-01-02,Technology Services,TRUE
-ef37dc58-8474-4565-81fa-5f56090c2344_1,Doc4160373628,RFQ,Professional Services,Markland Property Management Inc.,3274000,2024-01-02,Corporate Real Estate Management,FALSE
+ef37dc58-8474-4565-81fa-5f56090c2344_1,Doc4160373628,RFQ,Professional Services,Markland Property Management Inc.,3274000,2024-01-02,Corporate Real Estate Management,TRUE
 aaafa8bb-c3cf-4058-8f88-0d7d02ae0466_1,Doc4252234478,RFQ,Professional Services,C.e.s. Engineering Ltd.,17000,2024-04-11,Corporate Real Estate Management,TRUE
-77525044-f92a-477d-95b6-59616feaac5f_1,Doc3480504749,RFT,Construction Services,"Taurus Contracting, A Div Of Tcl",706982,2023-04-18,"Parks, Forestry & Recreation",FALSE
-77525044-f92a-477d-95b6-59616feaac5f_2,Doc3480504749,RFT,Construction Services,Tribro Group Ltd,903420,2023-04-18,"Parks, Forestry & Recreation",FALSE
-d066445f-f606-4229-98bf-57152c52b2ee_1,Doc3489780251,RFT,Construction Services,Grascan Construction Ltd,10364920.5,2023-03-06,"Parks, Forestry & Recreation",FALSE
-68486240-064a-41cd-9448-bc43bafd3037_1,Doc3641398576,RFT,Construction Services,"Cimco Refrigeration, Div. Of Toromont Industries Ltd.",10098699,2023-01-19,"Parks, Forestry & Recreation",FALSE
+77525044-f92a-477d-95b6-59616feaac5f_1,Doc3480504749,RFT,Construction Services,"Taurus Contracting, A Div Of Tcl",706982,2023-04-18,"Parks, Forestry & Recreation",TRUE
+77525044-f92a-477d-95b6-59616feaac5f_2,Doc3480504749,RFT,Construction Services,Tribro Group Ltd,903420,2023-04-18,"Parks, Forestry & Recreation",TRUE
+d066445f-f606-4229-98bf-57152c52b2ee_1,Doc3489780251,RFT,Construction Services,Grascan Construction Ltd,10364920.5,2023-03-06,"Parks, Forestry & Recreation",TRUE
+68486240-064a-41cd-9448-bc43bafd3037_1,Doc3641398576,RFT,Construction Services,"Cimco Refrigeration, Div. Of Toromont Industries Ltd.",10098699,2023-01-19,"Parks, Forestry & Recreation",TRUE
 c67eb05b-19ab-44f1-999b-f415fe1d0f3d_1,Doc3660353340,RFT,Construction Services,Joe Pace & Sons Contracting Inc.,492000,2023-01-26,Seniors Services and Long-Term Care,TRUE
-6b613f29-1bdf-4619-a937-14f0368a73a4_1,Doc3715381581,RFT,Construction Services,Ferdom Construction,2223861,2023-08-08,"Parks, Forestry & Recreation",FALSE
-10a8938b-9e40-4971-8ce9-8d7d84d8ed54_1,Doc3752824967,RFT,Construction Services,373044 Ont Ltd/Trans Canada Construction,1549486.1,2023-03-09,"Parks, Forestry & Recreation",FALSE
-8a5d600e-52a7-4be4-8757-dcc4faf660e5_1,Doc3792180788,RFT,Construction Services,Mopal Construction Ltd,903650,2023-06-06,"Parks, Forestry & Recreation",FALSE
-e7be46a1-b37c-4cbe-af26-41468dca8c27_1,Doc3835056852,RFT,Construction Services,Hank Deenen Landscaping Limited,729500,2023-05-17,"Parks, Forestry & Recreation",FALSE
-ff2546f7-990f-490a-ba8f-8b23fd97c261_1,Doc3866406467,RFT,Construction Services,Pine Valley Corporation,1016600,2023-06-02,Children's Services,FALSE
-eb2c1ade-e120-4991-bbbf-923c3deae091_1,Doc3885862776,RFT,Construction Services,Pine Valley Corp,906200,2023-06-07,Children's Services,FALSE
-ce8adf39-9348-4960-9333-07d6d6d2058d_1,Doc3901497212,RFT,Construction Services,671860 Ontario Inc. O/A Somerville Construction,6799825,2023-07-25,"Parks, Forestry & Recreation",FALSE
-0d7e886b-f1fc-4ace-882d-4c129b58b2da_1,Doc3941852394,RFT,Construction Services,South Central Inc,1256393.69,2023-11-28,"Parks, Forestry & Recreation",FALSE
+6b613f29-1bdf-4619-a937-14f0368a73a4_1,Doc3715381581,RFT,Construction Services,Ferdom Construction,2223861,2023-08-08,"Parks, Forestry & Recreation",TRUE
+10a8938b-9e40-4971-8ce9-8d7d84d8ed54_1,Doc3752824967,RFT,Construction Services,373044 Ont Ltd/Trans Canada Construction,1549486.1,2023-03-09,"Parks, Forestry & Recreation",TRUE
+8a5d600e-52a7-4be4-8757-dcc4faf660e5_1,Doc3792180788,RFT,Construction Services,Mopal Construction Ltd,903650,2023-06-06,"Parks, Forestry & Recreation",TRUE
+e7be46a1-b37c-4cbe-af26-41468dca8c27_1,Doc3835056852,RFT,Construction Services,Hank Deenen Landscaping Limited,729500,2023-05-17,"Parks, Forestry & Recreation",TRUE
+ff2546f7-990f-490a-ba8f-8b23fd97c261_1,Doc3866406467,RFT,Construction Services,Pine Valley Corporation,1016600,2023-06-02,Children's Services,TRUE
+eb2c1ade-e120-4991-bbbf-923c3deae091_1,Doc3885862776,RFT,Construction Services,Pine Valley Corp,906200,2023-06-07,Children's Services,TRUE
+ce8adf39-9348-4960-9333-07d6d6d2058d_1,Doc3901497212,RFT,Construction Services,671860 Ontario Inc. O/A Somerville Construction,6799825,2023-07-25,"Parks, Forestry & Recreation",TRUE
+0d7e886b-f1fc-4ace-882d-4c129b58b2da_1,Doc3941852394,RFT,Construction Services,South Central Inc,1256393.69,2023-11-28,"Parks, Forestry & Recreation",TRUE
 eba02287-cdde-4b6f-a666-21b4a8ce33cb_1,Doc3950532421,RFT,Construction Services,Joe Pace & Sons Contracting Inc,499800,2023-10-17,Seniors Services and Long-Term Care,TRUE
-240837fa-6ef2-4123-b408-cf523ed89ed4_1,Doc3997770153,RFT,Construction Services,Midome Construction Services Ltd.,1523750,2023-10-24,Economic Development & Culture,FALSE
-107aa1aa-7037-4193-881b-41cde2d8a46c_1,Doc4005444130,RFT,Construction Services,Pegah Construction Ltd.,1259490.7,2023-10-17,Economic Development & Culture,FALSE
-af8fce1c-72ea-4681-9dea-818cf24a0398_1,Doc4132390726,RFT,Construction Services,Semple Gooder Roofing Corporation,2742072,2024-02-13,"Parks, Forestry & Recreation",FALSE
-66685e1c-b62c-42a9-8ea7-0ef937222015_1,Doc4207355066,RFT,Construction Services,Limen Group Const. (2019) Ltd,949825,2024-04-22,"Parks, Forestry & Recreation",FALSE
-59683e42-e70f-4cb8-a781-e8d36dd59dee_1,Doc4275197418,RFT,Construction Services,Frank Pellegrino Gen Cont Ltd,1101610,2024-02-21,"Parks, Forestry & Recreation",FALSE
-22534d8c-b2ef-4d12-b00a-1d2e748f8634_1,Doc4288902389,RFT,Construction Services,South Central Inc,2941205.47,2024-04-10,Economic Development & Culture,FALSE
+240837fa-6ef2-4123-b408-cf523ed89ed4_1,Doc3997770153,RFT,Construction Services,Midome Construction Services Ltd.,1523750,2023-10-24,Economic Development & Culture,TRUE
+107aa1aa-7037-4193-881b-41cde2d8a46c_1,Doc4005444130,RFT,Construction Services,Pegah Construction Ltd.,1259490.7,2023-10-17,Economic Development & Culture,TRUE
+af8fce1c-72ea-4681-9dea-818cf24a0398_1,Doc4132390726,RFT,Construction Services,Semple Gooder Roofing Corporation,2742072,2024-02-13,"Parks, Forestry & Recreation",TRUE
+66685e1c-b62c-42a9-8ea7-0ef937222015_1,Doc4207355066,RFT,Construction Services,Limen Group Const. (2019) Ltd,949825,2024-04-22,"Parks, Forestry & Recreation",TRUE
+59683e42-e70f-4cb8-a781-e8d36dd59dee_1,Doc4275197418,RFT,Construction Services,Frank Pellegrino Gen Cont Ltd,1101610,2024-02-21,"Parks, Forestry & Recreation",TRUE
+22534d8c-b2ef-4d12-b00a-1d2e748f8634_1,Doc4288902389,RFT,Construction Services,South Central Inc,2941205.47,2024-04-10,Economic Development & Culture,TRUE
 81833d0c-8264-4fb9-95c6-8d132df2d940_1,Doc3261513648,RFQ,Goods and Services,Cosar Gc Pm,173135,2023-04-05,"Shelter, Support & Housing Administration",TRUE
 66ea522d-20b1-431d-bfe4-3b526127a49e_1,Doc3528836035,RFQ,Goods and Services,Canadian Safety Equipment Ltd,309528,2023-01-19,Fire Services,TRUE
 18306e4d-ddeb-4ae7-b348-3774e55c21eb_1,Doc3592822887,RFQ,Goods and Services,De Vroomen Bulb Canada Inc,133377,2023-11-08,"Parks, Forestry & Recreation",TRUE
@@ -126,413 +126,413 @@ a1e29478-8c9e-4ca1-85dc-b5f7281d3143_1,Doc3646531698,RFQ,Goods and Services,Form
 beb4e440-07c8-48d2-a801-2a0ed17e3091_1,Doc3693313720,RFQ,Goods and Services,Urban Tactical Brantford Ltd.,202888,2023-02-01,Toronto Paramedic Services,TRUE
 756d9e56-bffd-47cd-b7bc-9f4d872d62ef_1,Doc3705909281,RFQ,Goods and Services,Office Central Inc.,350059.08,2023-01-11,Children's Services,TRUE
 c6fb27ed-7e0d-4f90-a5e6-8e381609b7e0_1,Doc3728357052,RFQ,Goods and Services,Entomogen Incorporated,25290,2023-03-29,Toronto Public Health,TRUE
-ac034f4e-3118-40b2-a481-7b8c70080491_1,Doc3733064819,RFQ,Goods and Services,1913574 Ontario Inc. Oa Royal Oak Tree Services Inc.,609472.5,2023-04-27,"Parks, Forestry & Recreation",FALSE
-65385768-4716-40a9-8a3e-b5f304f63ca3_1,Doc3733917681,RFQ,Goods and Services,Guillevin International Co.,254169.33,2023-04-21,"Parks, Forestry & Recreation",TRUE
-1ac9ea9b-0b2d-4f13-87c7-49522db4ee93_1,Doc3734314805,RFQ,Goods and Services,Cardinal Health Canada Inc,2099192,2023-07-01,Seniors Services and Long-Term Care,FALSE
+ac034f4e-3118-40b2-a481-7b8c70080491_1,Doc3733064819,RFQ,Goods and Services,1913574 Ontario Inc. Oa Royal Oak Tree Services Inc.,609472.5,2023-04-27,"Parks, Forestry & Recreation",TRUE
+65385768-4716-40a9-8a3e-b5f304f63ca3_1,Doc3733917681,RFQ,Goods and Services,Guillevin International Co.,254169.33,2023-04-21,"Parks, Forestry & Recreation",FALSE
+1ac9ea9b-0b2d-4f13-87c7-49522db4ee93_1,Doc3734314805,RFQ,Goods and Services,Cardinal Health Canada Inc,2099192,2023-07-01,Seniors Services and Long-Term Care,TRUE
 569818bd-36d1-4195-b02f-2b4a991289c6_1,Doc3743044527,RFQ,Goods and Services,Sysco,18148195,2023-10-01,Seniors Services and Long-Term Care,FALSE
 5544acc2-77f7-4c1a-a73e-23e09ef4b14a_1,Doc3754618822,RFQ,Goods and Services,Joerns Healthcare Canada Inc.,399651.45,2023-03-29,Seniors Services and Long-Term Care,TRUE
 26fa5e12-9f9f-4914-b3d9-302f084db0cb_1,Doc3760842012,RFQ,Goods and Services,"Ariva, Division Of Domtar Inc",3799,2023-05-01,City Clerk's Office,TRUE
-26fa5e12-9f9f-4914-b3d9-302f084db0cb_2,Doc3760842012,RFQ,Goods and Services,Spicers Canada Ulc,1488836.23,2023-05-01,City Clerk's Office,FALSE
+26fa5e12-9f9f-4914-b3d9-302f084db0cb_2,Doc3760842012,RFQ,Goods and Services,Spicers Canada Ulc,1488836.23,2023-05-01,City Clerk's Office,TRUE
 966c82a1-ee59-4893-a2cd-7cf6e0d3f839_1,Doc3781209681,RFQ,Goods and Services,Kooy Brothers Lawn Equipment Ltd.,228297.6,2023-10-08,"Parks, Forestry & Recreation",TRUE
-170802bf-1bc5-4c49-b713-fd3b797c4df7_1,Doc3781394690,RFQ,Goods and Services,K-Dental Inc.,1698588,2023-05-01,Toronto Public Health,FALSE
-7e2538ba-af00-4cf2-b1f7-4c4431dcd84b_1,Doc3782444242,RFQ,Goods and Services,Street Graffiti Solutions,632900,2023-04-18,Economic Development & Culture,FALSE
+170802bf-1bc5-4c49-b713-fd3b797c4df7_1,Doc3781394690,RFQ,Goods and Services,K-Dental Inc.,1698588,2023-05-01,Toronto Public Health,TRUE
+7e2538ba-af00-4cf2-b1f7-4c4431dcd84b_1,Doc3782444242,RFQ,Goods and Services,Street Graffiti Solutions,632900,2023-04-18,Economic Development & Culture,TRUE
 173d21ba-87a7-47d1-9f1c-312d1149d3c4_1,Doc3794517986,RFQ,Goods and Services,Firechek Protection Services Inc.,153684,2023-10-01,Fire Services,TRUE
 46a3cc8e-be34-403e-8f27-8eb2ed168536_1,Doc3816975592,RFQ,Goods and Services,Dignity Transportation Inc.,307200,2023-05-25,Seniors Services and Long-Term Care,TRUE
 7b11c3f1-ab75-40a1-af09-eb4dbcefdeb6_1,Doc3853643516,RFQ,Goods and Services,Power King Exhaust Cleaning,84867.46,2023-04-06,Purchasing & Materials Management,TRUE
 5dd5a9e2-ead1-49d9-8fca-48a3c4ea2344_1,Doc3897157314,RFQ,Goods and Services,Masters Golf Carts Inc,373400,2023-05-04,"Parks, Forestry & Recreation",TRUE
-a5595ea8-ad76-4466-bc56-f674d95cc2f2_1,Doc3911974670,RFQ,Goods and Services,Ontario Line Clearing & Tree Expert,6454120,2023-07-26,"Parks, Forestry & Recreation",FALSE
-a5595ea8-ad76-4466-bc56-f674d95cc2f2_2,Doc3911974670,RFQ,Goods and Services,Wm Weller Tree Service Ltd,1591809,2023-07-26,"Parks, Forestry & Recreation",FALSE
+a5595ea8-ad76-4466-bc56-f674d95cc2f2_1,Doc3911974670,RFQ,Goods and Services,Ontario Line Clearing & Tree Expert,6454120,2023-07-26,"Parks, Forestry & Recreation",TRUE
+a5595ea8-ad76-4466-bc56-f674d95cc2f2_2,Doc3911974670,RFQ,Goods and Services,Wm Weller Tree Service Ltd,1591809,2023-07-26,"Parks, Forestry & Recreation",TRUE
 ca19ba15-95f4-4a97-96fe-48aba62397e7_1,Doc3922453518,RFQ,Goods and Services,Forest Ridge Landscaping Inc.,77100,2023-07-14,"Parks, Forestry & Recreation",TRUE
-5d7cde32-b373-44a3-9cc1-70cd85bf087b_1,Doc3973062271,RFQ,Goods and Services,Dafco Filtration Group Corporation,1342719,2023-08-23,Seniors Services and Long-Term Care,FALSE
-c022f2ec-c71b-4564-9525-dae84ff04c01_1,Doc3974631288,RFQ,Goods and Services,Kr Communications Ltd,907761.05,2023-09-07,Seniors Services and Long-Term Care,FALSE
-97d9ef92-e578-4264-aab7-a8dfadd1a6df_1,Doc3988526049,RFQ,Goods and Services,Alpine Building Maintenance Inc,9214560,2023-10-27,Seniors Services and Long-Term Care,FALSE
+5d7cde32-b373-44a3-9cc1-70cd85bf087b_1,Doc3973062271,RFQ,Goods and Services,Dafco Filtration Group Corporation,1342719,2023-08-23,Seniors Services and Long-Term Care,TRUE
+c022f2ec-c71b-4564-9525-dae84ff04c01_1,Doc3974631288,RFQ,Goods and Services,Kr Communications Ltd,907761.05,2023-09-07,Seniors Services and Long-Term Care,TRUE
+97d9ef92-e578-4264-aab7-a8dfadd1a6df_1,Doc3988526049,RFQ,Goods and Services,Alpine Building Maintenance Inc,9214560,2023-10-27,Seniors Services and Long-Term Care,TRUE
 97914339-0268-4970-b5c0-369937bfa521_1,Doc3999823865,RFQ,Goods and Services,Trh Services (Brandon Biomed Inc),266007.96,2023-08-03,Seniors Services and Long-Term Care,TRUE
 65328888-de88-44de-bf36-d034738ee48f_1,Doc4006632375,RFQ,Goods and Services,Clintar Landscape Management (Downtown Groundskeeping Services),59152.6,2023-06-30,Economic Development & Culture,TRUE
-c7dcbf3b-59b0-4333-97d2-b85b041e6b7a_1,Doc4087325475,RFQ,Goods and Services,Aqua Tech Solutions Inc,962981,2024-04-08,"Parks, Forestry & Recreation",FALSE
+c7dcbf3b-59b0-4333-97d2-b85b041e6b7a_1,Doc4087325475,RFQ,Goods and Services,Aqua Tech Solutions Inc,962981,2024-04-08,"Parks, Forestry & Recreation",TRUE
 215345e0-2118-4595-9f65-41046d850553_1,Doc4129126454,RFQ,Goods and Services,Sustainable Roots Ecological Restoration Inc,413305,2024-01-10,"Parks, Forestry & Recreation",TRUE
 215345e0-2118-4595-9f65-41046d850553_2,Doc4129126454,RFQ,Goods and Services,Brinkman & Associates Reforestation Ltd,327215,2024-01-10,"Parks, Forestry & Recreation",TRUE
-92440c10-a4f9-4979-8621-1595063c60c5_1,Doc4137121973,RFQ,Goods and Services,Salivan Landscape Ltd,1221000,2024-05-01,"Parks, Forestry & Recreation",FALSE
+92440c10-a4f9-4979-8621-1595063c60c5_1,Doc4137121973,RFQ,Goods and Services,Salivan Landscape Ltd,1221000,2024-05-01,"Parks, Forestry & Recreation",TRUE
 aeac5c67-7229-4296-82f4-1d2582db84d7_1,Doc4209172596,RFQ,Goods and Services,Norseco Inc.,40946.02,2024-01-09,"Parks, Forestry & Recreation",TRUE
 788a1f6a-3fa5-49f4-9730-36bc2bc1a9a1_1,Doc4230058518,RFQ,Goods and Services,"Sysco Toronto, A Division Of Sysco Canada Inc.",1222175,2024-02-02,Seniors Services and Long-Term Care,FALSE
 788a1f6a-3fa5-49f4-9730-36bc2bc1a9a1_2,Doc4230058518,RFQ,Goods and Services,"Sysco Toronto, A Division Of Sysco Canada Inc.",1117040,2024-02-01,Seniors Services and Long-Term Care,FALSE
-da8e31d7-0b74-44fa-93e3-068d858a4e79_1,Doc4230074410,RFQ,Goods and Services,Resolve Support Services,703800,2024-04-15,Seniors Services and Long-Term Care,FALSE
-e4aacb29-c1b1-4752-84e1-5eb48ff46e69_1,Doc3218413414,RFP,Professional Services,Canadian Hearing Services,1395333,2023-07-25,"Parks, Forestry & Recreation",FALSE
-983b1c44-ed65-43cf-8123-34ec2afc3f9a_1,Doc3389680974,RFP,Professional Services,Cbv Collection Services Ltd,660400,2023-04-14,Court Services,FALSE
-983b1c44-ed65-43cf-8123-34ec2afc3f9a_2,Doc3389680974,RFP,Professional Services,Gatestone & Co Inc,702800,2023-04-14,Court Services,FALSE
-983b1c44-ed65-43cf-8123-34ec2afc3f9a_3,Doc3389680974,RFP,Professional Services,Partners In Credit Inc,702400,2023-04-14,Court Services,FALSE
+da8e31d7-0b74-44fa-93e3-068d858a4e79_1,Doc4230074410,RFQ,Goods and Services,Resolve Support Services,703800,2024-04-15,Seniors Services and Long-Term Care,TRUE
+e4aacb29-c1b1-4752-84e1-5eb48ff46e69_1,Doc3218413414,RFP,Professional Services,Canadian Hearing Services,1395333,2023-07-25,"Parks, Forestry & Recreation",TRUE
+983b1c44-ed65-43cf-8123-34ec2afc3f9a_1,Doc3389680974,RFP,Professional Services,Cbv Collection Services Ltd,660400,2023-04-14,Court Services,TRUE
+983b1c44-ed65-43cf-8123-34ec2afc3f9a_2,Doc3389680974,RFP,Professional Services,Gatestone & Co Inc,702800,2023-04-14,Court Services,TRUE
+983b1c44-ed65-43cf-8123-34ec2afc3f9a_3,Doc3389680974,RFP,Professional Services,Partners In Credit Inc,702400,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_4,Doc3389680974,RFP,Professional Services,General Credit Services Inc,318200,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_5,Doc3389680974,RFP,Professional Services,Collectcents Inc.,303600,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_6,Doc3389680974,RFP,Professional Services,National Credit Recovery Inc,313800,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_7,Doc3389680974,RFP,Professional Services,Aro Inc,311400,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_8,Doc3389680974,RFP,Professional Services,International Credit Experts Inc,311000,2023-04-14,Court Services,TRUE
 983b1c44-ed65-43cf-8123-34ec2afc3f9a_9,Doc3389680974,RFP,Professional Services,Mjr Capital Services Inc,308800,2023-04-14,Court Services,TRUE
-a6e3d72f-3c71-4a52-918a-923ec5c1cd1b_1,Doc3403637266,RFP,Professional Services,Cs&P Architects Inc,4780044,2023-05-31,"Parks, Forestry & Recreation",FALSE
-70bbda78-a20c-461b-a9f3-0fcaa7d84d37_1,Doc3442615863,RFP,Professional Services,Kongats Architects,1738150,2023-01-13,"Parks, Forestry & Recreation",FALSE
-6129294f-004f-41b7-8f44-07387cca1ac7_1,Doc3442750404,RFP,Professional Services,Stantec Consulting Ltd,112318,2023-05-26,"Shelter, Support & Housing Administration",TRUE
-cefb4fb8-7069-4a16-8e34-109a7fc58558_1,Doc3621156462,RFP,Professional Services,Ibi Group Professional Services (Canada) Inc. Sla Landscape Design And Planning Inc. (Canada),2733266,2023-03-06,"Parks, Forestry & Recreation",FALSE
+a6e3d72f-3c71-4a52-918a-923ec5c1cd1b_1,Doc3403637266,RFP,Professional Services,Cs&P Architects Inc,4780044,2023-05-31,"Parks, Forestry & Recreation",TRUE
+70bbda78-a20c-461b-a9f3-0fcaa7d84d37_1,Doc3442615863,RFP,Professional Services,Kongats Architects,1738150,2023-01-13,"Parks, Forestry & Recreation",TRUE
+6129294f-004f-41b7-8f44-07387cca1ac7_1,Doc3442750404,RFP,Professional Services,Stantec Consulting Ltd,112318,2023-05-26,"Shelter, Support & Housing Administration",FALSE
+cefb4fb8-7069-4a16-8e34-109a7fc58558_1,Doc3621156462,RFP,Professional Services,Ibi Group Professional Services (Canada) Inc. Sla Landscape Design And Planning Inc. (Canada),2733266,2023-03-06,"Parks, Forestry & Recreation",TRUE
 b750c115-708c-497f-a208-5dc5656b7588_1,Doc3672808985,RFP,Professional Services,Koppert Biological Systems Ltd,52298.19,2023-04-26,"Parks, Forestry & Recreation",TRUE
-e6a98268-e64b-45b6-bfba-680456ed4598_1,Doc3682536087,RFP,Professional Services,Dtah,724536.5,2023-03-08,"Parks, Forestry & Recreation",FALSE
+e6a98268-e64b-45b6-bfba-680456ed4598_1,Doc3682536087,RFP,Professional Services,Dtah,724536.5,2023-03-08,"Parks, Forestry & Recreation",TRUE
 125cd752-6efd-44a1-9c07-b7b71cfb0e7f_1,Doc3723149053,RFP,Professional Services,Canadian Observatory On Homelessne,65224.5,2023-02-01,"Shelter, Support & Housing Administration",TRUE
 11bd7c42-dfca-4f22-be55-8530d86493b8_1,Doc3763094007,RFP,Professional Services,The George Hull Centre For Children And  Families,239775,2023-05-06,Children's Services,TRUE
 68638e11-cb54-4038-8631-8be5bea77d31_1,Doc3784440258,RFP,Professional Services,Plant Architect Inc.,477200.25,2023-05-17,"Parks, Forestry & Recreation",TRUE
-a21219dd-a327-4566-9158-63e70e0f2b10_1,Doc3788742006,RFP,Professional Services,Culture Check Inc,551000,2023-12-27,Children's Services,FALSE
+a21219dd-a327-4566-9158-63e70e0f2b10_1,Doc3788742006,RFP,Professional Services,Culture Check Inc,551000,2023-12-27,Children's Services,TRUE
 c1a4d834-7f45-4b42-bffb-58decfa2514d_1,Doc3792138118,RFP,Professional Services,Kpmg Llp,710100,2023-07-04,City Planning,FALSE
 01222138-52e8-495d-949e-dde7309ce214_1,Doc3864992256,RFQ,Professional Services,Insight Advantage Inc.,146142,2023-05-06,City Clerk's Office,TRUE
 802712c1-f453-46fb-8349-bb2ebc301d28_1,Doc3892776235,RFP,Professional Services,Thinc Design (Tocher Heyblom Design Inc.),196847,2023-07-25,"Parks, Forestry & Recreation",TRUE
-c41d7f80-e093-42e6-9205-2d5e2ae8059b_1,Doc3908708378,RFP,Professional Services,Culture Check Inc.,632750,2023-12-27,Children's Services,FALSE
+c41d7f80-e093-42e6-9205-2d5e2ae8059b_1,Doc3908708378,RFP,Professional Services,Culture Check Inc.,632750,2023-12-27,Children's Services,TRUE
 ec92dfa7-29da-40f0-b685-929bff8ce7d4_1,Doc3940063088,RFP,Professional Services,Production Service Industries,454966,2023-09-05,Economic Development & Culture,TRUE
 ec92dfa7-29da-40f0-b685-929bff8ce7d4_2,Doc3940063088,RFP,Professional Services,Light And Dark Inc,275789,2023-09-05,Economic Development & Culture,TRUE
 ec92dfa7-29da-40f0-b685-929bff8ce7d4_3,Doc3940063088,RFP,Professional Services,Solotech Inc,131616,2023-09-05,Economic Development & Culture,TRUE
-4a2c936d-5a98-4666-adef-4362345e32b4_1,Doc3941927287,RFP,Professional Services,Cherie Ng Architect Inc,4596378.08,2023-09-26,"Parks, Forestry & Recreation",FALSE
-b35a5f6e-b83a-4787-8db1-a1dcb29c606e_1,Doc3992823329,RFP,Professional Services,Achieva,2974150,2023-10-23,Seniors Services and Long-Term Care,FALSE
+4a2c936d-5a98-4666-adef-4362345e32b4_1,Doc3941927287,RFP,Professional Services,Cherie Ng Architect Inc,4596378.08,2023-09-26,"Parks, Forestry & Recreation",TRUE
+b35a5f6e-b83a-4787-8db1-a1dcb29c606e_1,Doc3992823329,RFP,Professional Services,Achieva,2974150,2023-10-23,Seniors Services and Long-Term Care,TRUE
 fcc41ef6-bb64-402c-a16a-ff0311245b3e_1,Doc3996002373,RFP,Professional Services,Slbc Inc.,329740,2023-10-26,"Parks, Forestry & Recreation",TRUE
 b114a122-5977-444d-9e55-e5a606067889_1,Doc4030204679,RFP,Professional Services,Peter T Mitches & Associates Limite,196000,2024-04-02,"Parks, Forestry & Recreation",TRUE
-342c9d83-8140-4e5e-8687-5a509619763f_1,Doc4042404104,RFP,Professional Services,Kpmg,439620,2023-10-27,"Parks, Forestry & Recreation",TRUE
+342c9d83-8140-4e5e-8687-5a509619763f_1,Doc4042404104,RFP,Professional Services,Kpmg,439620,2023-10-27,"Parks, Forestry & Recreation",FALSE
 68920bab-92b5-420e-99d7-cbb86ed15d01_1,Doc4066811187,RFP,Professional Services,Strategic Measures,149210,2023-11-14,"Social Development, Finance & Administration",TRUE
 79d076d6-ad7f-4c52-8244-9cd89a88fe99_1,Doc4129126454,RFQ,Professional Services,Brinkman And Associates Reforestation Limited,327215,2024-01-10,"Parks, Forestry & Recreation",TRUE
 79d076d6-ad7f-4c52-8244-9cd89a88fe99_2,Doc4129126454,RFQ,Professional Services,Sustainable Roots Ecological Restoration Inc.,413305,2024-01-10,"Parks, Forestry & Recreation",TRUE
 9d10e0d6-73d6-41fd-9193-ba07718a7b0e_1,Doc4291231363,RFP,Professional Services,"Sysco Toronto, A Division Of Sysco Canada Inc.",1492601,2024-05-09,Seniors Services and Long-Term Care,FALSE
 2bc81a29-e833-44d3-b78f-1d5e16ac62ae_1,Doc4339888194,RFQ,Professional Services,Mep Designs Inc,81000,2024-03-25,"Parks, Forestry & Recreation",TRUE
 5afff42a-603c-4e05-aef2-1f4955785c68_1,Doc3393128038,RFT,Construction Services,Pine Valley Corporation,411697.7,2023-08-23,Transportation Services,TRUE
-4f9cf15c-df6f-4a3a-87b7-23baa0e4f803_1,Doc3516863233,RFT,Construction Services,Distinct Concrete Cutting Inc.,810175,2023-01-01,Toronto Water,FALSE
-200d7588-96d3-4a8d-aacf-0528aa080f48_1,Doc3530455664,RFT,Construction Services,Anacond Contracting Inc.,595666.78,2022-12-21,Solid Waste Management Services,FALSE
-3bafbed3-b33c-42d7-9b89-274a5b67a093_1,Doc3542998354,RFT,Construction Services,Utility Force Construction Inc,5084375,2023-02-03,Toronto Water,FALSE
-3bafbed3-b33c-42d7-9b89-274a5b67a093_2,Doc3542998354,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",1947086,2023-02-03,Toronto Water,FALSE
-5a33631f-1f85-45d8-a100-219b14b70253_1,Doc3557875189,RFT,Construction Services,Utility Force Construction Inc,2972850,2023-02-06,Engineering & Construction Services - Engineering Services,FALSE
-5a33631f-1f85-45d8-a100-219b14b70253_2,Doc3557875189,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",2302516,2023-02-06,Engineering & Construction Services - Engineering Services,FALSE
-3d68cde9-3f1e-4063-a841-9968406c9f00_1,Doc3571174199,RFT,Construction Services,Utility Force Construction Inc,3425125,2023-02-06,Engineering & Construction Services - Engineering Services,FALSE
-3d68cde9-3f1e-4063-a841-9968406c9f00_2,Doc3571174199,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",1622998,2023-02-06,Engineering & Construction Services - Engineering Services,FALSE
-f0940a4d-d804-4f92-b8de-5d1043cff077_1,Doc3575939075,RFT,Construction Services,Martinway Contracting Limited,4070825,2022-12-14,Solid Waste Management Services,FALSE
-403e4084-c305-46dd-b784-0df55dd2bbb2_1,Doc3584366982,RFT,Construction Services,D Crupi & Sons Limited,3603034.59,2023-02-01,Engineering & Construction Services - Capital Works Delivery,FALSE
-95420132-ab85-45c1-b1a8-95cbbc2949da_1,Doc3596273865,RFT,Construction Services,Ritestart Limited,953970,2023-02-06,Solid Waste Management Services,FALSE
-75d1978c-bc75-4711-b68f-0109fc4c5b54_1,Doc3602895745,RFT,Construction Services,Pine Valley Corporation,938999,2023-03-24,"Parks, Forestry & Recreation",FALSE
-6ad9d83b-5642-4f38-b05f-da6db01fcb2c_1,Doc3610971650,RFT,Construction Services,Waste Management Of Canada Corp.,983737.8,2023-01-01,Toronto Water,FALSE
-a8da0351-94d1-45f8-a483-7ed9a3aa9f54_1,Doc3643941743,RFT,Construction Services,Joe Pace & Sons Contracting Inc.,1751830,2023-07-17,"Parks, Forestry & Recreation",FALSE
-a097f456-7fd6-427e-910c-de0cda253690_1,Doc3672748647,RFT,Construction Services,Es Fox Ltd,7266676.48,2023-08-10,Toronto Water,FALSE
-b76bce6a-e738-40b8-bc3f-67b27fb49e5c_1,Doc3694194042,RFT,Construction Services,Ptr Paving Inc.,1055150,2022-12-23,Transportation Services,FALSE
-b76bce6a-e738-40b8-bc3f-67b27fb49e5c_2,Doc3694194042,RFT,Construction Services,Aqua Tech Solutions Inc.,737330,2022-12-23,Transportation Services,FALSE
-632e0dd8-fd47-48a7-9c27-a11f3f9e2947_1,Doc3694727991,RFT,Construction Services,Canada Construction Limited,1040000,2023-03-02,"Parks, Forestry & Recreation",FALSE
-520e9f3c-a252-4347-b53b-902d20823b5f_1,Doc3705608289,RFT,Construction Services,Midome Construction Services Ltd.,792000,2023-01-23,Engineering & Construction Services,FALSE
-f75f7c88-8896-4d57-a603-a3ea32bd390e_1,Doc3709344674,RFT,Construction Services,Stinson Equipment Limited,995629.5,2023-02-16,Engineering & Construction Services,FALSE
-ab9c1fb3-19a5-4f01-a952-055fd51bdac2_1,Doc3727842694,RFT,Construction Services,Aerzen Canada,11174077.64,2023-12-07,Engineering & Construction Services,FALSE
-6b90f4b0-773d-497b-9d15-85172dfee0dd_1,Doc3731138941,RFT,Construction Services,Csl Group Ltd.,837993.84,2023-02-17,Transportation Services,FALSE
-1d0595a4-8717-4c15-a3a5-98c84d909c59_1,Doc3740576765,RFT,Construction Services,D Crupi & Sons Limited,51838829.34,2023-02-09,Engineering & Construction Services,FALSE
-a630232b-a68d-4fa1-80ec-0f008db057dd_1,Doc3743124423,RFSQ,Construction Services,Cosar Gc Pm,3100000,2023-10-23,Corporate Real Estate Management,FALSE
-a630232b-a68d-4fa1-80ec-0f008db057dd_2,Doc3743124423,RFSQ,Construction Services,Canada Construction Limited,3100000,2023-10-23,Corporate Real Estate Management,FALSE
-a630232b-a68d-4fa1-80ec-0f008db057dd_3,Doc3743124423,RFSQ,Construction Services,"State Group Inc, The",3100000,2023-10-23,Corporate Real Estate Management,FALSE
-a630232b-a68d-4fa1-80ec-0f008db057dd_4,Doc3743124423,RFSQ,Construction Services,Martinway Contracting Ltd,3100000,2023-10-23,Corporate Real Estate Management,FALSE
+4f9cf15c-df6f-4a3a-87b7-23baa0e4f803_1,Doc3516863233,RFT,Construction Services,Distinct Concrete Cutting Inc.,810175,2023-01-01,Toronto Water,TRUE
+200d7588-96d3-4a8d-aacf-0528aa080f48_1,Doc3530455664,RFT,Construction Services,Anacond Contracting Inc.,595666.78,2022-12-21,Solid Waste Management Services,TRUE
+3bafbed3-b33c-42d7-9b89-274a5b67a093_1,Doc3542998354,RFT,Construction Services,Utility Force Construction Inc,5084375,2023-02-03,Toronto Water,TRUE
+3bafbed3-b33c-42d7-9b89-274a5b67a093_2,Doc3542998354,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",1947086,2023-02-03,Toronto Water,TRUE
+5a33631f-1f85-45d8-a100-219b14b70253_1,Doc3557875189,RFT,Construction Services,Utility Force Construction Inc,2972850,2023-02-06,Engineering & Construction Services - Engineering Services,TRUE
+5a33631f-1f85-45d8-a100-219b14b70253_2,Doc3557875189,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",2302516,2023-02-06,Engineering & Construction Services - Engineering Services,TRUE
+3d68cde9-3f1e-4063-a841-9968406c9f00_1,Doc3571174199,RFT,Construction Services,Utility Force Construction Inc,3425125,2023-02-06,Engineering & Construction Services - Engineering Services,TRUE
+3d68cde9-3f1e-4063-a841-9968406c9f00_2,Doc3571174199,RFT,Construction Services,"614128 Ontario Ltd, O/A Trisan Construction",1622998,2023-02-06,Engineering & Construction Services - Engineering Services,TRUE
+f0940a4d-d804-4f92-b8de-5d1043cff077_1,Doc3575939075,RFT,Construction Services,Martinway Contracting Limited,4070825,2022-12-14,Solid Waste Management Services,TRUE
+403e4084-c305-46dd-b784-0df55dd2bbb2_1,Doc3584366982,RFT,Construction Services,D Crupi & Sons Limited,3603034.59,2023-02-01,Engineering & Construction Services - Capital Works Delivery,TRUE
+95420132-ab85-45c1-b1a8-95cbbc2949da_1,Doc3596273865,RFT,Construction Services,Ritestart Limited,953970,2023-02-06,Solid Waste Management Services,TRUE
+75d1978c-bc75-4711-b68f-0109fc4c5b54_1,Doc3602895745,RFT,Construction Services,Pine Valley Corporation,938999,2023-03-24,"Parks, Forestry & Recreation",TRUE
+6ad9d83b-5642-4f38-b05f-da6db01fcb2c_1,Doc3610971650,RFT,Construction Services,Waste Management Of Canada Corp.,983737.8,2023-01-01,Toronto Water,TRUE
+a8da0351-94d1-45f8-a483-7ed9a3aa9f54_1,Doc3643941743,RFT,Construction Services,Joe Pace & Sons Contracting Inc.,1751830,2023-07-17,"Parks, Forestry & Recreation",TRUE
+a097f456-7fd6-427e-910c-de0cda253690_1,Doc3672748647,RFT,Construction Services,Es Fox Ltd,7266676.48,2023-08-10,Toronto Water,TRUE
+b76bce6a-e738-40b8-bc3f-67b27fb49e5c_1,Doc3694194042,RFT,Construction Services,Ptr Paving Inc.,1055150,2022-12-23,Transportation Services,TRUE
+b76bce6a-e738-40b8-bc3f-67b27fb49e5c_2,Doc3694194042,RFT,Construction Services,Aqua Tech Solutions Inc.,737330,2022-12-23,Transportation Services,TRUE
+632e0dd8-fd47-48a7-9c27-a11f3f9e2947_1,Doc3694727991,RFT,Construction Services,Canada Construction Limited,1040000,2023-03-02,"Parks, Forestry & Recreation",TRUE
+520e9f3c-a252-4347-b53b-902d20823b5f_1,Doc3705608289,RFT,Construction Services,Midome Construction Services Ltd.,792000,2023-01-23,Engineering & Construction Services,TRUE
+f75f7c88-8896-4d57-a603-a3ea32bd390e_1,Doc3709344674,RFT,Construction Services,Stinson Equipment Limited,995629.5,2023-02-16,Engineering & Construction Services,TRUE
+ab9c1fb3-19a5-4f01-a952-055fd51bdac2_1,Doc3727842694,RFT,Construction Services,Aerzen Canada,11174077.64,2023-12-07,Engineering & Construction Services,TRUE
+6b90f4b0-773d-497b-9d15-85172dfee0dd_1,Doc3731138941,RFT,Construction Services,Csl Group Ltd.,837993.84,2023-02-17,Transportation Services,TRUE
+1d0595a4-8717-4c15-a3a5-98c84d909c59_1,Doc3740576765,RFT,Construction Services,D Crupi & Sons Limited,51838829.34,2023-02-09,Engineering & Construction Services,TRUE
+a630232b-a68d-4fa1-80ec-0f008db057dd_1,Doc3743124423,RFSQ,Construction Services,Cosar Gc Pm,3100000,2023-10-23,Corporate Real Estate Management,TRUE
+a630232b-a68d-4fa1-80ec-0f008db057dd_2,Doc3743124423,RFSQ,Construction Services,Canada Construction Limited,3100000,2023-10-23,Corporate Real Estate Management,TRUE
+a630232b-a68d-4fa1-80ec-0f008db057dd_3,Doc3743124423,RFSQ,Construction Services,"State Group Inc, The",3100000,2023-10-23,Corporate Real Estate Management,TRUE
+a630232b-a68d-4fa1-80ec-0f008db057dd_4,Doc3743124423,RFSQ,Construction Services,Martinway Contracting Ltd,3100000,2023-10-23,Corporate Real Estate Management,TRUE
 5558a8fd-3166-417f-b184-2343aac182c2_1,Doc3754640010,RFT,Construction Services,Bennett Mechanical Installations,75275157.23,2023-05-19,Engineering & Construction Services,FALSE
-29a09f1f-ec07-4110-adfe-47a426088250_1,Doc3768492766,RFT,Construction Services,D Martino Construction Ltd,3471536.2,2023-04-17,Engineering & Construction Services,FALSE
+29a09f1f-ec07-4110-adfe-47a426088250_1,Doc3768492766,RFT,Construction Services,D Martino Construction Ltd,3471536.2,2023-04-17,Engineering & Construction Services,TRUE
 751a1d4a-a92d-44d7-a815-fb2714525c24_1,Doc3778035206,RFT,Construction Services,Dynex Construction Inc.,314964,2023-04-14,Engineering & Construction Services,TRUE
-7bbaae15-eea4-4c74-b64e-42cbbfd3620d_1,Doc3780626765,RFT,Construction Services,Grascan Construction Ltd.,4632000,2023-03-28,Engineering & Construction Services,FALSE
-6021c8c7-3315-4922-be78-f38d57d24552_1,Doc3780962042,RFT,Construction Services,Green Infrastructure Partners Inc.,19085364.43,2023-05-29,Engineering & Construction Services,FALSE
-ee05bea0-abc9-4b10-9a6f-a741093c328c_1,Doc3797694830,RFT,Construction Services,Clearway Construction Inc,17539027,2023-08-21,Toronto Water,FALSE
+7bbaae15-eea4-4c74-b64e-42cbbfd3620d_1,Doc3780626765,RFT,Construction Services,Grascan Construction Ltd.,4632000,2023-03-28,Engineering & Construction Services,TRUE
+6021c8c7-3315-4922-be78-f38d57d24552_1,Doc3780962042,RFT,Construction Services,Green Infrastructure Partners Inc.,19085364.43,2023-05-29,Engineering & Construction Services,TRUE
+ee05bea0-abc9-4b10-9a6f-a741093c328c_1,Doc3797694830,RFT,Construction Services,Clearway Construction Inc,17539027,2023-08-21,Toronto Water,TRUE
 89c71b42-57f5-4487-936f-ee24996cbc04_1,Doc3813921483,RFT,Construction Services,373044 Ontario Limited O/A Trans Canada Construction,210780.2,2023-05-09,Solid Waste Management Services,TRUE
-9b499e59-1695-4fbd-8bb4-1f342046616e_1,Doc3819431950,RFT,Construction Services,Insituform Technologies Ltd,8414613.9,2023-05-25,Toronto Water,FALSE
+9b499e59-1695-4fbd-8bb4-1f342046616e_1,Doc3819431950,RFT,Construction Services,Insituform Technologies Ltd,8414613.9,2023-05-25,Toronto Water,TRUE
 6824b4d5-7d80-4826-8b0d-58a6f86bdfcf_1,Doc3824580171,RFT,Construction Services,Lishey Metal Fabrication Ltd,412250,2023-05-12,Transportation Services,TRUE
-c538e6fe-e883-4383-9879-907c44892c30_1,Doc3824814989,RFT,Construction Services,2489960 Ontario Inc.,2620200,2023-05-19,Engineering & Construction Services,FALSE
-9d177d4d-72e9-464b-8782-81fee532857c_1,Doc3846791801,RFT,Construction Services,Grascan Construction Ltd,29939012.2,2023-06-26,Engineering & Construction Services,FALSE
-a79f5e5f-dec3-447e-b21e-a7209fcbf1a1_1,Doc3846914594,RFT,Construction Services,Midome Construction Services Ltd,2098880,2023-10-24,Engineering & Construction Services,FALSE
-4ef33b1b-18fd-4197-91d1-f0c2360ba777_1,Doc3850138283,RFT,Construction Services,Viola Management Inc.,28168691.41,2023-05-30,Engineering & Construction Services,FALSE
-8c1a21c1-1020-47fa-b41b-60d7937ede12_1,Doc3865067327,RFT,Construction Services,Bridgecon Construction Ltd,4244583.63,2023-06-15,Transportation Services,FALSE
+c538e6fe-e883-4383-9879-907c44892c30_1,Doc3824814989,RFT,Construction Services,2489960 Ontario Inc.,2620200,2023-05-19,Engineering & Construction Services,TRUE
+9d177d4d-72e9-464b-8782-81fee532857c_1,Doc3846791801,RFT,Construction Services,Grascan Construction Ltd,29939012.2,2023-06-26,Engineering & Construction Services,TRUE
+a79f5e5f-dec3-447e-b21e-a7209fcbf1a1_1,Doc3846914594,RFT,Construction Services,Midome Construction Services Ltd,2098880,2023-10-24,Engineering & Construction Services,TRUE
+4ef33b1b-18fd-4197-91d1-f0c2360ba777_1,Doc3850138283,RFT,Construction Services,Viola Management Inc.,28168691.41,2023-05-30,Engineering & Construction Services,TRUE
+8c1a21c1-1020-47fa-b41b-60d7937ede12_1,Doc3865067327,RFT,Construction Services,Bridgecon Construction Ltd,4244583.63,2023-06-15,Transportation Services,TRUE
 8e711b0f-a059-4a9b-a39e-6a037603143b_1,Doc3883709991,RFT,Construction Services,Fer-Pal Construction Ltd.,10525401.7,2023-06-28,Toronto Water,FALSE
 beeea9d2-45cf-4d78-a8e4-0367799c3be6_1,Doc3885238177,RFT,Construction Services,Aqua Tech Solutions Inc,327210,2023-06-27,Transportation Services,TRUE
-09642d05-7783-4ea5-881f-6b170f6f0930_1,Doc3900076733,RFT,Construction Services,Ptr Paving Inc,1700794.3,2023-05-10,Transportation Services,FALSE
-39bb6964-6d78-49dc-b80b-053a2e67a3b1_1,Doc3901002343,RFT,Construction Services,Viola Management Inc,2167125.14,2023-07-07,Transportation Services,FALSE
-866ceae4-ead7-4d00-9acf-90648850de31_1,Doc3904392069,RFT,Construction Services,Ptr Paving Inc.,1053000,2023-06-26,Transportation Services,FALSE
-1bc39255-2c2e-4f76-a0a2-d69717f66666_1,Doc3906481560,RFT,Construction Services,Maple-Crete Inc.,4316993.6,2023-05-30,Transportation Services,FALSE
-76054c08-79da-4ec4-95f7-9f0b569b45d7_1,Doc3920611266,RFT,Construction Services,Brook Restoration Ltd,2168605.35,2023-10-23,Engineering & Construction Services,FALSE
-a16c3fbd-af49-4c3a-b1f3-79d71ecffc17_1,Doc3921046980,RFT,Construction Services,Wsp Canada Inc,324862.5,2023-08-10,Engineering & Construction Services,TRUE
-910e6432-8871-4fe8-bd46-ed5d8603ae29_1,Doc3921272353,RFT,Construction Services,Maple-Crete Inc,2030075,2023-06-29,Transportation Services,FALSE
-ead8e347-a217-4d29-a7f5-e4e3b43fecd5_1,Doc3921321083,RFT,Construction Services,Maple-Crete Inc,2016167.29,2023-07-07,Transportation Services,FALSE
-4db51897-aa5f-419a-bf99-4234f3b83248_1,Doc3932620378,RFT,Construction Services,Vaughan Paving Ltd.,1211340,2023-06-05,Transportation Services,FALSE
-9bdcef48-2081-409e-a36d-8034fc026431_1,Doc3937572365,RFT,Construction Services,Rafat General Contractor Inc,605975,2023-10-24,Transportation Services,FALSE
-30bbb305-8aad-4ecb-98c7-bddeaa7fd3d4_1,Doc3948833589,RFT,Construction Services,Sanscon Construction Limited,6417184.62,2023-07-12,Engineering & Construction Services,FALSE
-a3bc2ade-7eb3-404c-978e-78f678410807_1,Doc3948982724,RFT,Construction Services,Midome Construction Services Ltd,16972800,2023-10-24,Engineering & Construction Services,FALSE
-9fb088c1-8786-4b4e-85d1-65853062c150_1,Doc3952713027,RFT,Construction Services,Il Duca Contracting Inc.,3376572.1,2023-07-17,Engineering & Construction Services,FALSE
-7b1196ab-e183-498d-9756-902e78afe8f7_1,Doc3964425639,RFT,Construction Services,Infrastructure Coatings Corporation,2136249,2023-08-08,Transportation Services,FALSE
-94989545-9cce-4ddd-8e86-a9df2dc06aed_1,Doc3964997028,RFT,Construction Services,Aqua Tech Solutions Inc,1237334,2023-06-28,Transportation Services,FALSE
-9b8a3d46-de52-4870-9912-0223d8bcee48_1,Doc3971697547,RFT,Construction Services,Grascan Construction Ltd / Torbridge Construction Ltd,2520000,2023-08-01,Engineering & Construction Services,FALSE
-efb604ea-4de1-47b0-ba2b-ed97f5534e38_1,Doc3973032085,RFT,Construction Services,Ptr Paving Inc,5340440,2023-10-24,Transportation Services,FALSE
+09642d05-7783-4ea5-881f-6b170f6f0930_1,Doc3900076733,RFT,Construction Services,Ptr Paving Inc,1700794.3,2023-05-10,Transportation Services,TRUE
+39bb6964-6d78-49dc-b80b-053a2e67a3b1_1,Doc3901002343,RFT,Construction Services,Viola Management Inc,2167125.14,2023-07-07,Transportation Services,TRUE
+866ceae4-ead7-4d00-9acf-90648850de31_1,Doc3904392069,RFT,Construction Services,Ptr Paving Inc.,1053000,2023-06-26,Transportation Services,TRUE
+1bc39255-2c2e-4f76-a0a2-d69717f66666_1,Doc3906481560,RFT,Construction Services,Maple-Crete Inc.,4316993.6,2023-05-30,Transportation Services,TRUE
+76054c08-79da-4ec4-95f7-9f0b569b45d7_1,Doc3920611266,RFT,Construction Services,Brook Restoration Ltd,2168605.35,2023-10-23,Engineering & Construction Services,TRUE
+a16c3fbd-af49-4c3a-b1f3-79d71ecffc17_1,Doc3921046980,RFT,Construction Services,Wsp Canada Inc,324862.5,2023-08-10,Engineering & Construction Services,FALSE
+910e6432-8871-4fe8-bd46-ed5d8603ae29_1,Doc3921272353,RFT,Construction Services,Maple-Crete Inc,2030075,2023-06-29,Transportation Services,TRUE
+ead8e347-a217-4d29-a7f5-e4e3b43fecd5_1,Doc3921321083,RFT,Construction Services,Maple-Crete Inc,2016167.29,2023-07-07,Transportation Services,TRUE
+4db51897-aa5f-419a-bf99-4234f3b83248_1,Doc3932620378,RFT,Construction Services,Vaughan Paving Ltd.,1211340,2023-06-05,Transportation Services,TRUE
+9bdcef48-2081-409e-a36d-8034fc026431_1,Doc3937572365,RFT,Construction Services,Rafat General Contractor Inc,605975,2023-10-24,Transportation Services,TRUE
+30bbb305-8aad-4ecb-98c7-bddeaa7fd3d4_1,Doc3948833589,RFT,Construction Services,Sanscon Construction Limited,6417184.62,2023-07-12,Engineering & Construction Services,TRUE
+a3bc2ade-7eb3-404c-978e-78f678410807_1,Doc3948982724,RFT,Construction Services,Midome Construction Services Ltd,16972800,2023-10-24,Engineering & Construction Services,TRUE
+9fb088c1-8786-4b4e-85d1-65853062c150_1,Doc3952713027,RFT,Construction Services,Il Duca Contracting Inc.,3376572.1,2023-07-17,Engineering & Construction Services,TRUE
+7b1196ab-e183-498d-9756-902e78afe8f7_1,Doc3964425639,RFT,Construction Services,Infrastructure Coatings Corporation,2136249,2023-08-08,Transportation Services,TRUE
+94989545-9cce-4ddd-8e86-a9df2dc06aed_1,Doc3964997028,RFT,Construction Services,Aqua Tech Solutions Inc,1237334,2023-06-28,Transportation Services,TRUE
+9b8a3d46-de52-4870-9912-0223d8bcee48_1,Doc3971697547,RFT,Construction Services,Grascan Construction Ltd / Torbridge Construction Ltd,2520000,2023-08-01,Engineering & Construction Services,TRUE
+efb604ea-4de1-47b0-ba2b-ed97f5534e38_1,Doc3973032085,RFT,Construction Services,Ptr Paving Inc,5340440,2023-10-24,Transportation Services,TRUE
 a60aa478-ebf5-4f67-a588-4365a9785a50_1,Doc3975879037,RFT,Construction Services,Kleingburg Contracting Ltd,328000,2023-10-23,Transportation Services,TRUE
-adc0632a-11cd-41b1-a512-c69341e466d1_1,Doc3978905389,RFT,Construction Services,Capital Sewer Services Inc.,9433464.7,2023-10-04,Toronto Water,FALSE
-6de5ecd8-05ec-479b-8e3b-1270ea8139be_1,Doc3979244860,RFT,Construction Services,Superior Boiler Works And Welding Ltd.,5077632.85,2023-12-07,Toronto Water,FALSE
-f7cabca2-537b-4de1-a9fb-11bc23f10e9f_1,Doc3981710683,RFT,Construction Services,2489960 Ontario Inc,9647000,2023-08-03,Engineering & Construction Services,FALSE
-410bef4c-2edd-4656-b603-c4f5dc1d0672_1,Doc3992828327,RFT,Construction Services,Brennan Paving & Construction,1620057.54,2023-08-10,Engineering & Construction Services,FALSE
-c4fba143-1f6f-41c5-9ecd-76b136154350_1,Doc3993463838,RFT,Construction Services,Viola Management Inc,8169855.75,2023-10-24,Engineering & Construction Services,FALSE
-fac04f04-09d6-49be-b09e-e98f8aee24ce_1,Doc3994771203,RFT,Construction Services,Four Seasons Site Development Ltd,1795277,2023-08-10,Transportation Services,FALSE
-a1bcf057-09bd-40aa-8c4f-610be98a1443_1,Doc3996109285,RFT,Construction Services,Aqua Tech Solutions Inc,1312268,2023-09-13,Transportation Services,FALSE
-3345f1fc-35c8-4a10-b64d-e0887743dd44_1,Doc3999125314,RFT,Construction Services,Lcd Mechanical Inc.,717424.96,2023-09-20,Solid Waste Management Services,FALSE
-4c2c874e-c6e3-4ad4-b8a3-7f9c75b9dd0b_1,Doc4001403150,RFT,Construction Services,Green Infrastructure Partners Inc,801958.83,2023-10-13,Engineering & Construction Services,FALSE
-c22c0724-7e10-4617-a5e8-c07e0c504275_1,Doc4001854894,RFT,Construction Services,Vaughan Paving Ltd,1360939,2023-10-24,Transportation Services,FALSE
-3b48efe1-2ebe-4c33-8089-9b9f555f2a9f_1,Doc4005137066,RFT,Construction Services,1460973 Ontario Ltd. O/A C.p. Systems,3028907,2023-10-18,Toronto Water,FALSE
+adc0632a-11cd-41b1-a512-c69341e466d1_1,Doc3978905389,RFT,Construction Services,Capital Sewer Services Inc.,9433464.7,2023-10-04,Toronto Water,TRUE
+6de5ecd8-05ec-479b-8e3b-1270ea8139be_1,Doc3979244860,RFT,Construction Services,Superior Boiler Works And Welding Ltd.,5077632.85,2023-12-07,Toronto Water,TRUE
+f7cabca2-537b-4de1-a9fb-11bc23f10e9f_1,Doc3981710683,RFT,Construction Services,2489960 Ontario Inc,9647000,2023-08-03,Engineering & Construction Services,TRUE
+410bef4c-2edd-4656-b603-c4f5dc1d0672_1,Doc3992828327,RFT,Construction Services,Brennan Paving & Construction,1620057.54,2023-08-10,Engineering & Construction Services,TRUE
+c4fba143-1f6f-41c5-9ecd-76b136154350_1,Doc3993463838,RFT,Construction Services,Viola Management Inc,8169855.75,2023-10-24,Engineering & Construction Services,TRUE
+fac04f04-09d6-49be-b09e-e98f8aee24ce_1,Doc3994771203,RFT,Construction Services,Four Seasons Site Development Ltd,1795277,2023-08-10,Transportation Services,TRUE
+a1bcf057-09bd-40aa-8c4f-610be98a1443_1,Doc3996109285,RFT,Construction Services,Aqua Tech Solutions Inc,1312268,2023-09-13,Transportation Services,TRUE
+3345f1fc-35c8-4a10-b64d-e0887743dd44_1,Doc3999125314,RFT,Construction Services,Lcd Mechanical Inc.,717424.96,2023-09-20,Solid Waste Management Services,TRUE
+4c2c874e-c6e3-4ad4-b8a3-7f9c75b9dd0b_1,Doc4001403150,RFT,Construction Services,Green Infrastructure Partners Inc,801958.83,2023-10-13,Engineering & Construction Services,TRUE
+c22c0724-7e10-4617-a5e8-c07e0c504275_1,Doc4001854894,RFT,Construction Services,Vaughan Paving Ltd,1360939,2023-10-24,Transportation Services,TRUE
+3b48efe1-2ebe-4c33-8089-9b9f555f2a9f_1,Doc4005137066,RFT,Construction Services,1460973 Ontario Ltd. O/A C.p. Systems,3028907,2023-10-18,Toronto Water,TRUE
 1b8a69b4-c978-463d-bf34-a020a0d0355a_1,Doc4005733390,RFT,Construction Services,Bennett Mechanical Installations,2003640,2023-09-13,Engineering & Construction Services,FALSE
 b5c97257-0625-405f-beeb-198642ef54c8_1,Doc4013334293,RFT,Construction Services,Pnj Engineering Inc,205265,2023-08-08,Transportation Services,TRUE
-6501585a-b174-4a61-a38b-7d404a342e59_1,Doc4014898448,RFT,Construction Services,Drainstar Contracting Ltd.,10967268,2023-12-06,Transportation Services,FALSE
-e61ada3d-fa21-4674-96c9-9ce9f3f5f7fa_1,Doc4016646588,RFT,Construction Services,Greenspace Construction Inc,1717156.41,2023-12-06,Solid Waste Management Services,FALSE
-85379182-268f-4120-9100-73a302eeb9b1_1,Doc4021925808,RFT,Construction Services,Upper Canada Road Services Inc,3131905,2023-08-24,Transportation Services,FALSE
-488ff922-cf36-46e4-9c36-1d3fc56cff6d_1,Doc4024276481,RFT,Construction Services,D Crupi & Sons Limited,8486485.76,2023-10-24,Engineering & Construction Services,FALSE
-904c8e2b-dc73-4f18-a858-f87255edf78f_1,Doc4031969151,RFT,Construction Services,Pegah Construction Ltd,2277887.5,2023-09-19,Transportation Services,FALSE
-526ff44e-7b83-430d-ae53-2f80efe88904_1,Doc4048088807,RFT,Construction Services,Viola Management Inc,1102628,2023-09-13,Transportation Services,FALSE
-4dafc906-966f-4568-b207-32686a58031d_1,Doc4051355928,RFT,Construction Services,Anacond Contracting Inc,882936,2024-02-02,Corporate Real Estate Management,FALSE
-bcc18542-c9a8-401b-aa98-34d2686c67c5_1,Doc4061525952,RFT,Construction Services,Midome Construction Services Inc,2138888.88,2023-09-12,Engineering & Construction Services,FALSE
-1d731648-0fe2-436d-9c3d-d606dc2a32a6_1,Doc4071505535,RFT,Construction Services,Four Seasons Site Development Ltd,8424256.5,2023-10-06,Engineering & Construction Services,FALSE
-5aa774c7-db2e-46c6-b9d9-42281f5961dd_1,Doc4075289930,RFT,Construction Services,Insituform Technologies Ltd,9717955.5,2024-02-02,Engineering & Construction Services,FALSE
-9fa0d5eb-3f91-423c-b1f1-d964826fefbf_1,Doc4076896026,RFT,Construction Services,Direct Underground Inc.,3294826,2023-10-04,Engineering & Construction Services,FALSE
-4aa38176-5f9c-4792-87e4-4d54bcdf6351_1,Doc4079197579,RFT,Construction Services,Sanscon Construction Limited,2568496.25,2023-10-24,Engineering & Construction Services,FALSE
-6e89d4e6-f708-49ea-9487-5d372fc86069_1,Doc4085663195,RFT,Construction Services,Maple-Crete Inc,2556961.5,2023-10-10,Transportation Services,FALSE
-6e89d4e6-f708-49ea-9487-5d372fc86069_2,Doc4085663195,RFT,Construction Services,Maple-Crete Inc,2556961.5,2023-10-10,Transportation Services,FALSE
-4e546a66-ee4b-437c-8f4a-a5f9008891ce_1,Doc4091895163,RFT,Construction Services,Ptr Paving Ltd,2601543,2023-10-24,Transportation Services,FALSE
-4ed67095-6600-43f7-a69a-591995c6cc40_1,Doc4091952536,RFT,Construction Services,D Crupi And Sons,1320643.39,2023-10-10,Engineering & Construction Services,FALSE
-12272319-1d48-47a5-8e2e-580a9f590ee6_1,Doc4095573772,RFT,Construction Services,Maple Crete Inc,1140762,2023-10-24,Transportation Services,FALSE
-c6eb2f07-de74-45c0-87b8-ff26887a5331_1,Doc4102625216,RFT,Construction Services,Clearwater Structures Inc,1372179.68,2023-10-23,Transportation Services,FALSE
-1234ba00-bc9d-4053-8baa-b587528d0c5a_1,Doc4104321075,RFT,Construction Services,Kapp Infrastructure Inc,18856444.31,2023-12-22,Transportation Services,FALSE
-90572bb4-83b3-4747-a15c-64ce2b6562a4_1,Doc4104321108,RFT,Construction Services,2220742 Ontario Ltd,12606572.29,2023-12-19,Engineering & Construction Services,FALSE
-a4bd68c2-3e8d-4383-96fa-d89fda258d18_1,Doc4104683821,RFT,Construction Services,Alliance Verdi Civil Inc,11235030.57,2023-10-24,Engineering & Construction Services,FALSE
-90d3c69f-21db-45f9-862d-0a2e242ddd48_1,Doc4107533377,RFT,Construction Services,D Crupi & Sons Limited,6658436.02,2023-11-02,Engineering & Construction Services,FALSE
-d7822cfc-106e-49e5-a980-3012b0c89584_1,Doc4113248357,RFT,Construction Services,Viola Management Inc.,1662027.25,2023-09-20,Transportation Services,FALSE
-8d7d89f2-4098-47e9-bb45-7aeb3697632e_1,Doc4117198645,RFT,Construction Services,D.crupi & Sons Limited,2593249.8,2023-10-19,Transportation Services,FALSE
-d1383331-f81a-4096-b403-f2119951991b_1,Doc4141341712,RFT,Construction Services,Belor Construction Ltd,7255343.76,2023-11-22,Engineering & Construction Services,FALSE
-6f367ef4-187e-46a2-9923-3cf59a64bab5_1,Doc4167985241,RFT,Construction Services,Sanscon Construction Limited,8731709.95,2024-02-02,Engineering & Construction Services,FALSE
-60948e6f-b5f9-40b7-9842-881027224ba4_1,Doc4223531728,RFT,Construction Services,D Crupi & Sons Limited,3799762.67,2024-02-05,Engineering & Construction Services,FALSE
+6501585a-b174-4a61-a38b-7d404a342e59_1,Doc4014898448,RFT,Construction Services,Drainstar Contracting Ltd.,10967268,2023-12-06,Transportation Services,TRUE
+e61ada3d-fa21-4674-96c9-9ce9f3f5f7fa_1,Doc4016646588,RFT,Construction Services,Greenspace Construction Inc,1717156.41,2023-12-06,Solid Waste Management Services,TRUE
+85379182-268f-4120-9100-73a302eeb9b1_1,Doc4021925808,RFT,Construction Services,Upper Canada Road Services Inc,3131905,2023-08-24,Transportation Services,TRUE
+488ff922-cf36-46e4-9c36-1d3fc56cff6d_1,Doc4024276481,RFT,Construction Services,D Crupi & Sons Limited,8486485.76,2023-10-24,Engineering & Construction Services,TRUE
+904c8e2b-dc73-4f18-a858-f87255edf78f_1,Doc4031969151,RFT,Construction Services,Pegah Construction Ltd,2277887.5,2023-09-19,Transportation Services,TRUE
+526ff44e-7b83-430d-ae53-2f80efe88904_1,Doc4048088807,RFT,Construction Services,Viola Management Inc,1102628,2023-09-13,Transportation Services,TRUE
+4dafc906-966f-4568-b207-32686a58031d_1,Doc4051355928,RFT,Construction Services,Anacond Contracting Inc,882936,2024-02-02,Corporate Real Estate Management,TRUE
+bcc18542-c9a8-401b-aa98-34d2686c67c5_1,Doc4061525952,RFT,Construction Services,Midome Construction Services Inc,2138888.88,2023-09-12,Engineering & Construction Services,TRUE
+1d731648-0fe2-436d-9c3d-d606dc2a32a6_1,Doc4071505535,RFT,Construction Services,Four Seasons Site Development Ltd,8424256.5,2023-10-06,Engineering & Construction Services,TRUE
+5aa774c7-db2e-46c6-b9d9-42281f5961dd_1,Doc4075289930,RFT,Construction Services,Insituform Technologies Ltd,9717955.5,2024-02-02,Engineering & Construction Services,TRUE
+9fa0d5eb-3f91-423c-b1f1-d964826fefbf_1,Doc4076896026,RFT,Construction Services,Direct Underground Inc.,3294826,2023-10-04,Engineering & Construction Services,TRUE
+4aa38176-5f9c-4792-87e4-4d54bcdf6351_1,Doc4079197579,RFT,Construction Services,Sanscon Construction Limited,2568496.25,2023-10-24,Engineering & Construction Services,TRUE
+6e89d4e6-f708-49ea-9487-5d372fc86069_1,Doc4085663195,RFT,Construction Services,Maple-Crete Inc,2556961.5,2023-10-10,Transportation Services,TRUE
+6e89d4e6-f708-49ea-9487-5d372fc86069_2,Doc4085663195,RFT,Construction Services,Maple-Crete Inc,2556961.5,2023-10-10,Transportation Services,TRUE
+4e546a66-ee4b-437c-8f4a-a5f9008891ce_1,Doc4091895163,RFT,Construction Services,Ptr Paving Ltd,2601543,2023-10-24,Transportation Services,TRUE
+4ed67095-6600-43f7-a69a-591995c6cc40_1,Doc4091952536,RFT,Construction Services,D Crupi And Sons,1320643.39,2023-10-10,Engineering & Construction Services,TRUE
+12272319-1d48-47a5-8e2e-580a9f590ee6_1,Doc4095573772,RFT,Construction Services,Maple Crete Inc,1140762,2023-10-24,Transportation Services,TRUE
+c6eb2f07-de74-45c0-87b8-ff26887a5331_1,Doc4102625216,RFT,Construction Services,Clearwater Structures Inc,1372179.68,2023-10-23,Transportation Services,TRUE
+1234ba00-bc9d-4053-8baa-b587528d0c5a_1,Doc4104321075,RFT,Construction Services,Kapp Infrastructure Inc,18856444.31,2023-12-22,Transportation Services,TRUE
+90572bb4-83b3-4747-a15c-64ce2b6562a4_1,Doc4104321108,RFT,Construction Services,2220742 Ontario Ltd,12606572.29,2023-12-19,Engineering & Construction Services,TRUE
+a4bd68c2-3e8d-4383-96fa-d89fda258d18_1,Doc4104683821,RFT,Construction Services,Alliance Verdi Civil Inc,11235030.57,2023-10-24,Engineering & Construction Services,TRUE
+90d3c69f-21db-45f9-862d-0a2e242ddd48_1,Doc4107533377,RFT,Construction Services,D Crupi & Sons Limited,6658436.02,2023-11-02,Engineering & Construction Services,TRUE
+d7822cfc-106e-49e5-a980-3012b0c89584_1,Doc4113248357,RFT,Construction Services,Viola Management Inc.,1662027.25,2023-09-20,Transportation Services,TRUE
+8d7d89f2-4098-47e9-bb45-7aeb3697632e_1,Doc4117198645,RFT,Construction Services,D.crupi & Sons Limited,2593249.8,2023-10-19,Transportation Services,TRUE
+d1383331-f81a-4096-b403-f2119951991b_1,Doc4141341712,RFT,Construction Services,Belor Construction Ltd,7255343.76,2023-11-22,Engineering & Construction Services,TRUE
+6f367ef4-187e-46a2-9923-3cf59a64bab5_1,Doc4167985241,RFT,Construction Services,Sanscon Construction Limited,8731709.95,2024-02-02,Engineering & Construction Services,TRUE
+60948e6f-b5f9-40b7-9842-881027224ba4_1,Doc4223531728,RFT,Construction Services,D Crupi & Sons Limited,3799762.67,2024-02-05,Engineering & Construction Services,TRUE
 c1aa27b6-8a0a-46da-88ef-d405cb8767f0_1,Doc4235384096,RFT,Construction Services,Dyna Engineering Ltd,277281.3,2023-12-08,Transportation Services,TRUE
-fd2024b2-66af-40f1-b14f-399c0bb66f95_1,Doc4235467703,RFT,Construction Services,Viola Management Inc,6090812.99,2024-02-02,Engineering & Construction Services,FALSE
-b66b1b5e-6545-4856-ba43-664075598ae7_1,Doc4241747801,RFT,Construction Services,Viola Management Inc,4660915.49,2024-01-30,Engineering & Construction Services,FALSE
-d6b8914f-9ac1-4f0c-83f9-6d5c1bd21fb9_1,Doc4247073892,RFT,Construction Services,2489960 Ontario Inc,5478067,2024-02-29,Engineering & Construction Services,FALSE
-bb05d5bf-1869-4a46-aeb2-5c810dd41393_1,Doc4267533023,RFT,Construction Services,Sanscon Construction Ltd,6929115,2023-10-19,Engineering & Construction Services,FALSE
-75a809cf-23d1-4923-99af-9696f81c9d37_1,Doc4277122039,RFT,Construction Services,Schouten Excavating,902552,2024-01-30,Corporate Real Estate Management,FALSE
-534919d3-23c5-4e9e-a4a2-2e84d6dae3ec_1,Doc4294155291,RFT,Construction Services,Viola Management Inc.,744792.92,2024-04-04,Engineering & Construction Services,FALSE
-4b88e139-005c-49a7-8b0f-eaf4470ced3f_1,Doc4306065789,RFQ,Construction Services,Aqua Tech Solutions Inc,987660,2024-02-20,Transportation Services,FALSE
-3cd9618f-fe30-4c53-9c1c-faee8c533b91_1,Doc4306117175,RFT,Construction Services,Clearway Construction Inc.,13423845,2024-04-17,Toronto Water,FALSE
-66a7f98b-46dc-4899-a257-518fc71f28fa_1,Doc4332801004,RFQ,Construction Services,Viola Management Inc.,23588613.35,2024-02-05,Engineering & Construction Services,FALSE
-bc244727-a100-49e1-baba-a8713261c08d_1,Doc4352474598,RFT,Construction Services,Multiseal,1334000,2024-03-22,Transportation Services,FALSE
+fd2024b2-66af-40f1-b14f-399c0bb66f95_1,Doc4235467703,RFT,Construction Services,Viola Management Inc,6090812.99,2024-02-02,Engineering & Construction Services,TRUE
+b66b1b5e-6545-4856-ba43-664075598ae7_1,Doc4241747801,RFT,Construction Services,Viola Management Inc,4660915.49,2024-01-30,Engineering & Construction Services,TRUE
+d6b8914f-9ac1-4f0c-83f9-6d5c1bd21fb9_1,Doc4247073892,RFT,Construction Services,2489960 Ontario Inc,5478067,2024-02-29,Engineering & Construction Services,TRUE
+bb05d5bf-1869-4a46-aeb2-5c810dd41393_1,Doc4267533023,RFT,Construction Services,Sanscon Construction Ltd,6929115,2023-10-19,Engineering & Construction Services,TRUE
+75a809cf-23d1-4923-99af-9696f81c9d37_1,Doc4277122039,RFT,Construction Services,Schouten Excavating,902552,2024-01-30,Corporate Real Estate Management,TRUE
+534919d3-23c5-4e9e-a4a2-2e84d6dae3ec_1,Doc4294155291,RFT,Construction Services,Viola Management Inc.,744792.92,2024-04-04,Engineering & Construction Services,TRUE
+4b88e139-005c-49a7-8b0f-eaf4470ced3f_1,Doc4306065789,RFQ,Construction Services,Aqua Tech Solutions Inc,987660,2024-02-20,Transportation Services,TRUE
+3cd9618f-fe30-4c53-9c1c-faee8c533b91_1,Doc4306117175,RFT,Construction Services,Clearway Construction Inc.,13423845,2024-04-17,Toronto Water,TRUE
+66a7f98b-46dc-4899-a257-518fc71f28fa_1,Doc4332801004,RFQ,Construction Services,Viola Management Inc.,23588613.35,2024-02-05,Engineering & Construction Services,TRUE
+bc244727-a100-49e1-baba-a8713261c08d_1,Doc4352474598,RFT,Construction Services,Multiseal,1334000,2024-03-22,Transportation Services,TRUE
 ccb3a435-13da-401e-a297-200b1a909eff_1,Doc4352825063,RFT,Construction Services,2220742 Ontario Ltd,403741.43,2024-05-10,Engineering & Construction Services,TRUE
 3e897882-f1a3-4f1b-9a62-28cb88cafab2_1,Doc4352825063,RFT,Construction Services,2220742 Ontario Ltd,403741.43,2024-02-15,Engineering & Construction Services,TRUE
-87845a28-3f2e-4a21-89b9-884d2d35f1f9_1,Doc4389212417,RFP,Construction Services,Midome Construction Services Ltd,7230000,2024-01-18,Engineering & Construction Services,FALSE
-ef524f55-9a21-4d6c-88a9-fe7872e49039_1,Doc4413383564,RFT,Construction Services,Rafat General Contractor Inc,758310,2024-05-07,Transportation Services,FALSE
-4c379b63-6b57-4abd-af1a-45545fb098d6_1,Doc4435996422,RFT,Construction Services,D Crupi & Sons Limited,4729220.85,2024-05-02,Transportation Services,FALSE
-75623a6e-68d7-4cfc-b7fa-63488193ead0_1,Doc4467384196,RFT,Construction Services,D Crupi & Sons Limited,5294204.98,2024-05-24,Engineering & Construction Services,FALSE
-5cc506b1-ba58-49ce-886d-31723cbfbc02_1,Doc4476302036,RFQ,Construction Services,Guild Electric Limited,4839497.6,2024-05-01,Transportation Services,FALSE
+87845a28-3f2e-4a21-89b9-884d2d35f1f9_1,Doc4389212417,RFP,Construction Services,Midome Construction Services Ltd,7230000,2024-01-18,Engineering & Construction Services,TRUE
+ef524f55-9a21-4d6c-88a9-fe7872e49039_1,Doc4413383564,RFT,Construction Services,Rafat General Contractor Inc,758310,2024-05-07,Transportation Services,TRUE
+4c379b63-6b57-4abd-af1a-45545fb098d6_1,Doc4435996422,RFT,Construction Services,D Crupi & Sons Limited,4729220.85,2024-05-02,Transportation Services,TRUE
+75623a6e-68d7-4cfc-b7fa-63488193ead0_1,Doc4467384196,RFT,Construction Services,D Crupi & Sons Limited,5294204.98,2024-05-24,Engineering & Construction Services,TRUE
+5cc506b1-ba58-49ce-886d-31723cbfbc02_1,Doc4476302036,RFQ,Construction Services,Guild Electric Limited,4839497.6,2024-05-01,Transportation Services,TRUE
 1e1f1af3-f042-4d5f-8131-536e750a69ac_1,Doc3434402030,RFQ,Goods and Services,Laundry On Wheels,88884.65,2023-07-07,Toronto Water,TRUE
 bf2a06ed-0de3-4f08-ab6c-dab3c023fba8_1,Doc3444210172,RFQ,Goods and Services,Five Star Enterprise,132457.81,2023-01-09,Purchasing & Materials Management,TRUE
-945c5ac9-4b94-4b0a-8101-fa754d6d5809_1,Doc3536109096,RFQ,Goods and Services,Dependable Emergency Vehicles,5113395,2022-12-21,Fire Services,FALSE
-945c5ac9-4b94-4b0a-8101-fa754d6d5809_2,Doc3536109096,RFQ,Goods and Services,Safetek Emergency Vehicles Ltd.,5704250,2022-12-21,Fire Services,FALSE
-2922e576-122d-4cad-b62c-5fd16481e3b6_1,Doc3580308056,RFQ,Goods and Services,Safedesign Apparel Ltd,1913708,2024-03-12,Fire Services,FALSE
+945c5ac9-4b94-4b0a-8101-fa754d6d5809_1,Doc3536109096,RFQ,Goods and Services,Dependable Emergency Vehicles,5113395,2022-12-21,Fire Services,TRUE
+945c5ac9-4b94-4b0a-8101-fa754d6d5809_2,Doc3536109096,RFQ,Goods and Services,Safetek Emergency Vehicles Ltd.,5704250,2022-12-21,Fire Services,TRUE
+2922e576-122d-4cad-b62c-5fd16481e3b6_1,Doc3580308056,RFQ,Goods and Services,Safedesign Apparel Ltd,1913708,2024-03-12,Fire Services,TRUE
 5ef72059-7193-4509-bfbd-a3143f4f1e60_1,Doc3586141004,RFQ,Goods and Services,Sqm Janitorial Services Inc.,218821.9,2022-12-15,Municipal Licensing & Standards,TRUE
-59334dd6-d580-4425-a2a4-672c148dcc19_1,Doc3624722286,RFQ,Goods and Services,Metro Compactor Service Inc.,686138,2023-04-26,Solid Waste Management Services,FALSE
+59334dd6-d580-4425-a2a4-672c148dcc19_1,Doc3624722286,RFQ,Goods and Services,Metro Compactor Service Inc.,686138,2023-04-26,Solid Waste Management Services,TRUE
 5d98caca-f7a7-413a-9e8e-cabd2a2a9238_1,Doc3655214325,RFQ,Goods and Services,Control Gap Inc.,199179,2022-12-16,Information & Technology,TRUE
 8e9d19b7-f1e4-4edf-8031-3efcc3b05a7d_1,Doc3662800591,RFQ,Goods and Services,Black And Mcdonald Limited,8362970.6,2023-01-27,Transportation Services,FALSE
-1995e813-fe2e-4990-a483-023f7db1931a_1,Doc3663148302,RFQ,Goods and Services,Thermo Fisher Scientific,143317.76,2022-12-23,Toronto Water,TRUE
+1995e813-fe2e-4990-a483-023f7db1931a_1,Doc3663148302,RFQ,Goods and Services,Thermo Fisher Scientific,143317.76,2022-12-23,Toronto Water,FALSE
 c7efc227-ea28-4c2f-b150-aab28bf73e1e_1,Doc3664626497,RFQ,Goods and Services,Britespan Building Systems,108742.7,2023-06-01,Toronto Water,TRUE
-2cbf9149-9e28-4a75-bd5d-88131e5c3f3e_1,Doc3687223488,RFQ,Goods and Services,Nachurs Alpine Solutions Inc.,639700,2022-12-23,Toronto Water,FALSE
-857b85b4-b31e-431d-ba3c-c78c10cf3125_1,Doc3692809488,RFQ,Goods and Services,Superior Air Systems,833421.6,2023-02-06,Toronto Water,FALSE
-7d95ddb9-f217-4691-abee-b8d9570d954e_1,Doc3693132330,RFQ,Goods and Services,International Cybernetics Canada Inc,3013251.38,2023-02-22,Transportation Services,FALSE
-e345f6bf-b842-4fc7-9a6d-15a273e0824a_1,Doc3775384972,RFQ,Goods and Services,Dependable Emergency Vehicles,33590760,2023-06-23,Fire Services,FALSE
-a6e4a462-86cc-4dba-9475-eab312a19d5a_1,Doc3814081357,RFQ,Goods and Services,Mississauga Steel Mart,998566.21,2023-07-14,Solid Waste Management Services,FALSE
-977cc23d-8afd-4432-853c-64a803138372_1,Doc3817220750,RFQ,Goods and Services,Turkstra Modular Builders Inc,908343.8,2023-04-28,Toronto Water,FALSE
-628eca24-4392-4cc4-bff1-d34dc4dc2e16_1,Doc3865027173,RFQ,Goods and Services,Woodbine Pavement Markings Limited,5438345,2023-05-10,Transportation Services,FALSE
-fda4846c-fa20-4e39-ac95-98eee1e51ea9_1,Doc3873905324,RFQ,Goods and Services,Stinson Equipment Ltd,951056,2023-06-26,Transportation Services,FALSE
+2cbf9149-9e28-4a75-bd5d-88131e5c3f3e_1,Doc3687223488,RFQ,Goods and Services,Nachurs Alpine Solutions Inc.,639700,2022-12-23,Toronto Water,TRUE
+857b85b4-b31e-431d-ba3c-c78c10cf3125_1,Doc3692809488,RFQ,Goods and Services,Superior Air Systems,833421.6,2023-02-06,Toronto Water,TRUE
+7d95ddb9-f217-4691-abee-b8d9570d954e_1,Doc3693132330,RFQ,Goods and Services,International Cybernetics Canada Inc,3013251.38,2023-02-22,Transportation Services,TRUE
+e345f6bf-b842-4fc7-9a6d-15a273e0824a_1,Doc3775384972,RFQ,Goods and Services,Dependable Emergency Vehicles,33590760,2023-06-23,Fire Services,TRUE
+a6e4a462-86cc-4dba-9475-eab312a19d5a_1,Doc3814081357,RFQ,Goods and Services,Mississauga Steel Mart,998566.21,2023-07-14,Solid Waste Management Services,TRUE
+977cc23d-8afd-4432-853c-64a803138372_1,Doc3817220750,RFQ,Goods and Services,Turkstra Modular Builders Inc,908343.8,2023-04-28,Toronto Water,TRUE
+628eca24-4392-4cc4-bff1-d34dc4dc2e16_1,Doc3865027173,RFQ,Goods and Services,Woodbine Pavement Markings Limited,5438345,2023-05-10,Transportation Services,TRUE
+fda4846c-fa20-4e39-ac95-98eee1e51ea9_1,Doc3873905324,RFQ,Goods and Services,Stinson Equipment Ltd,951056,2023-06-26,Transportation Services,TRUE
 dd47457d-df88-46c9-b3f2-1695a21d28cb_1,Doc3883212056,RFQ,Goods and Services,Pnj Engineering Inc,289880,2023-04-26,Transportation Services,TRUE
 e3139f12-1941-4ec4-9354-17cbb5767127_1,Doc3889294579,RFQ,Goods and Services,Graphix Source Canada,371547,2023-08-01,Transportation Services,TRUE
 2630b651-c342-4dad-b0ac-67e61dab10dc_1,Doc3923013040,RFQ,Goods and Services,Supco Construction Ltd.,479977.2,2023-05-09,Toronto Water,TRUE
 ba031b31-9ca3-44b5-aac2-685416b1de86_1,Doc3937497848,RFQ,Goods and Services,Valley Integration Inc.,157274.8,2023-12-07,Toronto Water,TRUE
 5aedf578-66d9-41ee-9ea0-f445ada54749_1,Doc3970617953,RFQ,Goods and Services,Markham Metals Ltd.,620,2023-08-04,Solid Waste Management Services,TRUE
 b1ebf4fd-7de3-4cc9-8fab-640108ceb541_1,Doc3979244813,RFQ,Goods and Services,Combined Metal Industries Inc.,165,2023-07-06,Solid Waste Management Services,TRUE
-c0fd8680-8559-4daa-9825-d063bdb70c31_1,Doc3999401141,RFQ,Goods and Services,Guild Electric Limited,4594649.57,2023-09-07,Transportation Services,FALSE
-1970bdc9-f7b6-4d00-8f9b-d3f14c978afb_1,Doc4033738804,RFQ,Goods and Services,Cdmv Inc.,840000,2023-09-08,Municipal Licensing & Standards,FALSE
-81fe2597-f63b-4d33-9983-912b60c81e2a_1,Doc4162151819,RFQ,Goods and Services,Flochem Ltd,3532760,2024-01-11,Toronto Water,FALSE
-f99690f2-3be4-46ce-9524-7187eef2973d_1,Doc4162151819,RFQ,Goods and Services,Flochem Ltd,3532760,2024-01-11,Toronto Water,FALSE
-47a65b95-d8a9-4f7b-ad82-fae92cd49e66_1,Doc4221731495,RFQ,Goods and Services,416 Vactor Inc.,942290,2024-01-11,Toronto Water,FALSE
-fb43640d-9736-4a59-8008-8c24c8d3a266_1,Doc4230041922,RFQ,Goods and Services,Uba Inc,4368480,2024-01-29,Toronto Water,FALSE
-6be452b5-0ff1-42c0-a04c-141f5480fbd6_1,Doc4230041922,RFQ,Goods and Services,Uba Inc,4368480,2024-01-29,Toronto Water,FALSE
+c0fd8680-8559-4daa-9825-d063bdb70c31_1,Doc3999401141,RFQ,Goods and Services,Guild Electric Limited,4594649.57,2023-09-07,Transportation Services,TRUE
+1970bdc9-f7b6-4d00-8f9b-d3f14c978afb_1,Doc4033738804,RFQ,Goods and Services,Cdmv Inc.,840000,2023-09-08,Municipal Licensing & Standards,TRUE
+81fe2597-f63b-4d33-9983-912b60c81e2a_1,Doc4162151819,RFQ,Goods and Services,Flochem Ltd,3532760,2024-01-11,Toronto Water,TRUE
+f99690f2-3be4-46ce-9524-7187eef2973d_1,Doc4162151819,RFQ,Goods and Services,Flochem Ltd,3532760,2024-01-11,Toronto Water,TRUE
+47a65b95-d8a9-4f7b-ad82-fae92cd49e66_1,Doc4221731495,RFQ,Goods and Services,416 Vactor Inc.,942290,2024-01-11,Toronto Water,TRUE
+fb43640d-9736-4a59-8008-8c24c8d3a266_1,Doc4230041922,RFQ,Goods and Services,Uba Inc,4368480,2024-01-29,Toronto Water,TRUE
+6be452b5-0ff1-42c0-a04c-141f5480fbd6_1,Doc4230041922,RFQ,Goods and Services,Uba Inc,4368480,2024-01-29,Toronto Water,TRUE
 bc5a99b6-d9b5-4ae0-905c-cf87fd7f0549_1,Doc4316684665,RFQ,Goods and Services,Paris Site Furnishings And Outdoor Fitness,76196,2024-02-15,Transportation Services,TRUE
 cd11dcab-55f3-4440-bce7-78ae660f6aea_1,Doc3236037760,RFP,Professional Services,2503396 Ontario Inc,428301.56,2022-12-06,Toronto Water,TRUE
 8807541d-43d6-48b2-b0f6-22c4f6c36896_1,Doc3383644334,RFP,Professional Services,Safe Roads Engineering Inc,65572.97,2023-10-24,Transportation Services,TRUE
-efca9026-da9b-44bc-823b-b88af4f2b8be_1,Doc3447108958,RFP,Professional Services,Dsr Systems Inc.,928999,2023-03-06,"Parks, Forestry & Recreation",FALSE
+efca9026-da9b-44bc-823b-b88af4f2b8be_1,Doc3447108958,RFP,Professional Services,Dsr Systems Inc.,928999,2023-03-06,"Parks, Forestry & Recreation",TRUE
 9c27ff6d-b2c1-4f36-979a-c91a6f2d4a66_1,Doc3448368603,RFP,Professional Services,Stantec Consulting Ltd,43768591,2023-05-19,Engineering & Construction Services,FALSE
-c42b311b-6ba6-4856-a26d-82fc56547c06_1,Doc3470566906,RFP,Professional Services,The Control Institute Inc.,1175450,2023-02-01,Transportation Services,FALSE
+c42b311b-6ba6-4856-a26d-82fc56547c06_1,Doc3470566906,RFP,Professional Services,The Control Institute Inc.,1175450,2023-02-01,Transportation Services,TRUE
 cb468add-6359-4a02-b79e-6e3382b3e7f5_1,Doc3655392179,RFP,Professional Services,The Planning Partnership,197295,2023-01-13,"Parks, Forestry & Recreation",TRUE
-ba6e855d-aa74-41fa-975e-a3e767aa5f31_1,Doc3670282580,RFP,Professional Services,Dtah,934951,2023-07-20,City Planning,FALSE
+ba6e855d-aa74-41fa-975e-a3e767aa5f31_1,Doc3670282580,RFP,Professional Services,Dtah,934951,2023-07-20,City Planning,TRUE
 b78f6aa8-b639-4173-9fb0-2c2f6154043b_1,Doc3679821417,RFP,Professional Services,Arup Canada Incorporated,191900,2023-03-15,Facilities Management,TRUE
 f2d960fe-c828-47b0-9e54-0d92cdaa8ab6_1,Doc3684959756,RFP,Professional Services,Lmdg Building Code Consultants,100000,2023-03-07,Toronto Building,TRUE
-26be2734-4e47-4720-b760-cb331fe1007b_1,Doc3686626945,RFP,Professional Services,Wsp Canada Inc.,762950,2023-03-20,Solid Waste Management Services,FALSE
-465b5b46-42f3-4661-8099-5d17c1043775_1,Doc3704419610,RFP,Professional Services,Speridian Technologies Canada Inc,867474,2023-01-27,Engineering & Construction Services,FALSE
-238e6731-0f63-4d65-9f63-44e4c96a81ae_1,Doc3717319201,RFP,Professional Services,Ghd Limited,2301982.57,2023-03-10,Engineering & Construction Services - Engineering Services,FALSE
-b6527a85-3d76-471d-8075-c7dfd6347bb3_1,Doc3722909802,RFP,Professional Services,Ibi Group Professional Services Canada Inc,3810458.36,2023-01-30,Transportation Services,FALSE
-7206f2eb-2cf0-4905-afa4-409db66c191f_1,Doc3740004804,RFP,Professional Services,373044 Ont Ltd/Trans Canada Construction,8194057.64,2023-03-16,Engineering & Construction Services,FALSE
-1159dc02-5926-45ba-8d30-440eeda1cc4b_1,Doc3741395991,RFP,Professional Services,Access Planning Ltd.,597115,2023-10-06,Transportation Services,FALSE
-30b6aab5-3974-4f29-82d7-cfd6c850b13e_1,Doc3751442529,RFP,Professional Services,Rv Anderson Associated Ltd.,28244663,2023-07-11,Fire Services,FALSE
+26be2734-4e47-4720-b760-cb331fe1007b_1,Doc3686626945,RFP,Professional Services,Wsp Canada Inc.,762950,2023-03-20,Solid Waste Management Services,TRUE
+465b5b46-42f3-4661-8099-5d17c1043775_1,Doc3704419610,RFP,Professional Services,Speridian Technologies Canada Inc,867474,2023-01-27,Engineering & Construction Services,TRUE
+238e6731-0f63-4d65-9f63-44e4c96a81ae_1,Doc3717319201,RFP,Professional Services,Ghd Limited,2301982.57,2023-03-10,Engineering & Construction Services - Engineering Services,TRUE
+b6527a85-3d76-471d-8075-c7dfd6347bb3_1,Doc3722909802,RFP,Professional Services,Ibi Group Professional Services Canada Inc,3810458.36,2023-01-30,Transportation Services,TRUE
+7206f2eb-2cf0-4905-afa4-409db66c191f_1,Doc3740004804,RFP,Professional Services,373044 Ont Ltd/Trans Canada Construction,8194057.64,2023-03-16,Engineering & Construction Services,TRUE
+1159dc02-5926-45ba-8d30-440eeda1cc4b_1,Doc3741395991,RFP,Professional Services,Access Planning Ltd.,597115,2023-10-06,Transportation Services,TRUE
+30b6aab5-3974-4f29-82d7-cfd6c850b13e_1,Doc3751442529,RFP,Professional Services,Rv Anderson Associated Ltd.,28244663,2023-07-11,Fire Services,TRUE
 fc78f17d-cfbe-49ff-8f11-54de2f89fdb6_1,Doc3790262987,RFP,Professional Services,Era Architects Inc,211880,2023-06-22,City Planning,TRUE
 375db991-3485-42e8-83f9-a0e65e38eb1a_1,Doc3793973081,RFP,Professional Services,Three Sisters Consulting,338725,2023-12-27,City Planning,TRUE
-ba59688d-b58a-4c9d-bdcf-c0973a915f23_1,Doc3793992483,RFP,Professional Services,Aecom Canada Ltd.,2990901.29,2023-07-25,Engineering & Construction Services,FALSE
-89436497-1e64-482f-a6e2-93e42f7107a1_1,Doc3801944404,RFP,Professional Services,Exp Services Inc.,1887771.87,2023-08-03,Engineering & Construction Services,FALSE
-c4a9816a-c0e8-4c08-8aae-047c67c2d42b_1,Doc3817210853,RFP,Professional Services,Read Jones Christoffersen Ltd,3320000,2023-07-05,Corporate Real Estate Management,FALSE
-c4a9816a-c0e8-4c08-8aae-047c67c2d42b_2,Doc3817210853,RFP,Professional Services,Moon-Matz Ltd,3320000,2023-07-05,Corporate Real Estate Management,FALSE
-c4a9816a-c0e8-4c08-8aae-047c67c2d42b_3,Doc3817210853,RFP,Professional Services,Ata Architects Inc,3320000,2023-07-05,Corporate Real Estate Management,FALSE
-c4a9816a-c0e8-4c08-8aae-047c67c2d42b_4,Doc3817210853,RFP,Professional Services,Arcadis Professional Services,3320000,2023-07-05,Corporate Real Estate Management,FALSE
+ba59688d-b58a-4c9d-bdcf-c0973a915f23_1,Doc3793992483,RFP,Professional Services,Aecom Canada Ltd.,2990901.29,2023-07-25,Engineering & Construction Services,TRUE
+89436497-1e64-482f-a6e2-93e42f7107a1_1,Doc3801944404,RFP,Professional Services,Exp Services Inc.,1887771.87,2023-08-03,Engineering & Construction Services,TRUE
+c4a9816a-c0e8-4c08-8aae-047c67c2d42b_1,Doc3817210853,RFP,Professional Services,Read Jones Christoffersen Ltd,3320000,2023-07-05,Corporate Real Estate Management,TRUE
+c4a9816a-c0e8-4c08-8aae-047c67c2d42b_2,Doc3817210853,RFP,Professional Services,Moon-Matz Ltd,3320000,2023-07-05,Corporate Real Estate Management,TRUE
+c4a9816a-c0e8-4c08-8aae-047c67c2d42b_3,Doc3817210853,RFP,Professional Services,Ata Architects Inc,3320000,2023-07-05,Corporate Real Estate Management,TRUE
+c4a9816a-c0e8-4c08-8aae-047c67c2d42b_4,Doc3817210853,RFP,Professional Services,Arcadis Professional Services,3320000,2023-07-05,Corporate Real Estate Management,TRUE
 e68ccb69-11bd-45b1-b528-de6a1662054f_1,Doc3859894049,RFP,Professional Services,Gm Blueplan Engineering Limited,365052,2024-04-04,Toronto Water,TRUE
 03593e1b-47ab-4ac2-87e6-bee0c1f133b3_1,Doc3859894049,RFP,Professional Services,Gm Blueplan Engineering Limited,365052,2024-04-04,Toronto Water,TRUE
-ea2bd7ad-cb4d-4b1f-885c-908146f6c366_1,Doc3863128487,RFP,Professional Services,Spectrum Traffic Data Inc.,4435260,2023-08-21,Transportation Services,FALSE
+ea2bd7ad-cb4d-4b1f-885c-908146f6c366_1,Doc3863128487,RFP,Professional Services,Spectrum Traffic Data Inc.,4435260,2023-08-21,Transportation Services,TRUE
 1dbecdf5-9704-4051-baed-24435849a8d3_1,Doc3887611815,RFP,Professional Services,Ghd Contractors Limited,252000,2023-12-06,Toronto Water,TRUE
 6e422254-b2db-4545-b946-879aee40a70a_1,Doc3915365177,RFP,Professional Services,Urban Systems Ltd,144935,2023-09-14,City Planning,TRUE
-fe20d169-c6fe-4a27-8c11-02b516bb34d1_1,Doc3918912293,RFP,Professional Services,Davroc Testing Laboratories Inc.,882314.27,2023-11-06,Engineering & Construction Services,FALSE
-fe20d169-c6fe-4a27-8c11-02b516bb34d1_2,Doc3918912293,RFP,Professional Services,Snc Lavalin Inc.,882314.27,2023-11-06,Engineering & Construction Services,FALSE
-fe20d169-c6fe-4a27-8c11-02b516bb34d1_3,Doc3918912293,RFP,Professional Services,Wood E & I (Wsp E&I Canada Limited),882314.27,2023-11-06,Engineering & Construction Services,FALSE
+fe20d169-c6fe-4a27-8c11-02b516bb34d1_1,Doc3918912293,RFP,Professional Services,Davroc Testing Laboratories Inc.,882314.27,2023-11-06,Engineering & Construction Services,TRUE
+fe20d169-c6fe-4a27-8c11-02b516bb34d1_2,Doc3918912293,RFP,Professional Services,Snc Lavalin Inc.,882314.27,2023-11-06,Engineering & Construction Services,TRUE
+fe20d169-c6fe-4a27-8c11-02b516bb34d1_3,Doc3918912293,RFP,Professional Services,Wood E & I (Wsp E&I Canada Limited),882314.27,2023-11-06,Engineering & Construction Services,TRUE
 2c3a51f3-eb83-405f-8ff0-b080895c39cc_1,Doc3932901536,RFP,Professional Services,Gannett Fleming Canada Ulc,277098.84,2023-10-24,Engineering & Construction Services,TRUE
-49c19c57-76f2-4f6c-bf29-2e3dded700aa_1,Doc3935185884,RFP,Professional Services,Ghd Limited,5089797.82,2023-11-13,Toronto Water,FALSE
-98ec5577-27d7-4c3e-88cf-011ae4dd9180_1,Doc4011435999,RFP,Professional Services,Ghd Limited,4857181.26,2023-09-19,Engineering & Construction Services,FALSE
-b55420a8-3d62-4287-8055-4212a37c4d38_1,Doc4011687155,RFP,Professional Services,Aecom Canada Ltd.,5037183.12,2023-11-13,Engineering & Construction Services,FALSE
+49c19c57-76f2-4f6c-bf29-2e3dded700aa_1,Doc3935185884,RFP,Professional Services,Ghd Limited,5089797.82,2023-11-13,Toronto Water,TRUE
+98ec5577-27d7-4c3e-88cf-011ae4dd9180_1,Doc4011435999,RFP,Professional Services,Ghd Limited,4857181.26,2023-09-19,Engineering & Construction Services,TRUE
+b55420a8-3d62-4287-8055-4212a37c4d38_1,Doc4011687155,RFP,Professional Services,Aecom Canada Ltd.,5037183.12,2023-11-13,Engineering & Construction Services,TRUE
 4e528677-c053-4b18-808f-8bb50f195499_1,Doc4012155636,RFP,Professional Services,Parcel Economics Inc.,182532.5,2023-10-06,City Planning,TRUE
-cb2f95b7-4326-40b6-b9bb-203c991b1439_1,Doc4040813653,RFP,Professional Services,Arcadis Professional Services (Canada) Inc,1654156.1,2024-01-12,Toronto Water,FALSE
+cb2f95b7-4326-40b6-b9bb-203c991b1439_1,Doc4040813653,RFP,Professional Services,Arcadis Professional Services (Canada) Inc,1654156.1,2024-01-12,Toronto Water,TRUE
 ca06fb00-7539-486d-8f7b-fcb716ea261e_1,Doc4068734787,RFP,Professional Services,Stantec Consulting Ltd,786101.08,2024-01-05,Engineering & Construction Services,FALSE
 56b05c7d-f146-43ef-a9d1-b22e9a8421ba_1,Doc4093933430,RFQ,Professional Services,First Base Solutions Inc,99761,2024-01-05,Technology Services,TRUE
-a08fd7be-40d5-47cb-809d-c2a1e5376217_1,Doc4096217399,RFQ,Professional Services,Supco Construction Limited,3130166.5,2024-04-11,Toronto Water,FALSE
-a08fd7be-40d5-47cb-809d-c2a1e5376217_2,Doc4096217399,RFQ,Professional Services,Queensway Excavating & Landscaping Ltd.,3666413.69,2024-04-11,Toronto Water,FALSE
+a08fd7be-40d5-47cb-809d-c2a1e5376217_1,Doc4096217399,RFQ,Professional Services,Supco Construction Limited,3130166.5,2024-04-11,Toronto Water,TRUE
+a08fd7be-40d5-47cb-809d-c2a1e5376217_2,Doc4096217399,RFQ,Professional Services,Queensway Excavating & Landscaping Ltd.,3666413.69,2024-04-11,Toronto Water,TRUE
 22117bbd-6425-41c9-842a-8704872460ba_2,Doc4102874119,RFQ,Professional Services,Dye & Durham Corporation,115800,2024-02-22,Municipal Licensing & Standards,TRUE
-8c60b708-8c66-48ef-beed-fd5bf103bef9_1,Doc4104126185,RFP,Professional Services,Rv Anderson Associates Ltd,579639.96,2024-02-02,Engineering & Construction Services,FALSE
-e41a48b4-60ea-453e-ba2b-5e82a5b246f4_1,Doc4107019103,RFQ,Professional Services,416 Vactor Inc.,1577975,2024-01-11,Toronto Water,FALSE
+8c60b708-8c66-48ef-beed-fd5bf103bef9_1,Doc4104126185,RFP,Professional Services,Rv Anderson Associates Ltd,579639.96,2024-02-02,Engineering & Construction Services,TRUE
+e41a48b4-60ea-453e-ba2b-5e82a5b246f4_1,Doc4107019103,RFQ,Professional Services,416 Vactor Inc.,1577975,2024-01-11,Toronto Water,TRUE
 382248f1-847f-427d-8a69-70dcbfa85263_1,Doc4160248851,RFP,Professional Services,Testmark Laboratories Ltd,21891,2024-01-23,Toronto Water,TRUE
-b024c171-8bc1-4df6-881c-d22e04749abe_1,Doc4160464985,RFP,Professional Services,Wsp Canada Inc.,831438.66,2023-12-22,Solid Waste Management Services,FALSE
+b024c171-8bc1-4df6-881c-d22e04749abe_1,Doc4160464985,RFP,Professional Services,Wsp Canada Inc.,831438.66,2023-12-22,Solid Waste Management Services,TRUE
 b7a3701c-b4b2-4a53-9fd4-9d5350b3cf61_1,Doc4218530551,RFP,Professional Services,Ghd Limited,323473.3,2024-03-27,Toronto Water,TRUE
 b744e2a3-68aa-4b9a-826e-daf0efb86169_1,Doc4221532957,RFP,Professional Services,Moon-Matz Ltd.,437748,2024-05-10,Solid Waste Management Services,TRUE
 35bc4578-f52c-4130-a68e-c97c4ff80d90_1,Doc4227642481,RFT,Professional Services,Sutherland-Schultz Ltd.,3135727,2024-03-27,Toronto Water,FALSE
-4dcf4210-87bf-466b-a4bd-2e3cfa489d22_1,Doc4239628493,RFQ,Professional Services,Aqua Tech Solutions Inc,1197000,2024-01-18,Transportation Services,FALSE
+4dcf4210-87bf-466b-a4bd-2e3cfa489d22_1,Doc4239628493,RFQ,Professional Services,Aqua Tech Solutions Inc,1197000,2024-01-18,Transportation Services,TRUE
 87c57a3d-1e6e-4a7d-87ca-1cc87ff1a607_1,Doc4241600771,RFQ,Professional Services,Carraway Inc.,138283.2,2024-04-19,Transportation Services,TRUE
 87c57a3d-1e6e-4a7d-87ca-1cc87ff1a607_2,Doc4241600771,RFQ,Professional Services,Aai Corp.,87878,2024-04-19,Transportation Services,TRUE
-3090901c-89cf-414b-8a13-1831108ba714_1,Doc4254529929,RFQ,Professional Services,2192222 Ontario Inc. Dba Sunshine Grounds Care,632363,2024-04-17,Toronto Water,FALSE
-0004d889-246b-433f-9b6a-2b79098b61b4_1,Doc4316606042,RFP,Professional Services,Ghd Limited,1352148,2024-05-03,Solid Waste Management Services,FALSE
-e2251a56-616d-4baa-b73b-97d58fa1588c_1,Doc4344815153,RFP,Professional Services,Cima Canada Inc.,826862.65,2024-04-22,Engineering & Construction Services,FALSE
-57b99d50-b2bf-49b8-8ebd-e505fd0f0f3f_1,Doc4344815153,RFP,Professional Services,Cima Canada Inc,826862.65,2024-04-12,Engineering & Construction Services,FALSE
+3090901c-89cf-414b-8a13-1831108ba714_1,Doc4254529929,RFQ,Professional Services,2192222 Ontario Inc. Dba Sunshine Grounds Care,632363,2024-04-17,Toronto Water,TRUE
+0004d889-246b-433f-9b6a-2b79098b61b4_1,Doc4316606042,RFP,Professional Services,Ghd Limited,1352148,2024-05-03,Solid Waste Management Services,TRUE
+e2251a56-616d-4baa-b73b-97d58fa1588c_1,Doc4344815153,RFP,Professional Services,Cima Canada Inc.,826862.65,2024-04-22,Engineering & Construction Services,TRUE
+57b99d50-b2bf-49b8-8ebd-e505fd0f0f3f_1,Doc4344815153,RFP,Professional Services,Cima Canada Inc,826862.65,2024-04-12,Engineering & Construction Services,TRUE
 512de7b5-eefd-4abb-9c55-3621014924e2_1,Doc4378161663,RFP,Professional Services,Morrison Hershfield Ltd,1580032.3,2024-05-02,Engineering & Construction Services,FALSE
 58541e3c-307e-4408-b3ba-5424491561ca_1,Doc4378161663,RFP,Professional Services,Morrison Hershfield,1580032.3,2024-05-02,Engineering & Construction Services,FALSE
-1c9d54d4-ce2a-4d62-96aa-3aee19d48a2d_1,Doc4455587320,RFQ,Professional Services,Chemtrade Chemicals Canada Ltd.,1847535,2024-04-17,Toronto Water,FALSE
-85a9e98e-bf72-4e29-982a-282ba6b8deb7_1,Doc4355917968,RFT,Construction Services,Capital Sewer Services Inc,8658579.6,2024-06-06,Toronto Water,FALSE
+1c9d54d4-ce2a-4d62-96aa-3aee19d48a2d_1,Doc4455587320,RFQ,Professional Services,Chemtrade Chemicals Canada Ltd.,1847535,2024-04-17,Toronto Water,TRUE
+85a9e98e-bf72-4e29-982a-282ba6b8deb7_1,Doc4355917968,RFT,Construction Services,Capital Sewer Services Inc,8658579.6,2024-06-06,Toronto Water,TRUE
 2819b70e-7522-4d33-a5fb-13f1dadfb7a8_1,Doc4392014769,RFQ,Goods and Services,Onx Enterprise Solutions Ltd,333429.45,2024-05-16,Technology Services,TRUE
-d037ee43-cd4e-43d5-8ebe-562751794d84_1,Doc4273472356,RFP,Professional Services,Pmc Water Systems Services Inc,582928.74,2024-05-21,Corporate Real Estate Management,FALSE
-81d16940-7900-4758-8fe7-28505790bc86_1,Doc4227642481,RFT,Construction Services,Sutherland Schultz Ltd,1847535,2024-05-16,Toronto Water,FALSE
-9c2bd95a-63f4-4848-8a9f-d796b5de2c17_1,Doc4235627228,RFP,Construction Services,Ferdom Construction,974220,2024-05-23,"Parks, Forestry & Recreation",FALSE
-60ee4488-0a3e-489f-a0d2-2e999f041851_1,Doc4430207073,RFT,Construction Services,Harrison Muir Inc,15737709.43,2024-05-24,Engineering & Construction Services,FALSE
+d037ee43-cd4e-43d5-8ebe-562751794d84_1,Doc4273472356,RFP,Professional Services,Pmc Water Systems Services Inc,582928.74,2024-05-21,Corporate Real Estate Management,TRUE
+81d16940-7900-4758-8fe7-28505790bc86_1,Doc4227642481,RFT,Construction Services,Sutherland Schultz Ltd,1847535,2024-05-16,Toronto Water,TRUE
+9c2bd95a-63f4-4848-8a9f-d796b5de2c17_1,Doc4235627228,RFP,Construction Services,Ferdom Construction,974220,2024-05-23,"Parks, Forestry & Recreation",TRUE
+60ee4488-0a3e-489f-a0d2-2e999f041851_1,Doc4430207073,RFT,Construction Services,Harrison Muir Inc,15737709.43,2024-05-24,Engineering & Construction Services,TRUE
 0a7896ff-0e4f-4354-bd42-1894b7db9797_1,Doc4461503755,RFQ,Construction Services,Mna Engineering Ltd,350000,2024-05-22,Transportation Services,TRUE
 082ae8c1-2eb3-4b96-8b66-1b3a369ade05_1,Doc3928987223,RFP,Professional Services,Arcadis Professional Services (Canada) Inc,97740,2024-05-16,Technology Services,TRUE
-35bc4578-f52c-4130-a68e-c97c4ff80d90_2,Doc4227642481,RFT,Professional Services,Sutherland Schultz Ltd,1847535,2024-05-16,Toronto Water,FALSE
-b3a47100-8edb-456b-843a-f5cef8f47bc1_1,Doc4273472356,RFP,Professional Services,Pmc Water Systems Services Inc,582928.74,2024-05-21,Corporate Real Estate Management,FALSE
-5522a7a4-afbb-4649-a923-f2b91b9a6b4b_1,Doc4542619292,RFT,Construction Services,Midome Construction Services Ltd,3615600,2024-05-29,Engineering & Construction Services,FALSE
-e3d9dd11-3a10-4ffd-b41b-0259eb822acb_1,Doc4254143011,RFT,Construction Services,Aquicon Construction Co Ltd,59418568,2024-05-01,"Parks, Forestry & Recreation",FALSE
+35bc4578-f52c-4130-a68e-c97c4ff80d90_2,Doc4227642481,RFT,Professional Services,Sutherland Schultz Ltd,1847535,2024-05-16,Toronto Water,TRUE
+b3a47100-8edb-456b-843a-f5cef8f47bc1_1,Doc4273472356,RFP,Professional Services,Pmc Water Systems Services Inc,582928.74,2024-05-21,Corporate Real Estate Management,TRUE
+5522a7a4-afbb-4649-a923-f2b91b9a6b4b_1,Doc4542619292,RFT,Construction Services,Midome Construction Services Ltd,3615600,2024-05-29,Engineering & Construction Services,TRUE
+e3d9dd11-3a10-4ffd-b41b-0259eb822acb_1,Doc4254143011,RFT,Construction Services,Aquicon Construction Co Ltd,59418568,2024-05-01,"Parks, Forestry & Recreation",TRUE
 34db8817-cc64-40e5-8b58-45c30b512bfe_2,Doc4442364656,RFQ,Goods and Services,Concept Fiatlux Inc.,73200,2024-05-31,"Parks, Forestry & Recreation",TRUE
-a663ce11-e7f1-4236-883d-1a74a403ba09_1,Doc4038115970,RFP,Professional Services,West 8 Urban Design And Landscape Architecture Bv (West 8 Pr),1580000,2024-06-06,"Parks, Forestry & Recreation",FALSE
-e6de3a87-5132-4a38-8a7b-f953b5ec01e3_1,Doc4495674420,RFT,Construction Services,D Crupi & Sons Limited,24721984.93,2024-06-24,Engineering & Construction Services,FALSE
+a663ce11-e7f1-4236-883d-1a74a403ba09_1,Doc4038115970,RFP,Professional Services,West 8 Urban Design And Landscape Architecture Bv (West 8 Pr),1580000,2024-06-06,"Parks, Forestry & Recreation",TRUE
+e6de3a87-5132-4a38-8a7b-f953b5ec01e3_1,Doc4495674420,RFT,Construction Services,D Crupi & Sons Limited,24721984.93,2024-06-24,Engineering & Construction Services,TRUE
 b9d28a21-27f6-481a-a948-c75f1a0a1bf9_2,Doc4273922673,RFQ,Construction Services,International Name Plate Supplies Limited,156490.75,2024-06-09,Corporate Real Estate Management,TRUE
-a5d42c6a-ce78-45be-91be-d2a3a8caeee2_1,Doc4365588623,RFQ,Goods and Services,Ontario Water Werx Inc.,1044315,2024-06-09,Corporate Real Estate Management,FALSE
+a5d42c6a-ce78-45be-91be-d2a3a8caeee2_1,Doc4365588623,RFQ,Goods and Services,Ontario Water Werx Inc.,1044315,2024-06-09,Corporate Real Estate Management,TRUE
 021b31b9-fae6-4b18-834d-3d7e999db0a8_1,Doc4445313610,RFQ,Goods and Services,Aralia Interior Plantscaping  Inc,357969.24,2024-06-09,Corporate Real Estate Management,TRUE
 c8d14e8e-4fb5-429b-9beb-147766fee03b_1,Doc4241874588,RFP,Professional Services,Integral Group,297312,2024-06-09,Environment & Climate,TRUE
-a8ab061f-f517-40a2-89d6-f1a67425db2a_1,Doc4379656891,RFP,Professional Services,A.s.p. Incorporated,7371280.8,2024-06-19,Corporate Real Estate Management,FALSE
-e3d9dd11-3a10-4ffd-b41b-0259eb822acb_2,Doc4254143011,RFT,Construction Services,Atlas Constructors Inc,59418568,2024-06-21,"Parks, Forestry & Recreation",FALSE
-85a9e98e-bf72-4e29-982a-282ba6b8deb7_2,Doc4355917968,RFT,Construction Services,Capital Sewer Services Inc.,8658579.6,2024-06-06,Toronto Water,FALSE
-5732d3e0-121c-43aa-be7c-171e329091d5_1,Doc4355917968,RFQ,Construction Services,Capital Sewer Services Inc.,8658579.6,2024-06-06,Toronto Water,FALSE
-82385215-727f-4728-ab29-8ff1880be329_2,Doc4385003044,RFT,Construction Services,Triumph Aluminum & Sheet Metal Inc,2340468.5,2024-06-18,Solid Waste Management Services,FALSE
-2607d267-6694-4dfb-b204-0dd899030b7b_1,Doc4447617282,RFT,Construction Services,Viola Management Inc,2077052.04,2024-06-17,Transportation Services,FALSE
+a8ab061f-f517-40a2-89d6-f1a67425db2a_1,Doc4379656891,RFP,Professional Services,A.s.p. Incorporated,7371280.8,2024-06-19,Corporate Real Estate Management,TRUE
+e3d9dd11-3a10-4ffd-b41b-0259eb822acb_2,Doc4254143011,RFT,Construction Services,Atlas Constructors Inc,59418568,2024-06-21,"Parks, Forestry & Recreation",TRUE
+85a9e98e-bf72-4e29-982a-282ba6b8deb7_2,Doc4355917968,RFT,Construction Services,Capital Sewer Services Inc.,8658579.6,2024-06-06,Toronto Water,TRUE
+5732d3e0-121c-43aa-be7c-171e329091d5_1,Doc4355917968,RFQ,Construction Services,Capital Sewer Services Inc.,8658579.6,2024-06-06,Toronto Water,TRUE
+82385215-727f-4728-ab29-8ff1880be329_2,Doc4385003044,RFT,Construction Services,Triumph Aluminum & Sheet Metal Inc,2340468.5,2024-06-18,Solid Waste Management Services,TRUE
+2607d267-6694-4dfb-b204-0dd899030b7b_1,Doc4447617282,RFT,Construction Services,Viola Management Inc,2077052.04,2024-06-17,Transportation Services,TRUE
 b55e28a8-be61-4d8a-af0a-4a325a14f80c_1,Doc4480216572,RFT,Construction Services,Infrastructure Coatings Corporation,478950.5,2024-07-04,Transportation Services,TRUE
-7f656d77-7c69-46f5-972f-ee75801920e4_1,Doc4480270972,RFT,Construction Services,Four Seasons Sit Development Ltd.,4268451,2024-06-28,Engineering & Construction Services,FALSE
-e6de3a87-5132-4a38-8a7b-f953b5ec01e3_2,Doc4495674420,RFT,Construction Services,D Crupi And Sons,24721984.93,2024-06-26,Engineering & Construction Services,FALSE
+7f656d77-7c69-46f5-972f-ee75801920e4_1,Doc4480270972,RFT,Construction Services,Four Seasons Sit Development Ltd.,4268451,2024-06-28,Engineering & Construction Services,TRUE
+e6de3a87-5132-4a38-8a7b-f953b5ec01e3_2,Doc4495674420,RFT,Construction Services,D Crupi And Sons,24721984.93,2024-06-26,Engineering & Construction Services,TRUE
 7e5527a3-c39f-4d6f-b547-fb042108429b_1,Doc4521149812,RFT,Construction Services,7850891 Canada Inc/Egnatia Paving,441440.2,2024-06-17,Transportation Services,TRUE
 28d69046-3cbe-45f9-8401-b174030b6a7b_1,Doc4320141834,RFQ,Goods & Services,Teamworks Manufacturing Inc,99216.12,2024-06-28,Purchasing & Materials Management,TRUE
-4caf2c32-aeab-4e37-92e2-1b8727e53992_2,Doc4348333159,RFQ,Goods and Services,Bear Communications Inc,2275911,2024-06-20,Solid Waste Management Services,FALSE
-640a970a-ff0c-4a25-8108-2d4efa84a812_1,Doc4436320825,RFP,Professional Services,Multiview Locates Inc,1716464,2024-06-17,Engineering & Construction Services,FALSE
-d82776b3-8128-4489-8c51-c01775ad99cf_1,Doc4373506891,RFP,Professional Services,Arcadis Professional Services (Canada) Inc.,7520026.88,2024-07-10,Toronto Water,FALSE
-0aed99a9-9989-4f10-a2c3-284b899d8db7_1,Doc4386010404,RFT,Construction Services,Mopal Construction Ltd.,4934280,2024-06-19,"Parks, Forestry & Recreation",FALSE
-99b617ab-4ca5-4523-939a-540744b77931_1,Doc4408423701,RFT,Construction Services,Mopal Construction Ltd,11545900,2024-07-17,"Parks, Forestry & Recreation",FALSE
-9f0ac4eb-175d-4c6a-a822-9bbcc32138ae_1,Doc4444236144,RFT,Construction Services,Lomco Limited,692775,2024-07-04,"Parks, Forestry & Recreation",FALSE
+4caf2c32-aeab-4e37-92e2-1b8727e53992_2,Doc4348333159,RFQ,Goods and Services,Bear Communications Inc,2275911,2024-06-20,Solid Waste Management Services,TRUE
+640a970a-ff0c-4a25-8108-2d4efa84a812_1,Doc4436320825,RFP,Professional Services,Multiview Locates Inc,1716464,2024-06-17,Engineering & Construction Services,TRUE
+d82776b3-8128-4489-8c51-c01775ad99cf_1,Doc4373506891,RFP,Professional Services,Arcadis Professional Services (Canada) Inc.,7520026.88,2024-07-10,Toronto Water,TRUE
+0aed99a9-9989-4f10-a2c3-284b899d8db7_1,Doc4386010404,RFT,Construction Services,Mopal Construction Ltd.,4934280,2024-06-19,"Parks, Forestry & Recreation",TRUE
+99b617ab-4ca5-4523-939a-540744b77931_1,Doc4408423701,RFT,Construction Services,Mopal Construction Ltd,11545900,2024-07-17,"Parks, Forestry & Recreation",TRUE
+9f0ac4eb-175d-4c6a-a822-9bbcc32138ae_1,Doc4444236144,RFT,Construction Services,Lomco Limited,692775,2024-07-04,"Parks, Forestry & Recreation",TRUE
 911ad599-8e54-41c7-ab1a-88485571f3d4_1,Doc4430037985,RFQ,Goods and Services,Lans Construction & Contracting Ltd,381641,2024-07-29,"Parks, Forestry & Recreation",TRUE
 911ad599-8e54-41c7-ab1a-88485571f3d4_2,Doc4430037985,RFQ,Goods and Services,Index Construction Inc,398192,2024-07-29,"Parks, Forestry & Recreation",TRUE
 911ad599-8e54-41c7-ab1a-88485571f3d4_3,Doc4430037985,RFQ,Goods and Services,Butler Contracting Group Inc,398213,2024-07-29,"Parks, Forestry & Recreation",TRUE
 911ad599-8e54-41c7-ab1a-88485571f3d4_4,Doc4430037985,RFQ,Goods and Services,Lincoln Paving & Contracting Ltd,410019,2024-07-29,"Parks, Forestry & Recreation",TRUE
 911ad599-8e54-41c7-ab1a-88485571f3d4_5,Doc4430037985,RFQ,Goods and Services,Tribro Group Ltd,414300,2024-07-29,"Parks, Forestry & Recreation",TRUE
 da8432d6-7a06-45f6-8bca-9a132877fa96_1,Doc4445229954,RFP,Professional Services,Moon-Matz Ltd,60740,2024-08-08,"Parks, Forestry & Recreation",TRUE
-fbae72c7-0a76-4fc4-afca-8daebfa8630f_1,Doc4612000762,RFT,Construction Services,Maple-Crete Inc,1584789.2,2024-07-31,Transportation Services,FALSE
-8b7441bb-a0d5-437a-9101-3db8ee35f1b5_1,Doc4619099786,RFT,Construction Services,Ptr Paving Inc.,1528095.7,2024-07-30,Transportation Services,FALSE
-d63aa71b-b2ef-4dfc-a316-8f851fabbb31_1,Doc4385673159,RFT,Construction Services,Insituform Technologies Ltd.,13408117.6,2024-08-13,Toronto Water,FALSE
-869bd31b-e8ad-49e5-8bec-395c321c703d_1,Doc4539266153,RFT,Construction Services,Phoenix Restoration Inc.,2713210,2024-08-09,Corporate Real Estate Management,FALSE
-4ddd8925-a851-4fe1-9071-f6a485ab7a80_1,Doc4337640855,RFQ,Goods and Services,Metro Freightliner Hamilton Inc,307942,2024-07-19,Fleet Services,TRUE
+fbae72c7-0a76-4fc4-afca-8daebfa8630f_1,Doc4612000762,RFT,Construction Services,Maple-Crete Inc,1584789.2,2024-07-31,Transportation Services,TRUE
+8b7441bb-a0d5-437a-9101-3db8ee35f1b5_1,Doc4619099786,RFT,Construction Services,Ptr Paving Inc.,1528095.7,2024-07-30,Transportation Services,TRUE
+d63aa71b-b2ef-4dfc-a316-8f851fabbb31_1,Doc4385673159,RFT,Construction Services,Insituform Technologies Ltd.,13408117.6,2024-08-13,Toronto Water,TRUE
+869bd31b-e8ad-49e5-8bec-395c321c703d_1,Doc4539266153,RFT,Construction Services,Phoenix Restoration Inc.,2713210,2024-08-09,Corporate Real Estate Management,TRUE
+4ddd8925-a851-4fe1-9071-f6a485ab7a80_1,Doc4337640855,RFQ,Goods and Services,Metro Freightliner Hamilton Inc,307942,2024-07-19,Fleet Services,FALSE
 a4068878-7bae-48aa-be8f-5cbe1d4fe64a_1,Doc4485657528,RFQ,Goods and Services,Medline Canada Corp O/A Medical Mar,65149.2,2024-08-09,Purchasing & Materials Management,TRUE
 9f60ded8-2611-42fe-9fe5-b3ac4a1e64f2_1,Doc4529454649,RFQ,Goods and Services,Mcl - Mister Chemical Ltd,44454,2024-07-17,Purchasing & Materials Management,TRUE
 8fcfa8a8-3794-4717-a282-26c931561ebc_1,Doc4542354457,RFQ,Goods and Services,Ricoh Canada Inc,1088934,2024-08-08,Technology Services,FALSE
-3ec36831-ff78-4ca0-a9f6-29af4b995008_1,Doc4153429731,RFSQ,Professional Services,Altus Group Limited,166667,2024-07-12,Finance & Treasury Services,TRUE
-3ec36831-ff78-4ca0-a9f6-29af4b995008_2,Doc4153429731,RFSQ,Professional Services,Kroll Consulting Canada Co.,166667,2024-07-12,Finance & Treasury Services,TRUE
-3ec36831-ff78-4ca0-a9f6-29af4b995008_3,Doc4153429731,RFSQ,Professional Services,Suncorp Valuations,166667,2024-07-12,Finance & Treasury Services,TRUE
-9e75739b-75c2-4384-8672-f0ff8e6ec70e_1,Doc4287185321,RFP,Professional Services,Kpmg Llp,245000,2024-07-25,Environment & Climate,TRUE
+3ec36831-ff78-4ca0-a9f6-29af4b995008_1,Doc4153429731,RFSQ,Professional Services,Altus Group Limited,166667,2024-07-12,Finance & Treasury Services,FALSE
+3ec36831-ff78-4ca0-a9f6-29af4b995008_2,Doc4153429731,RFSQ,Professional Services,Kroll Consulting Canada Co.,166667,2024-07-12,Finance & Treasury Services,FALSE
+3ec36831-ff78-4ca0-a9f6-29af4b995008_3,Doc4153429731,RFSQ,Professional Services,Suncorp Valuations,166667,2024-07-12,Finance & Treasury Services,FALSE
+9e75739b-75c2-4384-8672-f0ff8e6ec70e_1,Doc4287185321,RFP,Professional Services,Kpmg Llp,245000,2024-07-25,Environment & Climate,FALSE
 a8ed4a7c-a6a2-428a-8bb4-9075b3d23bb5_1,Doc4367280127,RFP,Professional Services,Logixx Security Inc,1145891.4,2024-08-09,Corporate Real Estate Management,FALSE
-695a6940-7829-4c22-8c08-b707fd92a946_1,Doc4355949486,RFQ,Construction Services,Butler Contracting Group Inc,1128610,2024-07-26,Children's Services,FALSE
-695a6940-7829-4c22-8c08-b707fd92a946_2,Doc4355949486,RFQ,Construction Services,Tribro Group Ltd,1020100,2024-07-26,Children's Services,FALSE
-0aed99a9-9989-4f10-a2c3-284b899d8db7_2,Doc4386010404,RFT,Construction Services,Mopal Construction Ltd,4934280,2024-06-19,"Parks, Forestry & Recreation",FALSE
-39d5b6c0-cd85-42f9-b509-904ce1d51543_2,Doc4403338466,RFQ,Goods and Services,Walker Environmental Group Inc,1143296,2024-08-08,"Parks, Forestry & Recreation",FALSE
+695a6940-7829-4c22-8c08-b707fd92a946_1,Doc4355949486,RFQ,Construction Services,Butler Contracting Group Inc,1128610,2024-07-26,Children's Services,TRUE
+695a6940-7829-4c22-8c08-b707fd92a946_2,Doc4355949486,RFQ,Construction Services,Tribro Group Ltd,1020100,2024-07-26,Children's Services,TRUE
+0aed99a9-9989-4f10-a2c3-284b899d8db7_2,Doc4386010404,RFT,Construction Services,Mopal Construction Ltd,4934280,2024-06-19,"Parks, Forestry & Recreation",TRUE
+39d5b6c0-cd85-42f9-b509-904ce1d51543_2,Doc4403338466,RFQ,Goods and Services,Walker Environmental Group Inc,1143296,2024-08-08,"Parks, Forestry & Recreation",TRUE
 4036e70e-9702-421b-a092-e993e8631fc9_1,Doc4632108018,RFQ,Goods and Services,Avron Foods Ltd,429148.45,2024-08-07,"Parks, Forestry & Recreation",TRUE
 da8432d6-7a06-45f6-8bca-9a132877fa96_2,Doc4445229954,RFP,Professional Services,Moon-Matz Ltd.,60740,2024-08-08,"Parks, Forestry & Recreation",TRUE
-d63aa71b-b2ef-4dfc-a316-8f851fabbb31_2,Doc4385673159,RFT,Construction Services,Insituform Technologies Ltd,13408117.6,2024-08-13,Toronto Water,FALSE
-959ae1cd-5bc3-4052-9004-f065712349ba_2,Doc4410699675,RFP,Construction Services,Levi Cleaning Services Inc O/A Goodbye Graffiti Toronto West,1307044.35,2024-06-26,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",FALSE
-5de4704e-9a1e-42a4-b485-80ebf3bc95f6_1,Doc4468015736,RFT,Construction Services,Viola Management Inc,2587105.75,2024-07-11,Transportation Services,FALSE
-d79b958e-83ce-4889-a596-d77047f911bf_1,Doc4476298180,RFT,Construction Services,Grascan Construction Ltd,5640000,2024-07-25,Engineering & Construction Services,FALSE
+d63aa71b-b2ef-4dfc-a316-8f851fabbb31_2,Doc4385673159,RFT,Construction Services,Insituform Technologies Ltd,13408117.6,2024-08-13,Toronto Water,TRUE
+959ae1cd-5bc3-4052-9004-f065712349ba_2,Doc4410699675,RFP,Construction Services,Levi Cleaning Services Inc O/A Goodbye Graffiti Toronto West,1307044.35,2024-06-26,"Corporate Real Estate Management,Municipal Licensing & Standards,Parks, Forestry & Recreation,Toronto Water,Transportation Services",TRUE
+5de4704e-9a1e-42a4-b485-80ebf3bc95f6_1,Doc4468015736,RFT,Construction Services,Viola Management Inc,2587105.75,2024-07-11,Transportation Services,TRUE
+d79b958e-83ce-4889-a596-d77047f911bf_1,Doc4476298180,RFT,Construction Services,Grascan Construction Ltd,5640000,2024-07-25,Engineering & Construction Services,TRUE
 9b06b73a-e176-4a45-a6b0-cb483916f2a3_2,Doc4502104843,RFT,Construction Services,Infrastructure Coatings Corporation,495150,2024-07-05,Transportation Services,TRUE
-5d5975de-7d3f-4da5-871e-18c04603ecf2_1,Doc4502684693,RFT,Construction Services,Viola Management Inc,18432891.68,2024-07-05,Engineering & Construction Services,FALSE
-b6392f46-bcfc-4b79-9f2f-bfe65d5e8cad_1,Doc4519719075,RFT,Construction Services,7850891 Canada Inc/Egnatia Paving,1870560.95,2024-08-07,Transportation Services,FALSE
-ebd8f65d-2b20-448f-9b26-1f5486c5ed55_1,Doc4528941885,RFT,Construction Services,Utility Force Inc,5305960,2024-08-14,Toronto Water,FALSE
-ebd8f65d-2b20-448f-9b26-1f5486c5ed55_2,Doc4528941885,RFT,Construction Services,Ojcr Construction Ltd,4054180,2024-08-14,Toronto Water,FALSE
-a06059d9-416b-4c75-8d16-197672f417e7_1,Doc4532426537,RFT,Construction Services,Alliance Verdi Civil Inc.,5994841.8,2024-08-06,Engineering & Construction Services,FALSE
-d557302d-6fa1-4bb2-b198-7b4e70250a5e_1,Doc4550114793,RFT,Construction Services,D Crupi & Sons Limited,1870560.95,2024-07-30,Transportation Services,FALSE
-db3d34b9-c423-4cd5-8974-a0519c97d649_1,Doc4561195980,RFT,Construction Services,Maple-Crete Inc,7725621.22,2024-07-31,Transportation Services,FALSE
-b18eafca-2ce4-4c84-ba03-f283613d8368_1,Doc4581030189,RFT,Construction Services,Viola Management Inc.,1448755.66,2024-08-13,Engineering & Construction Services,FALSE
-8b7441bb-a0d5-437a-9101-3db8ee35f1b5_2,Doc4619099786,RFT,Construction Services,Ptr Paving,1528095.7,2024-07-19,Transportation Services,FALSE
+5d5975de-7d3f-4da5-871e-18c04603ecf2_1,Doc4502684693,RFT,Construction Services,Viola Management Inc,18432891.68,2024-07-05,Engineering & Construction Services,TRUE
+b6392f46-bcfc-4b79-9f2f-bfe65d5e8cad_1,Doc4519719075,RFT,Construction Services,7850891 Canada Inc/Egnatia Paving,1870560.95,2024-08-07,Transportation Services,TRUE
+ebd8f65d-2b20-448f-9b26-1f5486c5ed55_1,Doc4528941885,RFT,Construction Services,Utility Force Inc,5305960,2024-08-14,Toronto Water,TRUE
+ebd8f65d-2b20-448f-9b26-1f5486c5ed55_2,Doc4528941885,RFT,Construction Services,Ojcr Construction Ltd,4054180,2024-08-14,Toronto Water,TRUE
+a06059d9-416b-4c75-8d16-197672f417e7_1,Doc4532426537,RFT,Construction Services,Alliance Verdi Civil Inc.,5994841.8,2024-08-06,Engineering & Construction Services,TRUE
+d557302d-6fa1-4bb2-b198-7b4e70250a5e_1,Doc4550114793,RFT,Construction Services,D Crupi & Sons Limited,1870560.95,2024-07-30,Transportation Services,TRUE
+db3d34b9-c423-4cd5-8974-a0519c97d649_1,Doc4561195980,RFT,Construction Services,Maple-Crete Inc,7725621.22,2024-07-31,Transportation Services,TRUE
+b18eafca-2ce4-4c84-ba03-f283613d8368_1,Doc4581030189,RFT,Construction Services,Viola Management Inc.,1448755.66,2024-08-13,Engineering & Construction Services,TRUE
+8b7441bb-a0d5-437a-9101-3db8ee35f1b5_2,Doc4619099786,RFT,Construction Services,Ptr Paving,1528095.7,2024-07-19,Transportation Services,TRUE
 b6b48b95-1f98-4328-8e12-9c737268fe11_1,Doc3968966388,RFP,Goods & Services,Signority Inc.,131790,2024-07-22,Technology Services,TRUE
-66b9f715-4d19-4acb-8454-f00bf6d5aedd_1,Doc3971345384,RFQ,Goods & Services,Bio Nuclear Diagnostics Inc,3622304,2024-07-22,Purchasing & Materials Management,FALSE
-e83de766-f685-4495-be48-76f7df57db02_1,Doc4463763991,RFQ,Goods and Services,Black And Mcdonald Ltd,1248118,2024-07-23,Solid Waste Management Services,FALSE
+66b9f715-4d19-4acb-8454-f00bf6d5aedd_1,Doc3971345384,RFQ,Goods & Services,Bio Nuclear Diagnostics Inc,3622304,2024-07-22,Purchasing & Materials Management,TRUE
+e83de766-f685-4495-be48-76f7df57db02_1,Doc4463763991,RFQ,Goods and Services,Black And Mcdonald Ltd,1248118,2024-07-23,Solid Waste Management Services,TRUE
 cc8872a3-af7f-46bf-8af6-308e38413c41_1,Doc4044208417,RFP,Professional Services,Garda Canada Security Corporation,600000,2024-08-01,People & Equity,FALSE
-cc8872a3-af7f-46bf-8af6-308e38413c41_2,Doc4044208417,RFP,Professional Services,Webtactics Inc,600000,2024-08-01,People & Equity,FALSE
-cc8872a3-af7f-46bf-8af6-308e38413c41_3,Doc4044208417,RFP,Professional Services,Ian Martin Limited,600000,2024-08-01,People & Equity,FALSE
+cc8872a3-af7f-46bf-8af6-308e38413c41_2,Doc4044208417,RFP,Professional Services,Webtactics Inc,600000,2024-08-01,People & Equity,TRUE
+cc8872a3-af7f-46bf-8af6-308e38413c41_3,Doc4044208417,RFP,Professional Services,Ian Martin Limited,600000,2024-08-01,People & Equity,TRUE
 cc8872a3-af7f-46bf-8af6-308e38413c41_4,Doc4044208417,RFP,Professional Services,Drake International Inc,600000,2024-08-01,People & Equity,FALSE
-cc8872a3-af7f-46bf-8af6-308e38413c41_5,Doc4044208417,RFP,Professional Services,Hr Associates,600000,2024-08-01,People & Equity,FALSE
+cc8872a3-af7f-46bf-8af6-308e38413c41_5,Doc4044208417,RFP,Professional Services,Hr Associates,600000,2024-08-01,People & Equity,TRUE
 cc8872a3-af7f-46bf-8af6-308e38413c41_6,Doc4044208417,RFP,Professional Services,Bevertec Cst Inc,600000,2024-08-01,People & Equity,FALSE
-cc8872a3-af7f-46bf-8af6-308e38413c41_7,Doc4044208417,RFP,Professional Services,Quantum Management Services Ltd,1200000,2024-08-01,People & Equity,FALSE
+cc8872a3-af7f-46bf-8af6-308e38413c41_7,Doc4044208417,RFP,Professional Services,Quantum Management Services Ltd,1200000,2024-08-01,People & Equity,TRUE
 fde26580-4ecc-494b-82c3-9512ab595863_1,Doc4343210572,RFP,Professional Services,Aecom Canada Ltd,1849531.48,2024-07-15,Engineering & Construction Services,FALSE
-d82776b3-8128-4489-8c51-c01775ad99cf_2,Doc4373506891,RFP,Professional Services,Arcadis Professional Services (Canada) Inc,7520026.88,2024-07-15,Toronto Water,FALSE
-66ed8ff5-1191-467a-a889-b141906ab94a_1,Doc4373783168,RFP,Professional Services,O2 Planning + Design,505778.89,2024-08-02,City Planning,FALSE
-6364a5c1-91ef-4687-9606-00a3a573cfe4_1,Doc4607679427,RFT,Construction Services,Crce Construction Ltd,1563741.85,2024-08-16,Engineering & Construction Services,FALSE
-66a8704f-3b18-43b1-a5dc-9ad2c4df0599_1,Doc4562891214,RFT,Construction Services,Utility Force Construction Inc.,4117750,2024-08-20,Toronto Water,FALSE
+d82776b3-8128-4489-8c51-c01775ad99cf_2,Doc4373506891,RFP,Professional Services,Arcadis Professional Services (Canada) Inc,7520026.88,2024-07-15,Toronto Water,TRUE
+66ed8ff5-1191-467a-a889-b141906ab94a_1,Doc4373783168,RFP,Professional Services,O2 Planning + Design,505778.89,2024-08-02,City Planning,TRUE
+6364a5c1-91ef-4687-9606-00a3a573cfe4_1,Doc4607679427,RFT,Construction Services,Crce Construction Ltd,1563741.85,2024-08-16,Engineering & Construction Services,TRUE
+66a8704f-3b18-43b1-a5dc-9ad2c4df0599_1,Doc4562891214,RFT,Construction Services,Utility Force Construction Inc.,4117750,2024-08-20,Toronto Water,TRUE
 f196eec2-b628-4113-856a-8039a88edc18_1,Doc4629883456,RFT,Construction Services,Ptr Paving Inc,334396.5,2024-08-20,Transportation Services,TRUE
 906f903a-c701-4abb-935d-ab1482949eca_1,Doc4269401146,RFQ,Goods and Services,Stericycle Ulc,654650,2024-06-07,Toronto Paramedic Services,FALSE
-043d8932-68fc-4ce7-9e0e-ae135184cdfd_1,Doc4463435829,RFT,Construction Services,Infrastructure Coatings (Ontario) Corporation,772860,2024-07-25,Transportation Services,FALSE
-9d6c1ece-15d8-4d3e-9e0b-b54c01be557b_1,Doc4555986450,RFT,Construction Services,D. Crupi & Sons Limited,1969954.58,2024-06-19,Engineering & Construction Services,FALSE
-9a6c76ee-a436-4456-8016-07fc7aaaf183_1,Doc4572428154,RFT,Construction Services,Vaughan Paving Ltd,1128060,2024-07-10,Transportation Services,FALSE
-a77613b5-fe5f-4ab7-8e64-c65da2ce6da0_1,Doc4586059956,RFT,Construction Services,2489960 Ontario Inc,3564900,2024-08-07,Engineering & Construction Services,FALSE
+043d8932-68fc-4ce7-9e0e-ae135184cdfd_1,Doc4463435829,RFT,Construction Services,Infrastructure Coatings (Ontario) Corporation,772860,2024-07-25,Transportation Services,TRUE
+9d6c1ece-15d8-4d3e-9e0b-b54c01be557b_1,Doc4555986450,RFT,Construction Services,D. Crupi & Sons Limited,1969954.58,2024-06-19,Engineering & Construction Services,TRUE
+9a6c76ee-a436-4456-8016-07fc7aaaf183_1,Doc4572428154,RFT,Construction Services,Vaughan Paving Ltd,1128060,2024-07-10,Transportation Services,TRUE
+a77613b5-fe5f-4ab7-8e64-c65da2ce6da0_1,Doc4586059956,RFT,Construction Services,2489960 Ontario Inc,3564900,2024-08-07,Engineering & Construction Services,TRUE
 b09e68f3-49c3-41a7-8eaa-e7bffbbcb45d_1,Doc4583507670,RFQ,Goods and Services,Optiv Canada Inc.,191814.22,2024-08-23,Technology Services,TRUE
 877ea20d-d87b-4b1d-a7d8-a21e3efae6fa_1,Doc4445313583,RFP,Professional Services,Ssg,184950,2024-08-30,Environment & Climate,TRUE
-4c05f9c0-e040-4daf-8c93-5fa28f258609_2,Doc3934845220,RFT,Construction Services,Black & Mcdonald Limited,3264240,2024-08-30,Toronto Water,FALSE
-b6ca93e8-468a-4a6f-8b9e-7420178301c3_2,Doc4470673376,RFT,Construction Services,Fer-Pal Construction Ltd,9884775.7,2024-08-29,Toronto Water,FALSE
-43712864-e8e2-4540-a897-fe39aae07a62_1,Doc4562792135,RFT,Construction Services,Marbridge Construction Ltd.,4472196,2024-08-29,Engineering & Construction Services,FALSE
-66a8704f-3b18-43b1-a5dc-9ad2c4df0599_2,Doc4562891214,RFT,Construction Services,Utility Force Inc,4117750,2024-08-20,Toronto Water,FALSE
-003f04b1-984e-46af-b487-256711486c69_1,Doc4564572903,RFT,Construction Services,Alliance Verdi Civil Inc,8096083.8,2024-08-21,Engineering & Construction Services,FALSE
+4c05f9c0-e040-4daf-8c93-5fa28f258609_2,Doc3934845220,RFT,Construction Services,Black & Mcdonald Limited,3264240,2024-08-30,Toronto Water,TRUE
+b6ca93e8-468a-4a6f-8b9e-7420178301c3_2,Doc4470673376,RFT,Construction Services,Fer-Pal Construction Ltd,9884775.7,2024-08-29,Toronto Water,TRUE
+43712864-e8e2-4540-a897-fe39aae07a62_1,Doc4562792135,RFT,Construction Services,Marbridge Construction Ltd.,4472196,2024-08-29,Engineering & Construction Services,TRUE
+66a8704f-3b18-43b1-a5dc-9ad2c4df0599_2,Doc4562891214,RFT,Construction Services,Utility Force Inc,4117750,2024-08-20,Toronto Water,TRUE
+003f04b1-984e-46af-b487-256711486c69_1,Doc4564572903,RFT,Construction Services,Alliance Verdi Civil Inc,8096083.8,2024-08-21,Engineering & Construction Services,TRUE
 f196eec2-b628-4113-856a-8039a88edc18_2,Doc4629883456,RFT,Construction Services,Ptr Paving,334396.5,2024-08-20,Transportation Services,TRUE
 11a21530-7c61-4780-84df-0709c61793cd_1,Doc4419641221,RFP,Professional Services,Cspn,305071,2024-08-30,Municipal Licensing & Standards,TRUE
-34e8e56a-6e05-47ba-b0e2-15c9d0ac699e_1,Doc4580499798,RFP,Professional Services,Rv Anderson Associates Ltd,26443056.74,2024-08-27,Engineering & Construction Services,FALSE
+34e8e56a-6e05-47ba-b0e2-15c9d0ac699e_1,Doc4580499798,RFP,Professional Services,Rv Anderson Associates Ltd,26443056.74,2024-08-27,Engineering & Construction Services,TRUE
 910f4b60-fb59-4cb5-aa16-aa56666f6e70_1,Doc4419211645,RFQ,Goods and Services,Garage Supply Contracting Inc.,149820,2024-07-11,"Fire Services,Fleet Services,Toronto Paramedic Services",TRUE
-71a0f5ee-c7bb-4fc7-9d42-125ecf1c4549_1,Doc3979622294,RFQ,Construction Services,Roma Fence Ltd,4640076.24,2024-07-02,"Parks, Forestry & Recreation",FALSE
+71a0f5ee-c7bb-4fc7-9d42-125ecf1c4549_1,Doc3979622294,RFQ,Construction Services,Roma Fence Ltd,4640076.24,2024-07-02,"Parks, Forestry & Recreation",TRUE
 05140675-4a2b-4678-aada-028842a63330_1,Doc4343390536,NRFP,Goods and Services,Schindler Elevator Corporation,19780842,2024-08-16,Corporate Real Estate Management,FALSE
-4cbd72a4-41e2-44f6-b037-d769c3d843f2_2,Doc4561503552,RFT,Construction Services,2489960 Ontario Inc,2445300,2024-08-30,Engineering & Construction Services,FALSE
-0fc5ea55-fb23-45cc-87cc-2a83a447339d_1,Doc4650730480,RFT,Construction Services,2489960 Ontario Inc,3625600,2024-08-28,Engineering & Construction Services,FALSE
-0bf73afe-c440-416a-917c-d2ed24fc6ad9_1,Doc4543204216,RFT,Construction Services,Patterned Concrete Ontario Inc.,1098765,2024-07-24,"Parks, Forestry & Recreation",FALSE
-5d6c26e8-2746-4a99-a5eb-488db3f4d980_1,Doc4437742176,RFT,Construction Services,Torbear Contracting Inc,1556086.4,2024-09-25,Toronto Water,FALSE
+4cbd72a4-41e2-44f6-b037-d769c3d843f2_2,Doc4561503552,RFT,Construction Services,2489960 Ontario Inc,2445300,2024-08-30,Engineering & Construction Services,TRUE
+0fc5ea55-fb23-45cc-87cc-2a83a447339d_1,Doc4650730480,RFT,Construction Services,2489960 Ontario Inc,3625600,2024-08-28,Engineering & Construction Services,TRUE
+0bf73afe-c440-416a-917c-d2ed24fc6ad9_1,Doc4543204216,RFT,Construction Services,Patterned Concrete Ontario Inc.,1098765,2024-07-24,"Parks, Forestry & Recreation",TRUE
+5d6c26e8-2746-4a99-a5eb-488db3f4d980_1,Doc4437742176,RFT,Construction Services,Torbear Contracting Inc,1556086.4,2024-09-25,Toronto Water,TRUE
 2c0b6ef4-e2b6-483c-bce9-e85aa0604fdb_1,Doc4585457414,RFT,Construction Services,Graham Bros. Construction Limited,5314555.84,2024-09-26,Engineering & Construction Services,FALSE
-29e17854-8bbc-4ac8-bce0-b3d109c7fc69_1,Doc4568662398,RFT,Construction Services,Ferdom Construction,1247688,2024-10-03,"Parks, Forestry & Recreation",FALSE
-e4fd6727-5ab7-4aa0-a5a0-b5849db38937_1,Doc4568434460,RFP,Professional Services,Ch2m Hill Canada Limited,660188.55,2024-10-08,Engineering & Construction Services,FALSE
+29e17854-8bbc-4ac8-bce0-b3d109c7fc69_1,Doc4568662398,RFT,Construction Services,Ferdom Construction,1247688,2024-10-03,"Parks, Forestry & Recreation",TRUE
+e4fd6727-5ab7-4aa0-a5a0-b5849db38937_1,Doc4568434460,RFP,Professional Services,Ch2m Hill Canada Limited,660188.55,2024-10-08,Engineering & Construction Services,TRUE
 f7a5c81b-dd64-4e42-bc41-0b6bcc0f2670_1,Doc4598881719,RFQ,Goods and Services,Production Service Industries,288595,2024-10-16,Economic Development & Culture,TRUE
 147d3cb8-13a8-4ff1-87df-f3d6b4489b17_1,Doc4476450575,RFP,Professional Services,Morrison Hershfield Limited,29757736.1,2024-10-17,Engineering & Construction Services,FALSE
-2d412378-8dbd-43a1-96a6-648ef18952b1_1,Doc4666145224,RFQ,Construction Services,Ppl Aquatic Fitness And Spa Group Inc.,1212458,2024-10-16,Corporate Real Estate Management,FALSE
-3c7e62b0-c40f-4889-8b5e-ff5b7b2ff16a_1,Doc4685977601,RFT,Construction Services,Ritestart Limited,6287900,2024-10-22,Corporate Real Estate Management,FALSE
+2d412378-8dbd-43a1-96a6-648ef18952b1_1,Doc4666145224,RFQ,Construction Services,Ppl Aquatic Fitness And Spa Group Inc.,1212458,2024-10-16,Corporate Real Estate Management,TRUE
+3c7e62b0-c40f-4889-8b5e-ff5b7b2ff16a_1,Doc4685977601,RFT,Construction Services,Ritestart Limited,6287900,2024-10-22,Corporate Real Estate Management,TRUE
 f4759985-afd7-4323-aa63-c1e83f9c0b79_1,Doc4158506855,RFQ,Goods and Services,Mcl - Mister Chemical Ltd,332686.7,2024-09-30,Purchasing & Materials Management,TRUE
 98d930f9-f653-411f-b0da-d0e8618204a0_1,Doc4287115427,RFQ,Goods and Services,Guillevin International Co,53760,2024-10-07,Purchasing & Materials Management,TRUE
-1980837a-c26c-4007-8847-fd6c4028d668_1,Doc4414721248,RFQ,Goods and Services,Premier Truck Group Of Mississauga,523406,2024-09-05,Fleet Services,FALSE
+1980837a-c26c-4007-8847-fd6c4028d668_1,Doc4414721248,RFQ,Goods and Services,Premier Truck Group Of Mississauga,523406,2024-09-05,Fleet Services,TRUE
 d08dace9-d6cd-496e-85c9-7a99aef42252_1,Doc4456330887,RFQ,Goods and Services,Power Station Inc.,180000,2024-09-03,"Corporate Real Estate Management,Seniors Services and Long-Term Care,Solid Waste Management Services",TRUE
-d08dace9-d6cd-496e-85c9-7a99aef42252_2,Doc4456330887,RFQ,Goods and Services,Northern Generator Company,2010494.88,2024-09-03,"Corporate Real Estate Management,Seniors Services and Long-Term Care,Solid Waste Management Services",FALSE
+d08dace9-d6cd-496e-85c9-7a99aef42252_2,Doc4456330887,RFQ,Goods and Services,Northern Generator Company,2010494.88,2024-09-03,"Corporate Real Estate Management,Seniors Services and Long-Term Care,Solid Waste Management Services",TRUE
 e8d36fc3-44b0-456d-9a75-f55ea9c74d5d_1,Doc4505719273,RFQ,Goods and Services,Metro Freightliner Hamilton Inc,1669071.83,2024-09-25,Fleet Services,FALSE
-a6030329-b6d3-4e57-bf16-2e7c6fb54a34_1,Doc4552573025,RFQ,Goods and Services,Mcl - Mister Chemical Ltd,1003893,2024-09-13,Purchasing & Materials Management,FALSE
+a6030329-b6d3-4e57-bf16-2e7c6fb54a34_1,Doc4552573025,RFQ,Goods and Services,Mcl - Mister Chemical Ltd,1003893,2024-09-13,Purchasing & Materials Management,TRUE
 e5a4a75e-6492-47cd-8ac2-8f03841681c1_1,Doc4650740446,RFQ,Goods and Services,Softchoice Lp,8970000,2024-09-30,Technology Services,FALSE
 d8459afd-c2ee-4edb-a8b6-ddc60d35669a_1,Doc4499760743,RFQ,Construction Services,Classic Displays,73500,2024-09-23,"Parks, Forestry & Recreation",TRUE
 8a452c73-5a27-488d-80b6-1653fa3b09a4_1,Doc4483761813,RFQ,Goods and Services,Monarch Mechanical Ltd,57700,2024-09-13,Children's Services,TRUE
@@ -544,30 +544,30 @@ c5aa45e3-6268-454a-a6df-caa10b1278b5_1,Doc4600851561,RFQ,Goods and Services,Coli
 b460df4e-24b6-4470-a5ae-d83df7fb8b9d_2,Doc4587708162,RFP,Professional Services,Monteith Brown Planning Consultants Ltd.,359970,2024-09-17,"Parks, Forestry & Recreation",TRUE
 446cb6c2-47ee-4261-8bfd-a130019456a7_1,Doc3987477359,RFT,Construction Services,Bennett Mechanical Installations,79784014,2024-10-17,Toronto Water,FALSE
 2b5ced4f-e1a0-4773-8016-fa5acb961698_1,Doc4053424337,RFQ,Construction Services,Damen Shipbuilding 5 B.v.,90569193.59,2024-09-10,"Parks, Forestry & Recreation",FALSE
-4cb41fdc-abec-44f2-961c-8a06d0ad95e8_1,Doc4394844139,RFP,Construction Services,Wsp Canada Inc.,782575.88,2024-09-06,Engineering & Construction Services,FALSE
-5d6c26e8-2746-4a99-a5eb-488db3f4d980_2,Doc4437742176,RFT,Construction Services,Torbear Contracting Inc,1556086.4,2024-09-25,Toronto Water,FALSE
-b17c6103-0d4f-4f40-8ea2-9cc478779f30_1,Doc4440996123,RFT,Construction Services,Robert B Somerville Co. Limited,12954430.3,2024-09-10,Toronto Water,FALSE
-3b748aa0-5e85-4dac-8a1d-5b6fe657b892_2,Doc4445258694,RFT,Construction Services,Capital Sewer Services Inc,12874085,2024-10-08,Toronto Water,FALSE
-043d8932-68fc-4ce7-9e0e-ae135184cdfd_2,Doc4463435829,RFT,Construction Services,Infrastructure Coatings Corporation,772860,2024-09-04,Transportation Services,FALSE
-cec9d70e-2e57-4184-888e-5562303be76b_2,Doc4487480100,RFT,Construction Services,1460973 Ontario Limited O/A C.p. Systems,3286438,2024-09-19,Toronto Water,FALSE
-c0505827-1551-4994-802d-a697fb8d6461_1,Doc4546251028,RFT,Construction Services,Belor Construction Ltd,4396103.4,2024-09-20,Engineering & Construction Services,FALSE
-9d6c1ece-15d8-4d3e-9e0b-b54c01be557b_2,Doc4555986450,RFT,Construction Services,D Crupi & Sons Limited,1969954.58,2024-09-05,Engineering & Construction Services,FALSE
-14be3eb2-16c8-49f0-99d0-5f0369380f4c_3,Doc4574690002,RFT,Construction Services,A & F Di Carlo Construction Inc.,3135025,2024-09-10,Toronto Water,FALSE
-14be3eb2-16c8-49f0-99d0-5f0369380f4c_4,Doc4574690002,RFT,Construction Services,Bevcon Construction & Paving Ltd,4187925,2024-09-10,Toronto Water,FALSE
-8f586bc4-8c3f-4448-93bb-eefc79cd1e6f_1,Doc4577962498,RFT,Construction Services,A & F Di Carlo Construction Inc.,3122085,2024-09-03,Toronto Water,FALSE
-8f586bc4-8c3f-4448-93bb-eefc79cd1e6f_2,Doc4577962498,RFT,Construction Services,Aqua Tech Solutions Inc,3627550,2024-09-03,Toronto Water,FALSE
+4cb41fdc-abec-44f2-961c-8a06d0ad95e8_1,Doc4394844139,RFP,Construction Services,Wsp Canada Inc.,782575.88,2024-09-06,Engineering & Construction Services,TRUE
+5d6c26e8-2746-4a99-a5eb-488db3f4d980_2,Doc4437742176,RFT,Construction Services,Torbear Contracting Inc,1556086.4,2024-09-25,Toronto Water,TRUE
+b17c6103-0d4f-4f40-8ea2-9cc478779f30_1,Doc4440996123,RFT,Construction Services,Robert B Somerville Co. Limited,12954430.3,2024-09-10,Toronto Water,TRUE
+3b748aa0-5e85-4dac-8a1d-5b6fe657b892_2,Doc4445258694,RFT,Construction Services,Capital Sewer Services Inc,12874085,2024-10-08,Toronto Water,TRUE
+043d8932-68fc-4ce7-9e0e-ae135184cdfd_2,Doc4463435829,RFT,Construction Services,Infrastructure Coatings Corporation,772860,2024-09-04,Transportation Services,TRUE
+cec9d70e-2e57-4184-888e-5562303be76b_2,Doc4487480100,RFT,Construction Services,1460973 Ontario Limited O/A C.p. Systems,3286438,2024-09-19,Toronto Water,TRUE
+c0505827-1551-4994-802d-a697fb8d6461_1,Doc4546251028,RFT,Construction Services,Belor Construction Ltd,4396103.4,2024-09-20,Engineering & Construction Services,TRUE
+9d6c1ece-15d8-4d3e-9e0b-b54c01be557b_2,Doc4555986450,RFT,Construction Services,D Crupi & Sons Limited,1969954.58,2024-09-05,Engineering & Construction Services,TRUE
+14be3eb2-16c8-49f0-99d0-5f0369380f4c_3,Doc4574690002,RFT,Construction Services,A & F Di Carlo Construction Inc.,3135025,2024-09-10,Toronto Water,TRUE
+14be3eb2-16c8-49f0-99d0-5f0369380f4c_4,Doc4574690002,RFT,Construction Services,Bevcon Construction & Paving Ltd,4187925,2024-09-10,Toronto Water,TRUE
+8f586bc4-8c3f-4448-93bb-eefc79cd1e6f_1,Doc4577962498,RFT,Construction Services,A & F Di Carlo Construction Inc.,3122085,2024-09-03,Toronto Water,TRUE
+8f586bc4-8c3f-4448-93bb-eefc79cd1e6f_2,Doc4577962498,RFT,Construction Services,Aqua Tech Solutions Inc,3627550,2024-09-03,Toronto Water,TRUE
 2c0b6ef4-e2b6-483c-bce9-e85aa0604fdb_2,Doc4585457414,RFT,Construction Services,Graham Bros Construction Ltd.,5314555.84,2024-09-26,Engineering & Construction Services,FALSE
-6f7e25bc-a919-4987-b985-a25f363c4c0a_1,Doc4586036577,RFT,Construction Services,7850891 Canada Inc/Egnatia Paving,2627635,2024-09-06,Transportation Services,FALSE
+6f7e25bc-a919-4987-b985-a25f363c4c0a_1,Doc4586036577,RFT,Construction Services,7850891 Canada Inc/Egnatia Paving,2627635,2024-09-06,Transportation Services,TRUE
 7224da9c-0f17-4d0c-aa65-ce11c8c3966a_1,Doc4590017410,RFT,Construction Services,Bennett Mechanical Installations,7973870,2024-10-21,Engineering & Construction Services,FALSE
-815a9a39-f7e3-4a53-9353-785190b8643f_1,Doc4628804071,RFT,Construction Services,Four Seasons Sit Development Ltd.,1321175,2024-09-05,Transportation Services,FALSE
-8c16a722-b9b9-4340-a126-3b0a5020dbb3_1,Doc4677682353,RFT,Construction Services,Gazzola Paving Limited,1470658,2024-09-18,Transportation Services,FALSE
-2d4d5631-d11c-4ba1-97cc-e30844e60268_1,Doc4680095655,RFT,Construction Services,Four Seasons Sit Development Ltd.,9017019,2024-10-03,Engineering & Construction Services,FALSE
-7d7d6e09-5417-4593-a2b4-6838035f3678_1,Doc4728197603,RFT,Construction Services,D Crupi & Sons Limited,2387474.1,2024-10-30,Engineering & Construction Services,FALSE
+815a9a39-f7e3-4a53-9353-785190b8643f_1,Doc4628804071,RFT,Construction Services,Four Seasons Sit Development Ltd.,1321175,2024-09-05,Transportation Services,TRUE
+8c16a722-b9b9-4340-a126-3b0a5020dbb3_1,Doc4677682353,RFT,Construction Services,Gazzola Paving Limited,1470658,2024-09-18,Transportation Services,TRUE
+2d4d5631-d11c-4ba1-97cc-e30844e60268_1,Doc4680095655,RFT,Construction Services,Four Seasons Sit Development Ltd.,9017019,2024-10-03,Engineering & Construction Services,TRUE
+7d7d6e09-5417-4593-a2b4-6838035f3678_1,Doc4728197603,RFT,Construction Services,D Crupi & Sons Limited,2387474.1,2024-10-30,Engineering & Construction Services,TRUE
 c7899952-605e-48a5-b1ff-836e9564e272_1,Doc4157422445,RFQ,Goods & Services,11913930 Canada Inc.,144000,2024-09-12,Purchasing & Materials Management,TRUE
 7aa76f14-9a8f-4a8b-a2f0-eee135cc9f63_2,Doc4686211466,OTP,Offer to Purchase,Gallops Waste Management,31.95,2024-10-01,Solid Waste Management Services,TRUE
-0a8ca8a4-d43f-4df4-9b9f-680681d4908d_1,Doc3869968460,RFP,Professional Services,Gartner Canada,395000,2024-09-25,Technology Services,TRUE
+0a8ca8a4-d43f-4df4-9b9f-680681d4908d_1,Doc3869968460,RFP,Professional Services,Gartner Canada,395000,2024-09-25,Technology Services,FALSE
 afba0249-9eec-4890-a31a-45e52b7cf388_1,Doc4322374774,RFP,Professional Services,Parsons Inc,8279921,2024-09-05,Transportation Services,FALSE
-16bc4e46-12c3-4bc6-8ae6-1c9a0334f8e1_2,Doc4360673147,RFP,Professional Services,Aecom Canada Ltd,139317.69,2024-10-21,City Planning,TRUE
+16bc4e46-12c3-4bc6-8ae6-1c9a0334f8e1_2,Doc4360673147,RFP,Professional Services,Aecom Canada Ltd,139317.69,2024-10-21,City Planning,FALSE
 95e091f9-cb47-406c-8898-8fbc6ae53663_2,Doc4360731519,RFQ,Professional Services,Environics Research Group,31766.66,2024-09-25,City Planning,TRUE
 6c8929fe-ec21-463d-b86e-413c4bf13b00_1,Doc4388651811,RFP,Professional Services,Morrison Hershfield,15440574.24,2024-09-12,Engineering & Construction Services,FALSE
 e4fd6727-5ab7-4aa0-a5a0-b5849db38937_2,Doc4568434460,RFP,Professional Services,Jacobs Consultancy Canada Inc,660188.55,2024-10-08,Engineering & Construction Services,FALSE

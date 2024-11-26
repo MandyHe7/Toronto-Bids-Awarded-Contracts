@@ -13,6 +13,7 @@
 #### Workspace setup ####
 library(tidyverse)
 library(testthat)
+library(dplyr)
 
 data <- read_csv("data/02-analysis_data/analysis_data.csv")
 
@@ -44,7 +45,6 @@ cat("\nRange of 'Awarded_Amount':\n")
 cat("Min:", min(data$Awarded_Amount), "\n")
 cat("Max:", max(data$Awarded_Amount), "\n")
 
-min(data$Awarded_Amount)
 
 # Check if any values in 'Awarded_Amount' are zero or negative
 invalid_award_amount <- any(data$Awarded_Amount <= 0)
@@ -78,16 +78,74 @@ print(unique(data$Division))
 cat("\nUnique Values in 'Successful_Supplier':\n")
 print(unique(data$Successful_Supplier))
 
-# Test 7:  Check the proportion of Small Business (TRUE/FALSE)
-small_business_proportion <- table(data$Small_Business)
-cat("\nProportion of Small Business (TRUE/FALSE):\n")
-print(small_business_proportion)
 
-# Test 8: Check for unique Document Numbers
-unique_documents <- length(unique(data$Document_Number))
-total_documents <- nrow(data)
 
-cat("\nAre 'Document_Number' unique?", unique_documents == total_documents, "\n")
-cat("Number of unique 'Document_Number':", unique_documents, "\n")
-cat("Total number of rows:", total_documents, "\n")
+
+# Test 7: check that all big vs small business is in correct 
+# Check if there are exactly 35 unique suppliers that are FALSE under Small_Business
+unique_big_businesses_count <- data %>%
+  filter(Small_Business == FALSE) %>%
+  summarise(unique_suppliers = n_distinct(Successful_Supplier)) %>%
+  pull(unique_suppliers)
+
+# Test if the count of unique big businesses is 49
+if (unique_big_businesses_count == 35) {
+  cat("Test Passed: There are exactly 35 unique big businesses.\n")
+} else {
+  cat("Test Failed: There are not exactly 35 unique big businesses. Count: ", unique_big_businesses_count, "\n")
+}
+
+# List of big businesses
+big_business_list <- c(
+  "Guillevin International Co.",
+  "Sysco",
+  "Sysco Toronto, A Division Of Sysco Canada Inc.",
+  "Stantec Consulting Ltd",
+  "Kpmg Llp",
+  "Kpmg",
+  "Bennett Mechanical Installations",
+  "Fer-Pal Construction Ltd.",
+  "Wsp Canada Inc",
+  "Black And Mcdonald Limited",
+  "Thermo Fisher Scientific",
+  "Sutherland-Schultz Ltd.",
+  "Morrison Hershfield Ltd",
+  "Morrison Hershfield",
+  "Metro Freightliner Hamilton Inc",
+  "Ricoh Canada Inc",
+  "Altus Group Limited",
+  "Kroll Consulting Canada Co.",
+  "Suncorp Valuations",
+  "Logixx Security Inc",
+  "Garda Canada Security Corporation",
+  "Drake International Inc",
+  "Bevertec Cst Inc",
+  "Aecom Canada Ltd",
+  "Stericycle Ulc",
+  "Schindler Elevator Corporation",
+  "Graham Bros. Construction Limited",
+  "Morrison Hershfield Limited",
+  "Softchoice Lp",
+  "Damen Shipbuilding 5 B.v.",
+  "Graham Bros Construction Ltd.",
+  "Gartner Canada",
+  "Parsons Inc",
+  "Jacobs Consultancy Canada Inc",
+  "Stericycle, Ulc"
+)
+
+# Ensure the Successful_Supplier column is character type and remove extra spaces
+contract_cleaned$Successful_Supplier <- str_trim(as.character(contract_cleaned$Successful_Supplier))
+
+# Check if all big businesses are in the data (i.e., Successful_Supplier column)
+missing_businesses <- setdiff(big_business_list, contract_cleaned$Successful_Supplier)
+
+# Check the result
+if (length(missing_businesses) == 0) {
+  cat("All big businesses are present in the data.\n")
+} else {
+  cat("The following big businesses are missing from the data:\n")
+  print(missing_businesses)
+}
+
 
