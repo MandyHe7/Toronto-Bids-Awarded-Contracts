@@ -24,6 +24,9 @@ library(ggplot2)
 library(scales)
 library(lubridate)
 library(knitr)
+library(kableExtra)
+library(broom)
+
 
 # load data
 Contract_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
@@ -46,7 +49,7 @@ The remainder of this paper is structured as follows. @sec-data will discuss the
 
 ## Overview
 
-The data used in this paper is access from Open Data Toronto and the particular data set used was the Toronto Bids Awarded Contracts [@toronto_tobids]. To analysis the data and creating graphs using the data, following package that was build in the statistical programming language R [@citeR] was used: tidyverse (@tidyverse), dplyr (@dplyr), lubridate (@lubridate), scales (@scales), knitr (@knitr), and ggplot2 (@ggplot2). LLM (@openai2023chatgpt) was also use in term of helping with coding in R to graph data, simulating data, cleaning data, and revising writing. 
+The data used in this paper is access from Open Data Toronto and the particular data set used was the Toronto Bids Awarded Contracts [@toronto_tobids]. To analysis the data and creating graphs using the data, following package that was build in the statistical programming language R [@citeR] was used: tidyverse [@tidyverse], dplyr [@dplyr], lubridate [@lubridate], scales [@scales], knitr [@knitr], kableExtra [@kableExtra], broom[@broom] and ggplot2 [@ggplot2]. LLM [@openai2023chatgpt] was also use in term of helping with coding in R to graph data, simulating data, cleaning data, and revising writing. 
 
 @tbl-Table1 is a preview of the clean data that will be used through out the analysis of this paper. 
 
@@ -65,7 +68,9 @@ kable(head(Contract_data),
       col.names = c("Unique ID", "Document Number", "RFx Type", 
                     "High Level Category", "Successful Supplier", 
                     "Awarded Amount ($)", "Award Date", 
-                    "Division", "Small Business"))
+                    "Division", "Small Business"))  %>%
+  kable_styling(font_size = 10) # Adjust font size 
+
 ```
 
 ## Measurement
@@ -77,10 +82,8 @@ The transition starts with the City identifying a need, such as infrastructure d
 This information is entered into the City's procurement management system, capturing the structured attributes necessary for documentation and analysis. For instance, details like the solicitation type (e.g., RFP, RFQ), high-level category (e.g., Construction Services, Professional Services), and award date are meticulously logged. To enhance the dataset's utility, additional attributes such as the division involved, buyer contact information, and a summary of the solicitation are included. The creation of a dummy variable, such as the classification of small businesses, involves further data processing to derive new insights from raw attributes like the awarded amount.
 
 Ultimately, the dataset represents a structured snapshot of a complex real-world process. Each entry reflects decisions, negotiations, and activities that unfolded in the real world, carefully abstracted into numerical and categorical variables. This process of translation allows researchers, policymakers, and the public to analyze the data to uncover patterns, monitor equity, and assess the efficiency and fairness of the City's procurement system. The dataset, while detailed, is always an abstraction—capturing key facets of the phenomenon while omitting others deemed less relevant to the analysis.
-## Outcome variables
 
-
-## Predictor variables
+## Data Variables
 
 The dataset includes information on competitive procurement processes and awarded contracts by the City of Toronto. Key variables are:
 
@@ -108,7 +111,7 @@ The dataset includes information on competitive procurement processes and awarde
 
 In addition, there was a small business classification was created for its role in the analysis.
 
-- Small Business (Dummy Variable): A binary variable indicating whether a supplier qualifies as a small business. Businesses with awarded contract amounts under $500,000 are classified as small (TRUE), while others are classified as large (FALSE).
+- Small Business (Dummy Variable): A binary variable indicating whether a supplier qualifies as a small business. Businesses are classified as small (TRUE), while others are classified as large (FALSE) determine by ChatGPT analysis, refer to [Appendix -@sec-appdata] for more detail.
 
 
 
@@ -145,7 +148,35 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 
 # Results
 
-The "RFT" type accounts for the highest awarded amount @fig-bargraph, exceeding $1.2 billion. This indicates that tenders dominate procurement expenditure in Toronto’s public contracts. This could reflect a preference for competitive, price-driven bidding processes for large-scale projects like construction and infrastructure.
+The pie chart @fig-PieChart demonstrates majority of contracts awarded to small businesses (marked as TRUE for small business). This indicates that small businesses have relative representation in the awarding process, suggesting equity just by looking at proportion.
+```{r}
+#| label: fig-PieChart
+#| fig-cap: Proportion of Small Business Awards
+#| echo: false
+#| warning: false
+#| message: false
+
+# Pie chart: Proportion of Small Business Awards
+small_business_summary <- Contract_data %>%
+  group_by(Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE))
+
+ggplot(small_business_summary, aes(x = "", y = Total_Awarded, fill = Small_Business)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of Small Business Awards",
+       x = NULL,
+       y = NULL) +
+  theme_void()
+
+```
+
+\newpage
+This bar chart @fig-bargraph displays the total awarded amount ($) for different RFx (Request for X) types. Key observations:
+
+RFT (Request for Tender) has the highest awarded amount, exceeding $1.2 billion, suggesting that most of the procurement budget is funneled through tenders.
+RFQ (Request for Quotation) and RFP (Request for Proposal) follow, with awarded amounts slightly below $500 million and around $400 million, respectively.
+Other RFx types (e.g., NRFP, OTP, RFSQ) have minimal awarded amounts, indicating limited use in contract awards.
 ```{r}
 #| label: fig-bargraph 
 #| fig-cap: Bar graph 
@@ -170,28 +201,40 @@ ggplot(rfx_summary, aes(x = RFx_Type, y = Total_Awarded, fill = RFx_Type)) +
 ```
 
 
-The pie chart @fig-PieChart demonstrates a significant disparity, with the majority of contracts awarded to large businesses (marked as FALSE for small business). This indicates that small businesses have minimal representation in the awarding process, suggesting a lack of equity.
+\newpage
+This stacked bar chart @@fig-bar2 breaks down supplier classification (Small Business vs. Large Business) for each RFx type:
+
+Small Businesses (TRUE) dominate RFQ, RFP, and RFSQ types, showing significant representation in these categories.
+Large Businesses (FALSE) appear to win the majority of contracts in RFT, reflecting a potential preference for larger suppliers in high-value tenders.
+NRFP and OTP show exclusive or near-exclusive awards to Large Businesses, albeit with lower overall amounts.
+
 ```{r}
-#| label: fig-PieChart
-#| fig-cap: Proportion of Small Business Awards
+#| label: fig-bar2
+#| fig-cap: Awarded Amounts Over Time
 #| echo: false
 #| warning: false
 #| message: false
 
-# Pie chart: Proportion of Small Business Awards
-small_business_summary <- Contract_data %>%
-  group_by(Small_Business) %>%
-  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE))
+# Calculate proportions of Small and Large Businesses by RFx Type
+rfx_small_large <- Contract_data %>%
+  group_by(RFx_Type, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
+  ungroup()
 
-ggplot(small_business_summary, aes(x = "", y = Total_Awarded, fill = Small_Business)) +
-  geom_bar(stat = "identity", width = 1, color = "white") +
-  coord_polar(theta = "y") +
-  labs(title = "Proportion of Small Business Awards",
-       x = NULL,
-       y = NULL) +
-  theme_void()
+# Bar Plot: Proportion of Small vs. Large Businesses by RFx Type
+ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(title = "Proportion of Small vs. Large Businesses by RFx Type",
+       x = "RFx Type",
+       y = "Proportion",
+       fill = "Small Business") +
+  theme_minimal()
 
 ```
+
+
 
 
 
@@ -212,6 +255,38 @@ ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = Hi
        y = "Awarded Amount ($)") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+@fig-bar1, Across most categories, the representation of small businesses is minimal compared to large businesses.Notably, in the "Offer to Purchase" category, there seems to be equal representation of small and large businesses. This could imply specific policies or practices in that category that favor small businesses.
+
+```{r}
+#| label: fig-bar1
+#| fig-cap: Awarded Amounts Over Time
+#| echo: false
+#| warning: false
+#| message: false
+
+
+# Calculate proportions of Small and Large Businesses by High-Level Category
+category_small_large <- Contract_data %>%
+  group_by(High_Level_Category, Small_Business) %>%
+  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
+  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
+  ungroup()
+
+# Bar Plot: Proportion of Small vs. Large Businesses by High-Level Category
+ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill = Small_Business)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(title = "Proportion of Small vs. Large Businesses by High-Level Category",
+       x = "High-Level Category",
+       y = "Proportion",
+       fill = "Small Business") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 
 ```
@@ -290,73 +365,19 @@ ggplot(regression_data, aes(x = Month, y = Total_Awarded)) +
 
 ```
 
-@fig-bar1, Across most categories, the representation of small businesses is minimal compared to large businesses.Notably, in the "Offer to Purchase" category, there seems to be equal representation of small and large businesses. This could imply specific policies or practices in that category that favor small businesses.
-
-```{r}
-#| label: fig-bar1
-#| fig-cap: Awarded Amounts Over Time
-#| echo: false
-#| warning: false
-#| message: false
-
-
-# Calculate proportions of Small and Large Businesses by High-Level Category
-category_small_large <- Contract_data %>%
-  group_by(High_Level_Category, Small_Business) %>%
-  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
-  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
-  ungroup()
-
-# Bar Plot: Proportion of Small vs. Large Businesses by High-Level Category
-ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill = Small_Business)) +
-  geom_bar(stat = "identity", position = "fill") +
-  scale_y_continuous(labels = scales::percent_format()) +
-  labs(title = "Proportion of Small vs. Large Businesses by High-Level Category",
-       x = "High-Level Category",
-       y = "Proportion",
-       fill = "Small Business") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
 
-```
 
-
-@fig-bar2, we can observe that for "RFT," where the largest contracts are awarded, small businesses are virtually excluded. Similarly, "RFQ" and "RFP" see small businesses struggling to compete against larger counterparts.
-
-```{r}
-#| label: fig-bar2
-#| fig-cap: Awarded Amounts Over Time
-#| echo: false
-#| warning: false
-#| message: false
-
-# Calculate proportions of Small and Large Businesses by RFx Type
-rfx_small_large <- Contract_data %>%
-  group_by(RFx_Type, Small_Business) %>%
-  summarise(Total_Awarded = sum(Awarded_Amount, na.rm = TRUE)) %>%
-  mutate(Proportion = Total_Awarded / sum(Total_Awarded)) %>%
-  ungroup()
-
-# Bar Plot: Proportion of Small vs. Large Businesses by RFx Type
-ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)) +
-  geom_bar(stat = "identity", position = "fill") +
-  scale_y_continuous(labels = scales::percent_format()) +
-  labs(title = "Proportion of Small vs. Large Businesses by RFx Type",
-       x = "RFx Type",
-       y = "Proportion",
-       fill = "Small Business") +
-  theme_minimal()
-
-```
 
 A logistic regression model can help assess the factors influencing whether a contract is awarded to a small business.
 
-Coefficients indicate how the likelihood of a contract being awarded to a small business changes with variables like Awarded_Amount, RFx_Type, and High_Level_Category.
+In regression result @tbl-Table2, coefficients indicate how the likelihood of a contract being awarded to a small business changes with variables like Awarded_Amount, RFx_Type, and High_Level_Category.
 Significant p-values for predictors suggest they have an impact on the outcome.
 
 ```{r}
+#| label: tbl-Table2
+#| tbl-cap: Logistic regression model
 #| echo: false
 #| warning: false
 #| message: false
@@ -365,8 +386,26 @@ Significant p-values for predictors suggest they have an impact on the outcome.
 log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
                  data = Contract_data, family = binomial)
 
-# Summary of the model
 summary(log_model)
+# Tidy the model output for a table
+log_model_summary <- broom::tidy(log_model)
+
+# Add odds ratios (exponentiated coefficients) and confidence intervals
+log_model_summary <- log_model_summary %>%
+  mutate(Odds_Ratio = exp(estimate)) %>%
+  mutate(Lower_CI = exp(estimate - 1.96 * std.error),
+         Upper_CI = exp(estimate + 1.96 * std.error))
+
+# Display the table
+log_model_summary %>%
+  select(term, estimate, std.error, Odds_Ratio, Lower_CI, Upper_CI, p.value) %>%
+  kable(
+    caption = "Logistic Regression Results: Predicting Small Business Contracts",
+    col.names = c("Term", "Estimate (Log Odds)", "Std. Error", 
+                  "Odds Ratio", "Lower CI", "Upper CI", "P-Value"),
+    digits = 4, align = "c"
+  ) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
 
 
 ```
@@ -374,21 +413,21 @@ summary(log_model)
 
 # Discussion
 
-General Inferences:
-Equity Gaps: There is a clear lack of equity in the distribution of contracts between small and large businesses. Most of the contracts and larger awards seem to favor larger corporations.
-Category-Specific Opportunities: Some categories like "Offer to Purchase" might be worth further investigation to understand what policies support small business equity and whether they can be applied to other categories.
-Implications for Policy: These findings could motivate policy adjustments to enhance opportunities for small businesses across all categories, potentially leading to more diverse supplier representation.
+## Equitable Representation Across RFx Types {#sec-first-point}
+
+The analysis of supplier representation across different RFx types highlights important trends and disparities in Toronto's public procurement system. Small businesses are well-represented in RFQ (Request for Quotation), RFP (Request for Proposal), and RFSQ (Request for Supplier Qualification) processes, suggesting that these procurement methods are more accessible due to potentially lower barriers to entry or more flexible requirements. However, large businesses dominate RFT (Request for Tender) contracts, which account for the majority of procurement spending, exceeding $1.2 billion. This imbalance points to structural challenges for small businesses, as RFT contracts often involve stringent qualification criteria or large-scale projects that may favor larger, more established firms. The limited representation of small businesses in RFTs underscores the need for more equitable procurement practices, particularly in high-value tenders.
+
+To address these disparities, targeted policy interventions are necessary. Simplifying bidding requirements for RFT contracts and creating set-aside opportunities for small businesses could help level the playing field. Additionally, encouraging large firms to subcontract with smaller enterprises can foster more inclusive participation. These measures, coupled with enhanced outreach and support programs, can ensure that Toronto’s procurement processes better reflect the principles of equity and inclusivity, offering fair opportunities to businesses of all sizes while optimizing the diversity of its supplier base.
+
+The analysis reveals that small businesses are well-represented in RFQ (Request for Quotation), RFP (Request for Proposal), and RFSQ (Request for Supplier Qualification) processes, suggesting these procurement types may be more accessible due to lower thresholds or flexible requirements. However, the dominance of large businesses in RFT (Request for Tender) contracts raises equity concerns, as these tenders account for the highest awarded amounts and may limit opportunities for smaller firms. The disparity highlights structural barriers, such as stringent qualification criteria or large-scale project scopes, that could disadvantage small businesses in accessing RFT opportunities. This imbalance underscores the need to reevaluate procurement processes to ensure fair access across all RFx types. Exploring RFT qualification criteria could uncover areas for policy adjustments to enhance inclusivity. Simplifying bidding requirements, introducing targeted outreach programs, and setting aside a portion of high-value tenders for small businesses are actionable strategies to address these challenges. Additionally, encouraging large firms to subcontract with smaller suppliers could further foster equitable participation. By implementing these measures, Toronto’s procurement system can better balance supplier representation, ensuring that public contracts promote equity, inclusion, and diverse economic growth.
 
 
-## First discussion point {#sec-first-point}
+##  {#sec-second-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
 
-## Second discussion point
+##  {#sec-thrid-point}
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
 
-## Third discussion point
 
 ## Weaknesses and next steps
 
@@ -401,7 +440,66 @@ Weaknesses and next steps should also be included.
 # Appendix {-}
 
 
-# Additional data details
+# Details on Selection of Big Business Out From Data {#sec-appdata}
+
+The reult of selection of big business is by using ChatGPT.
+
+I asked: 
+in the data, under the Successful_Supplier, can you anaysis and pull out the excat names that are consider as big business and put them into a big_business_list, so i can use it for r code
+ChatGPT said:
+ChatGPT
+The dataset contains the following columns:
+
+unique_id: A unique identifier for each record.
+Document_Number: The associated document number.
+RFx_Type: Type of request (e.g., RFQ, RFP).
+High_Level_Category: The category of the procurement.
+Successful_Supplier: The name of the supplier who won the contract.
+Awarded_Amount: The monetary value of the awarded contract.
+Award_Date: The date the contract was awarded.
+Division: The division responsible for the contract.
+Small_Business: Indicates if the supplier is classified as a small business (True/False).
+To identify big businesses, I will filter out suppliers where Small_Business is False and create a list of their names.
+
+The following are the big businesses identified from the dataset:
+
+Guillevin International Co.
+Sysco
+Sysco Toronto, A Division Of Sysco Canada Inc.
+Stantec Consulting Ltd
+KPMG LLP
+KPMG
+Bennett Mechanical Installations
+Fer-Pal Construction Ltd.
+WSP Canada Inc
+Black And McDonald Limited
+Thermo Fisher Scientific
+Sutherland-Schultz Ltd.
+Morrison Hershfield Ltd
+Morrison Hershfield
+Metro Freightliner Hamilton Inc
+Ricoh Canada Inc
+Altus Group Limited
+Kroll Consulting Canada Co.
+Suncorp Valuations
+Logixx Security Inc
+Garda Canada Security Corporation
+Drake International Inc
+Bevertec CST Inc
+AECOM Canada Ltd
+Stericycle Ulc
+Schindler Elevator Corporation
+Graham Bros. Construction Limited
+Morrison Hershfield Limited
+Softchoice LP
+Damen Shipbuilding 5 B.V.
+Graham Bros Construction Ltd.
+Gartner Canada
+Parsons Inc
+Jacobs Consultancy Canada Inc
+Stericycle, Ulc
+
+This list is now ready for use in your R code. Let me know if you need it in a specific format! 
 
 # Model details {#sec-model-details}
 
