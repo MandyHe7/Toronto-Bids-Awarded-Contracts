@@ -954,6 +954,270 @@ Residual Deviance: The deviance of your fitted model.
 Degrees of Freedom: Difference in degrees of freedom between the models.
 P-Value: Indicates whether the predictors significantly improve the model fit.
 
+You said: 
+can you help me code this so that the space for the awared, dat, and smallbusiness column is not so far apart. # Prepare the contract data, format the Awarded_Amount as dollar
+contract <- Contract_data %>%
+  select(
+    RFx_Type,
+    High_Level_Category,
+    Successful_Supplier,
+    Awarded_Amount,
+    Award_Date,
+    Small_Business
+  ) %>%
+  mutate(Awarded_Amount = dollar_format()(Awarded_Amount))  # Format Awarded_Amount as dollar
+
+# Create the table
+contract %>%
+  head() %>%
+  kable(
+    caption = "Data Preview", 
+    align = 'l', 
+    col.names = c(
+      "RFx Type", 
+      "High Level Category", 
+      "Successful Supplier", 
+      "Awarded Amount ($)", 
+      "Award Date", 
+      "Small Business"
+    )
+  ) %>%
+  kable_styling(
+    font_size = 8, 
+    bootstrap_options = c("striped", "hover")
+  ) %>%
+  column_spec(4, width = "2in") %>%  # Specify column width for Awarded Amount
+  column_spec(5, width = "2in") %>%  # Specify column width for Award Date
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50") %>%
+  scroll_box(width = "100%", height = "400px")  # Add scroll box if rendering in HTML or PDF
+
+ChatGPT said:
+ChatGPT
+To adjust the spacing between columns in your table so that the columns for "Awarded Amount", "Award Date", and "Small Business" are not too far apart, you can tweak the column widths and alignment further. Here's how you can modify the code:
+
+r
+Copy code
+# Prepare the contract data, format the Awarded_Amount as dollar
+contract <- Contract_data %>%
+  select(
+    RFx_Type,
+    High_Level_Category,
+    Successful_Supplier,
+    Awarded_Amount,
+    Award_Date,
+    Small_Business
+  ) %>%
+  mutate(Awarded_Amount = dollar_format()(Awarded_Amount))  # Format Awarded_Amount as dollar
+
+# Create the table
+contract %>%
+  head() %>%
+  kable(
+    caption = "Data Preview", 
+    align = c('l', 'l', 'l', 'r', 'l', 'l'),  # Align columns properly
+    col.names = c(
+      "RFx Type", 
+      "High Level Category", 
+      "Successful Supplier", 
+      "Awarded Amount ($)", 
+      "Award Date", 
+      "Small Business"
+    )
+  ) %>%
+  kable_styling(
+    font_size = 8, 
+    bootstrap_options = c("striped", "hover")
+  ) %>%
+  column_spec(4, width = "1.5in") %>%  # Adjust width of Awarded Amount
+  column_spec(5, width = "1.5in") %>%  # Adjust width of Award Date
+  column_spec(6, width = "1.2in") %>%  # Adjust width of Small Business column
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50") %>%
+  scroll_box(width = "100%", height = "400px")  # Add scroll box if rendering in HTML or PDF
+Changes made:
+Adjusted the align parameter in the kable function to make sure the columns are properly aligned (left for text and right for numeric values).
+Reduced the width for columns "Awarded Amount", "Award Date", and "Small Business" by specifying smaller width values using column_spec().
+This should reduce the space between the columns and help the table look more compact.
+
+
+
+
+
+
+You said:
+can you help me fix the code so that the space between each clounm is not too far, or else it iwll not fit in the pdf 
+ChatGPT said:
+ChatGPT
+To ensure the table fits properly in a PDF without excessive space between columns, you can fine-tune the column widths further and adjust the font size. Here's an updated version of your code:
+
+r
+Copy code
+# Prepare the contract data, format the Awarded_Amount as dollar
+contract <- Contract_data %>%
+  select(
+    RFx_Type,
+    High_Level_Category,
+    Successful_Supplier,
+    Awarded_Amount,
+    Award_Date,
+    Small_Business
+  ) %>%
+  mutate(Awarded_Amount = dollar_format()(Awarded_Amount))  # Format Awarded_Amount as dollar
+
+# Create the table
+contract %>%
+  head() %>%
+  kable(
+    caption = "Data Preview", 
+    align = c('l', 'l', 'l', 'r', 'l', 'l'),  # Proper alignment for each column
+    col.names = c(
+      "RFx Type", 
+      "High Level Category", 
+      "Successful Supplier", 
+      "Awarded Amount ($)", 
+      "Award Date", 
+      "Small Business"
+    )
+  ) %>%
+  kable_styling(
+    font_size = 7,  # Decrease font size for PDF fitting
+    bootstrap_options = c("striped", "hover")
+  ) %>%
+  column_spec(4, width = "1in") %>%  # Narrow down width for Awarded Amount column
+  column_spec(5, width = "1in") %>%  # Narrow down width for Award Date column
+  column_spec(6, width = "1in") %>%  # Narrow down width for Small Business column
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50") %>%
+  scroll_box(width = "100%", height = "400px")  # Add scroll box if rendering in HTML or PDF
+Key Adjustments:
+Column Width: Reduced the column width for "Awarded Amount", "Award Date", and "Small Business" to 1 inch to minimize space.
+Font Size: Lowered the font size to 7 to make the table more compact and fit better in a PDF.
+Alignment: Ensured that text columns (like RFx_Type and Successful_Supplier) are left-aligned ('l') and numerical ones (like Awarded Amount) are right-aligned ('r').
+This should help make the table fit into the PDF without leaving too much space between the columns.
+
+You said:
+can you fix the code for the table so that the table can fit in a pdf: 
+{r}
+#| label: tbl-Table2
+#| tbl-cap: Logistic regression results 
+#| echo: false
+#| warning: false
+#| message: false
+
+# Logistic regression model
+log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
+                 data = Contract_data, family = binomial)
+
+# Tidy the model output for a table
+log_model_summary <- broom::tidy(log_model)
+
+# Add odds ratios (exponentiated coefficients) and confidence intervals
+log_model_summary <- log_model_summary %>%
+  mutate(Odds_Ratio = exp(estimate)) %>%
+  mutate(Lower_CI = exp(estimate - 1.96 * std.error),
+         Upper_CI = exp(estimate + 1.96 * std.error))
+
+# Display the table
+kable(
+  log_model_summary %>%
+    select(term, estimate, std.error, Odds_Ratio, Lower_CI, Upper_CI, p.value),
+  format = "latex",
+  caption = "Logistic Regression Results: Predicting Small Business Contracts",
+  col.names = c("Term", "Log Odds", "Std. Error", 
+                "Odds Ratio", "Lower CI", "Upper CI", "P-Value"),
+  digits = 4, align = "c"
+) %>%
+  kable_styling(
+    font_size = 10,
+    bootstrap_options = c("striped", "hover")
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
+ChatGPT said:
+ChatGPT
+To ensure that the table fits in a PDF when using kable with LaTeX, we can apply additional formatting to control the width of the table and avoid it spilling over. Specifically, you can use the resizebox function in LaTeX to scale the table, and adjust column widths as needed. Here’s how you can modify the code:
+
+r
+Copy code
+#| label: tbl-Table2
+#| tbl-cap: Logistic regression results 
+#| echo: false
+#| warning: false
+#| message: false
+
+# Logistic regression model
+log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
+                 data = Contract_data, family = binomial)
+
+# Tidy the model output for a table
+log_model_summary <- broom::tidy(log_model)
+
+# Add odds ratios (exponentiated coefficients) and confidence intervals
+log_model_summary <- log_model_summary %>%
+  mutate(Odds_Ratio = exp(estimate)) %>%
+  mutate(Lower_CI = exp(estimate - 1.96 * std.error),
+         Upper_CI = exp(estimate + 1.96 * std.error))
+
+# Display the table with resizing for PDF
+kable(
+  log_model_summary %>%
+    select(term, estimate, std.error, Odds_Ratio, Lower_CI, Upper_CI, p.value),
+  format = "latex",
+  caption = "Logistic Regression Results: Predicting Small Business Contracts",
+  col.names = c("Term", "Log Odds", "Std. Error", 
+                "Odds Ratio", "Lower CI", "Upper CI", "P-Value"),
+  digits = 4, align = "c"
+) %>%
+  kable_styling(
+    font_size = 10,
+    bootstrap_options = c("striped", "hover")
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50") %>%
+  # Resize the table to fit within the page
+  add_header_above(c(" " = 1, "Logistic Regression Results" = 6)) %>%
+  row_spec(1:10, font_size = 8) %>%
+  # Apply resizebox for LaTeX
+  row_spec(0, font_size = 8) %>%
+  kable_styling(latex_options = "striped") %>%
+  # Use LaTeX resizebox for larger tables
+  column_spec(1, width = "1in") %>%
+  column_spec(2, width = "1in") %>%
+  column_spec(3, width = "1in") %>%
+  column_spec(4, width = "1.5in") %>%
+  column_spec(5, width = "1.5in") %>%
+  column_spec(6, width = "1.5in") %>%
+  column_spec(7, width = "1in") %>%
+  # Resize the table to fit in PDF output
+  kableExtra::add_latex_table() %>%
+  kableExtra::resizebox(width = "1.0\\textwidth")
+This code ensures the table fits within the page by adjusting the column widths and using the LaTeX resizebox function. Additionally, the font_size is adjusted to a smaller value for better readability in the PDF format.
+
+
+
+
+
+
+You said:
+Error: 'resizebox' is not an exported object from 'namespace:kableExtra'
+ChatGPT said:
+ChatGPT
+It appears that resizebox is not available in the kableExtra package. However, you can use the LaTeX resizebox function directly within your LaTeX output. To fit the table properly in the PDF, you can use the kableExtra's latex_options = c("scale_down") argument to scale the table automatically if needed. Here's how you can modify the code:
+
+r
+Copy code
+kable(
+  log_model_summary %>%
+    select(term, estimate, std.error, Odds_Ratio, Lower_CI, Upper_CI, p.value),
+  format = "latex",
+  caption = "Logistic Regression Results: Predicting Small Business Contracts",
+  col.names = c("Term", "Log Odds", "Std. Error", 
+                "Odds Ratio", "Lower CI", "Upper CI", "P-Value"),
+  digits = 4, align = "c"
+) %>%
+  kable_styling(
+    font_size = 10,
+    bootstrap_options = c("striped", "hover"),
+    latex_options = c("scale_down")  # Automatically scales the table for PDF output
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
+This code will automatically scale down the table if it overflows in the PDF output, ensuring it fits properly.
 
 
 
@@ -1098,3 +1362,94 @@ Flow & Clarity: Adjusted the sentence structure to improve readability and flow.
 Details: Clarified the reasoning behind choosing logistic regression and the model's limitations.
 Tone: Made the tone more formal and precise while preserving the original meaning.
 Let me know if this works or if you need further revisions!
+
+
+You siad:
+9. *Are there any errors, sources of noise, or redundancies in the dataset? If so, please provide a description.*
+	- Occasional data entry errors or inconsistencies in vendor classifications. For example, susessful supplier name may be written differntly but are refered to the same company (e.g, KMPG and KPMG llp).  
+ChatGPT said:
+ChatGPT
+Updated response for question 9 in the datasheet:
+
+Are there any errors, sources of noise, or redundancies in the dataset? If so, please provide a description.
+
+Occasional data entry errors or inconsistencies in vendor classifications. For instance, the same supplier's name might be entered differently (e.g., "KMPG" and "KPMG LLP"), leading to potential redundancy and challenges in analysis. This highlights a need for data cleaning and normalization to ensure accuracy and consistency.
+
+
+You said:
+11. *Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)? If so, please provide a description.*
+	- The dataset does not contain sensitive or confidential information. Evnought thou there are buyer name and email provided in the data, these information are not confidentiality as it will be publish or mention in contract offering either way. 
+ChatGPT said:
+ChatGPT
+Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals' non-public communications)? If so, please provide a description.
+
+The dataset does not contain sensitive or confidential information. Although buyer names and email addresses are included, these details are not confidential as they are publicly available in contract offerings and other procurement-related documentation.
+
+
+
+You said:
+13. *Does the dataset identify any sub-populations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.*
+	- The data doesn't not have any sub-population it self, however the data can be classif vendors into small businesses or not by resreaching the supplier names and determine if they fit into small or large by cretain cretia such as Market Captilization and etc.
+ChatGPT said:
+ChatGPT
+Does the dataset identify any sub-populations (for example, by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+
+The dataset itself does not include explicit sub-populations such as age or gender. However, vendors can be classified into categories such as small or large businesses by researching supplier names and applying criteria like market capitalization or employee count. This classification would need external validation and is not directly available within the dataset.
+
+- Dataset is licensed under the Open Government License – Canada. More detail of the license can be found with the following link: https://open.toronto.ca/open-data-license/. 
+ChatGPT said:
+ChatGPT
+The dataset is distributed under the Open Government License – Canada, which allows free use, modification, and sharing of the data, provided attribution is given to the source. Additional details about the license and its terms can be found here.
+
+
+
+
+
+
+You said:
+4. *Do any export controls or other regulatory restrictions apply to the dataset or to individual instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.*
+	- Using Information under the Open Government License – Canada. The Information Provider grants you a worldwide, royalty-free, perpetual, non-exclusive licence to use the Information, including for commercial purposes, subject to the terms below. You are free to: Copy, modify, publish, translate, adapt, distribute or otherwise use the Information in any medium, mode or format for any lawful purpose.
+ChatGPT said:
+ChatGPT
+The dataset is licensed under the Open Government License – Canada, allowing users to copy, modify, distribute, and use the data for any lawful purpose, including commercial use. There are no specific export controls or regulatory restrictions beyond the terms of this license. For more details on the terms and conditions of this license, please refer to the official documentation at the following link: Open Government License – Canada.
+
+
+
+
+
+
+You said:
+2. *How can the owner/curator/manager of the dataset be contacted (for example, email address)?*
+	- The data is Published by: Purchasing & Materials Management. The contact email is supplychain@toronto.ca. Queries can also be directed to the Open Data Toronto team.
+ChatGPT said:
+ChatGPT
+The dataset is published by the Purchasing & Materials Management division. For inquiries, you can contact them via email at supplychain@toronto.ca. Additionally, queries can be directed to the Open Data Toronto team for further assistance.
+
+
+
+
+
+
+You said:
+3. *Will the dataset be updated (for example, to correct labeling errors, add new instances, delete instances)? If so, please describe how often, by whom, and how updates will be communicated to dataset consumers (for example, mailing list, GitHub)?*
+	- Data last refreshed: Nov 19, 2024; Refreshed: Daily; Data type: Table; it is directly update through the Open data toronto portal. 
+ChatGPT said:
+ChatGPT
+The dataset is updated daily via the Open Data Toronto portal. Updates include the addition of new instances and corrections to existing data. The dataset is directly maintained by the City of Toronto's Open Data team. Consumers can access the latest version of the data on the portal, though updates are not necessarily communicated through a mailing list or GitHub.
+
+
+
+
+
+
+You said:
+5. *Are there tasks for which the dataset should not be used? If so, please provide a description.*
+ChatGPT said:
+ChatGPT
+The dataset should not be used for personal or sensitive data analysis, as it doesn't contain confidential or sensitive individual information. It may also not be appropriate for uses that involve predicting future procurement patterns or making decisions that rely on potentially incomplete or inconsistent vendor classifications, as some vendor data may require external validation. Furthermore, the dataset is specific to Toronto's procurement processes and may not be applicable to other jurisdictions without careful adaptation.
+
+
+
+
+
+
