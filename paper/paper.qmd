@@ -3,7 +3,7 @@ title: "Unequal Access in Public Procurement: Structural Barriers for Small Busi
 author: 
   - Mandy He
 thanks: "Code and data are available at: https://github.com/MandyHe7/Toronto-Bids-Awarded-Contracts"
-date: November 27 2024
+date: December 1 2024
 date-format: long
 abstract: "This study examines the representation of small businesses in Toronto’s public procurement system, focusing on how high-value contracts, particularly in construction services, favor larger businesses. Using data from the Toronto Bids Awarded Contracts dataset, the analysis reveals significant disparities in contract values and supplier participation, with small businesses facing barriers to accessing high-value opportunities. The findings highlight structural inequities that hinder small business inclusion and suggest the need for reforms in procurement policies. By improving transparency, outreach, and support for small businesses, the study provides recommendations for creating a more equitable procurement environment."
 format: pdf
