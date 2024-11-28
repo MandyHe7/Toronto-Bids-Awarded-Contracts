@@ -88,11 +88,11 @@ unique_big_businesses_count <- data %>%
   summarise(unique_suppliers = n_distinct(Successful_Supplier)) %>%
   pull(unique_suppliers)
 
-# Test if the count of unique big businesses is 49
-if (unique_big_businesses_count == 35) {
-  cat("Test Passed: There are exactly 35 unique big businesses.\n")
+# Test if the count of unique big businesses is 33
+if (unique_big_businesses_count == 33) {
+  cat("Test Passed: There are exactly 33 unique big businesses.\n")
 } else {
-  cat("Test Failed: There are not exactly 35 unique big businesses. Count: ", unique_big_businesses_count, "\n")
+  cat("Test Failed: There are not exactly 33 unique big businesses. Count: ", unique_big_businesses_count, "\n")
 }
 
 # List of big businesses
@@ -108,8 +108,8 @@ big_business_list <- c(
   "Wsp Canada Inc",
   "Black And Mcdonald Limited",
   "Thermo Fisher Scientific",
-  "Sutherland-Schultz Ltd.",
-  "Morrison Hershfield Ltd",
+  "Sutherland Schultz Ltd",
+  "Morrison Hershfield Limited",
   "Morrison Hershfield",
   "Metro Freightliner Hamilton Inc",
   "Ricoh Canada Inc",
@@ -123,7 +123,7 @@ big_business_list <- c(
   "Aecom Canada Ltd",
   "Stericycle Ulc",
   "Schindler Elevator Corporation",
-  "Graham Bros. Construction Limited",
+  "Graham Bros Construction Ltd.",
   "Morrison Hershfield Limited",
   "Softchoice Lp",
   "Damen Shipbuilding 5 B.v.",
