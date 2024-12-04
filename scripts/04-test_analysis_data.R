@@ -4,7 +4,7 @@
 # Date: 23 November 2024
 # Contact: mandyxy.he@mail.utoronto.ca
 # License: N/A
-# Pre-requisites: 
+# Pre-requisites:
 # - The `tidyverse` package must be installed and loaded
 # - 00-simulate_data.R must have been run
 # Any other information needed? Make sure you are in the `starter_folder` rproj
@@ -34,7 +34,7 @@ print(missing_critical)
 
 # Test 2: Check for duplicates in 'Document_Number'
 duplicates_document_number <- any(duplicated(data$Document_Number))
-duplicates_document_number <- any(duplicated(data$unique_id,))
+duplicates_document_number <- any(duplicated(data$unique_id, ))
 
 cat("\nAre there duplicates in 'Document_Number'?", duplicates_document_number, "\n")
 cat("Are there duplicates in 'Unique_ID'?", duplicates_unique_id, "\n")
@@ -81,7 +81,7 @@ print(unique(data$Successful_Supplier))
 
 
 
-# Test 7: check that all big vs small business is in correct 
+# Test 7: check that all big vs small business is in correct
 # Check if there are exactly 35 unique suppliers that are FALSE under Small_Business
 unique_big_businesses_count <- data %>%
   filter(Small_Business == FALSE) %>%
@@ -147,5 +147,3 @@ if (length(missing_businesses) == 0) {
   cat("The following big businesses are missing from the data:\n")
   print(missing_businesses)
 }
-
-

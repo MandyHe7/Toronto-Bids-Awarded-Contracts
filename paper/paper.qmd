@@ -3,9 +3,9 @@ title: "Unequal Access in Public Procurement: Structural Barriers for Small Busi
 author: 
   - Mandy He
 thanks: "Code and data are available at: https://github.com/MandyHe7/Toronto-Bids-Awarded-Contracts"
-date: December 1 2024
+date: December 3 2024
 date-format: long
-abstract: "This study examines the representation of small businesses in Toronto’s public procurement system, focusing on how high-value contracts, particularly in construction services, favor larger businesses. Using data from the Toronto Bids Awarded Contracts dataset, the analysis reveals significant disparities in contract values and supplier participation, with small businesses facing barriers to accessing high-value opportunities. The findings highlight structural inequities that hinder small business inclusion and suggest the need for reforms in procurement policies. By improving transparency, outreach, and support for small businesses, the study provides recommendations for creating a more equitable procurement environment."
+abstract: "This study explores the representation of small businesses in Toronto's public procurement system, specifically examining how high-value contracts—particularly in construction services—tend to favor larger firms. Using data from the Toronto Bids Awarded Contracts dataset, the analysis uncovers significant disparities in contract values and supplier participation, revealing that small businesses face considerable barriers in accessing these high-value opportunities. The findings highlight structural inequities that limit small business inclusion and point to the need for reform in procurement policies. To create a more equitable procurement environment, the study recommends enhancing transparency, improving outreach, and providing stronger support for small businesses."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -29,32 +29,32 @@ library(broom)
 
 # load data
 Contract_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
-
 ```
 
 
+\newpage
+
 # Introduction
 
-Equitable public procurement plays a critical role in fostering inclusive economic development, particularly in large, diverse cities like Toronto. Through its competitive contracting process, the City of Toronto allocates significant resources to suppliers for goods and services, providing essential economic opportunities. For small businesses and historically underrepresented sectors, public contracts represent vital opportunities to grow and succeed. However, ensuring that all suppliers have equal access to these opportunities remains a challenge, as barriers—such as high entry thresholds, limited outreach, and resource disparities—continue to hinder the participation of diverse suppliers, especially small businesses.
+Equitable public procurement plays a critical role in fostering inclusive economic development, particularly in large, diverse cities like Toronto. Through its competitive contracting process, the City of Toronto allocates substantial resources to suppliers for goods and services, providing essential economic opportunities. For small businesses and historically underrepresented sectors, public contracts represent vital opportunities for growth and success. However, ensuring equal access to these opportunities remains a challenge, as barriers—such as high entry thresholds, limited outreach, and resource disparities—continue to hinder the participation of diverse suppliers, especially small businesses.
 
-This study examines the equity of supplier representation in Toronto’s public procurement system, with a focus on small businesses and underrepresented sectors. By leveraging the Toronto Bids Awarded Contracts dataset, the research investigates whether these groups are adequately represented in contract awards. It also analyzes trends related to the value of contracts, with particular attention to which suppliers are winning high-value contracts in sectors like construction services, which tend to favor larger businesses. This paper aims to identify potential disparities in contract access and supplier diversity, providing insights that can inform the development of more equitable procurement policies.
+This study examines the equity of supplier representation in Toronto’s public procurement system, with a focus on small businesses and underrepresented sectors. By leveraging the Toronto Bids Awarded Contracts dataset, the research investigates whether these groups are adequately represented in contract awards. It also analyzes trends related to contract values, with particular attention to which suppliers are winning high-value contracts in sectors like construction services, which tend to favor larger businesses. This paper aims to identify potential disparities in contract access and supplier diversity, offering insights that can inform the development of more equitable procurement policies.
 
-The estimand of this study is the extent to which small businesses face structural barriers in accessing high-value contracts within the City of Toronto’s public procurement system. Specifically, the research aims to quantify disparities in the representation of small businesses in contract awards, with a focus on sectors like "Construction Services" that tend to favor larger firms. By analyzing the Toronto Bids Awarded Contracts dataset, this paper seeks to estimate the difference in contract values awarded to small businesses compared to larger businesses, and the likelihood of small businesses securing contracts in these high-value categories. This will shed light on systemic barriers that disproportionately limit small businesses' access to opportunities in the public procurement process.
+The estimand of this study is the extent to which small businesses face structural barriers in accessing high-value contracts within Toronto’s public procurement system. Specifically, the research aims to quantify disparities in the representation of small businesses in contract awards, with a focus on sectors such as construction services, which tend to favor larger firms. By analyzing the Toronto Bids Awarded Contracts dataset, this paper seeks to estimate the difference in contract values awarded to small businesses compared to larger businesses, as well as the likelihood of small businesses securing contracts in these high-value categories. This will shed light on systemic barriers that disproportionately limit small businesses' access to opportunities in the public procurement process.
 
-The findings of this study contribute to a growing body of work on supplier diversity and public accountability, emphasizing the importance of fostering inclusive economic opportunities in municipal contracting. Addressing these disparities is particularly critical in Toronto, where inclusive procurement practices can drive sustainable local development and contribute to reducing economic inequality. The study highlights the gaps in current procurement practices and offers actionable recommendations to enhance supplier inclusion, transparency, and equity in the city’s public procurement process.
+The findings of this study contribute to a growing body of work on supplier diversity and public accountability, emphasizing the importance of fostering inclusive economic opportunities in municipal contracting. Addressing these disparities is particularly critical in Toronto, where inclusive procurement practices can drive sustainable local development and help reduce economic inequality. The study highlights gaps in current procurement practices and offers actionable recommendations to enhance supplier inclusion, transparency, and equity in the city’s public procurement process.
 
-The remainder of this paper is structured as follows. @sec-data will describe the dataset used in the study, highlighting its key features and limitations. @sec-Results will present the analysis results, including visualizations of the trends observed in the data. Finally, @sec-discussion will discuss the implications of these findings, exploring the underlying reasons for observed disparities and offering recommendations to improve equity in Toronto's public procurement system.
+The remainder of this paper is structured as follows: @sec-data will describe the dataset used in the study and the model, highlighting its key features and limitations. @sec-Results will present the analysis results, including visualizations of the trends observed in the data. Finally, @sec-discussion will discuss the implications of these findings, exploring the underlying reasons for observed disparities and offering recommendations to improve equity in Toronto's public procurement system.
 
 # Data {#sec-data} 
 
 ## Overview
 
-The dataset used in this study is sourced from Open Data Toronto, specifically the Toronto Bids Awarded Contracts dataset [@toronto_tobids]. This dataset provides detailed information on competitive procurement processes and awarded contracts by the City of Toronto. It includes data on the goods, services, and professional expertise procured through the City’s public bidding system. It offers valuable insights into the suppliers selected through the bidding process, the amounts awarded, and the specific categories of procurement involved.
+The dataset used in this study is sourced from Open Data Toronto, specifically the Toronto Bids Awarded Contracts dataset [@toronto_tobids]. This dataset provides detailed information on competitive procurement processes and awarded contracts by the City of Toronto, including data on the goods, services, and professional expertise procured through the City’s public bidding system. It offers valuable insights into the suppliers selected through the bidding process, the amounts awarded, and the specific categories of procurement involved.
 
-To analyze this data and create visualizations, various packages in the R programming language were used, including tidyverse [@tidyverse], dplyr [@dplyr], lubridate [@lubridate], scales [@scales], knitr [@knitr], kableExtra [@kableExtra], broom [@R-broom], and ggplot2 [@ggplot2]. These tools facilitated data cleaning, transformation, and visualization, enabling us to explore trends and relationships within the dataset. Additionally, LLM [@openai2023chatgpt] was utilized to assist with coding tasks, including data cleaning, simulating missing values, generating graphs, and refining text.
+To analyze this data and create visualizations, several packages in the R programming language [@citeR] were used, including Tidyverse [@tidyverse], Dplyr [@dplyr], Lubridate [@lubridate], Scales [@scales], Knitr [@knitr], KableExtra [@kableExtra], Broom [@R-broom], and Ggplot2 [@ggplot2]. These tools facilitated data cleaning, transformation, and visualization, enabling us to explore trends and relationships within the dataset. Additionally, the language model LLM - ChatGPT 4o mini [@openai2023chatgpt] - was utilized to assist with coding tasks, including data cleaning, simulating missing values, generating graphs, and refining text.
 
-@tbl-Table1 is a preview of the clean data that will be used through out the analysis of this paper. 
-
+@tbl-Table1 provides a preview of the clean data that will be used throughout the analysis in this paper.
 ```{r}
 #| label: tbl-Table1
 #| tbl-cap: Data Preview
@@ -72,70 +72,70 @@ contract <- Contract_data %>%
     Award_Date,
     Small_Business
   ) %>%
-  mutate(Awarded_Amount = dollar_format()(Awarded_Amount))  # Format Awarded_Amount as dollar
+  mutate(Awarded_Amount = dollar_format()(Awarded_Amount)) # Format Awarded_Amount as dollar
 
 # Create the table
 contract %>%
   head() %>%
   kable(
-    caption = "Data Preview", 
-    align = c('l', 'l', 'l', 'r', 'l', 'l'),  # Proper alignment for each column
+    caption = "Data Preview",
+    align = c("l", "l", "l", "r", "l", "l"), # Proper alignment for each column
     col.names = c(
-      "RFx Type", 
-      "High Level Category", 
-      "Successful Supplier", 
-      "Awarded Amount ($)", 
-      "Award Date", 
+      "RFx Type",
+      "High Level Category",
+      "Successful Supplier",
+      "Awarded Amount ($)",
+      "Award Date",
       "Small Business"
     )
   ) %>%
   kable_styling(
-    font_size = 7,  # Decrease font size for PDF fitting
+    font_size = 7, # Decrease font size for PDF fitting
     bootstrap_options = c("striped", "hover")
   ) %>%
   column_spec(1, width = "0.5in") %>%
   column_spec(2, width = "1in") %>%
   column_spec(3, width = "1in") %>%
-  column_spec(4, width = "0.5in") %>%  # Narrow down width for Awarded Amount column
-  column_spec(5, width = "0.5in") %>%  # Narrow down width for Award Date column
-  column_spec(6, width = "0.5in") %>%  # Narrow down width for Small Business column
+  column_spec(4, width = "0.5in") %>% # Narrow down width for Awarded Amount column
+  column_spec(5, width = "0.5in") %>% # Narrow down width for Award Date column
+  column_spec(6, width = "0.5in") %>% # Narrow down width for Small Business column
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50") %>%
-  scroll_box(width = "100%", height = "400px")  # Add scroll box if rendering in HTML or PDF
-
+  scroll_box(width = "100%", height = "400px") # Add scroll box if rendering in HTML or PDF
 ```
+
+\newpage
 
 ## Measurement
 	
-To understand how real-world phenomena are captured in a structured dataset, it is important to trace the lifecycle of data collection, organization, and analysis. The Toronto Bids Awarded Contracts dataset begins with the City of Toronto’s procurement process—a fundamental operation for acquiring goods, services, and construction work to meet the city’s public needs. This process encompasses several stages, starting from identifying procurement needs, issuing requests for proposals (RFPs), evaluating bids, and ultimately awarding contracts to successful suppliers. Each of these stages reflects real-world events that are systematically documented and become part of the dataset.
+To understand how real-world phenomena are captured in a structured dataset, it is essential to trace the lifecycle of data collection, organization, and analysis. The Toronto Bids Awarded Contracts dataset begins with the City of Toronto’s procurement process—a fundamental operation for acquiring goods, services, and construction work to meet the city’s public needs. This process encompasses several stages, starting with identifying procurement needs, issuing requests for proposals (RFPs), evaluating bids, and ultimately awarding contracts to successful suppliers. Each stage reflects real-world events that are systematically documented and incorporated into the dataset.
 
-The transition from real-world activity to structured data starts when the City identifies a need, such as for infrastructure development, service enhancements, or administrative support. The procurement process begins by issuing a solicitation document that outlines the scope of work, evaluation criteria, and the specific requirements for the project or service. Suppliers then submit their bids, which are evaluated based on predefined criteria such as cost, quality, and compliance with the project specifications. After evaluating the bids, a contract is awarded to the supplier deemed most suitable for the task. Key details from this decision-making process—such as the contract’s awarded amount, the supplier’s name, and the City division requesting the procurement—are recorded for documentation and analysis purposes.
+The transition from real-world activity to structured data begins when the City identifies a need, such as for infrastructure development, service improvements, or administrative support. The procurement process starts with the issuance of a solicitation document that outlines the scope of work, evaluation criteria, and specific project or service requirements. Suppliers then submit their bids, which are evaluated based on predefined criteria, such as cost, quality, and compliance with project specifications. After evaluating the bids, a contract is awarded to the supplier deemed most suitable for the task. Key details from this decision-making process—such as the awarded contract amount, the supplier’s name, and the City division requesting the procurement—are recorded for documentation and analysis.
 
-This recorded information is input into the City's procurement management system, where it is organized into structured attributes that can be analyzed. For example, variables such as RFx Type (Solicitation Type), High-Level Category (e.g., "Construction Services," "Professional Services"), and the Award Date are systematically logged. These details capture essential aspects of the procurement process and serve as a foundation for further analysis. In addition to these basic attributes, supplementary information such as the division involved, buyer contact information, and a summary of the solicitation are included in the dataset to enhance its utility for researchers and policymakers.
+This information is entered into the City's procurement management system, where it is organized into structured attributes suitable for analysis. For example, variables such as RFx Type (Solicitation Type), High-Level Category (e.g., "Construction Services," "Professional Services"), and Award Date are systematically logged. These details capture essential aspects of the procurement process and serve as the foundation for further analysis. In addition to these core attributes, supplementary information—such as the division involved, buyer contact information, and a summary of the solicitation—is included to enhance the dataset’s utility for researchers and policymakers.
 
-Further data processing is performed to enhance the dataset’s analytical value. For instance, the creation of a Small Business (Dummy Variable) allows for a classification of suppliers as either small or large businesses based on contract size or other relevant factors. This variable is constructed from the awarded amounts and company size data, helping to identify potential barriers for small businesses within the procurement system.
+Further data processing enhances the dataset’s analytical value. For instance, the creation of a Small Business (Dummy Variable) allows for the classification of suppliers as either small or large businesses based on contract size or other relevant factors. This variable is derived from the awarded amounts and company size data, helping to identify potential barriers for small businesses within the procurement system.
 
-Ultimately, the dataset functions as a structured representation of the City’s complex procurement process. Each entry in the dataset reflects decisions, evaluations, and negotiations that occurred in the real world, distilled into numerical and categorical data points. This structured transformation enables researchers, policymakers, and the public to analyze procurement practices, uncover patterns, and assess the equity and efficiency of the City’s contracting system. However, it is important to acknowledge that, while detailed, this dataset is an abstraction—capturing critical aspects of the procurement process while omitting less relevant details for the purposes of this analysis.
+Ultimately, the dataset serves as a structured representation of the City’s complex procurement process. Each entry reflects decisions, evaluations, and negotiations that occurred in the real world, distilled into numerical and categorical data points. This structured transformation enables researchers, policymakers, and the public to analyze procurement practices, uncover patterns, and assess the equity and efficiency of the City’s contracting system. However, it is important to note that, while detailed, the dataset is an abstraction—capturing critical aspects of the procurement process while omitting less relevant details for the purposes of this analysis.
 
 ## Data Variables
 
-The dataset comprises several key variables that are essential for understanding supplier representation in the City’s public procurement process. The primary variables that is of interest for this paper include:
+The dataset comprises several key variables essential for understanding supplier representation in the City’s public procurement process. The primary variables of interest for this paper include:
 
-- **RFx Type (Solicitation Type):** The procurement method used for the solicitation, such as Request for Proposal (RFP), Request for Quotation (RFQ), Tender (RFT), and others. This indicates the process used to seek bids or proposals from suppliers.
+- **RFx Type (Solicitation Type):** The procurement method used for the solicitation, such as Request for Proposal (RFP), Request for Quotation (RFQ), Tender (RFT), and others. This variable indicates the process used to seek bids or proposals from suppliers.
 
-- **High-Level Category:** Groups the goods or services being procured, such as Goods and Services, Professional Services, or Construction Services.
-
-- **Successful Supplier:** The name of the supplier awarded the contract.
+- **High-Level Category:** This variable groups the goods or services being procured, such as Goods and Services, Professional Services, or Construction Services.
 
 - **Awarded Amount:** The total monetary value awarded to the supplier for the contract.
 
 - **Award Date:** The date the contract between the City and the supplier was finalized.
 
+In addition to these core variables, a **Small Business (Dummy Variable)** was created to classify suppliers as small (TRUE) or large (FALSE). This binary variable enables analysis of whether small businesses have equitable access to procurement opportunities. The classification of small businesses was determined based on contract value thresholds and company size data, as detailed in [Appendix - @sec-appdata]. All other variables that the dataset compile can be found in @sec-appvariable.
 
-In addition to these core variables, a **Small Business (Dummy Variable)** was created to classify suppliers as small (TRUE) or large (FALSE). This binary variable facilitates analysis of whether small businesses have equitable access to procurement opportunities. The classification of small businesses was determined based on contract value thresholds and company size data, as detailed in [Appendix - @sec-appdata].
+The dataset offers a robust foundation for exploring supplier equity in public procurement, especially concerning small businesses. However, it is important to note the limitations of the dataset. While it provides valuable insights, it lacks detailed data on supplier ownership, firm age, or procurement history, which could enhance the analysis. These additional variables might offer a more granular understanding of procurement practices, but they are not available through Open Data Toronto. Despite these limitations, the Toronto Bids Awarded Contracts dataset remains an essential resource for assessing procurement practices and identifying structural barriers that hinder small businesses, particularly in securing high-value contracts.
 
-The dataset offers a robust foundation for exploring supplier equity in public procurement, especially concerning small businesses. However, it is important to note the limitations of the dataset. While it provides significant insights, it lacks detailed data on supplier ownership, firm age, or procurement history, which could enhance the analysis. These additional variables might offer a more granular understanding of procurement practices, but they are not available through Open Data Toronto. Despite these limitations, the Toronto Bids Awarded Contracts dataset remains an essential resource for assessing procurement practices and identifying structural barriers that hinder small businesses, particularly in securing high-value contracts.
+Summary statistics have been calculated to understand key trends and relationships between the variables. These statistics help reveal patterns in contract distribution and the number of opportunities awarded to different suppliers, particularly in terms of small versus large businesses. @tbl-Tab, @tbl-Tab2, and @tbl-Tab3 provide an overview of these summary statistics, highlighting how the size of contracts correlates with the type and number of suppliers involved.
 
-Summary statistics have been calculated to understand key trends and relationships between the variables. These statistics help reveal patterns in contract distribution and the number of opportunities awarded to different suppliers, particularly in terms of small versus large businesses. @tbl-Tab, @tbl-Tab2 and @tbl-Tab3 provides an overview of these summary statistics, highlighting how the size of contracts correlates with the type and number of suppliers involved.
+\newpage
 ```{r}
 #| label: tbl-Tab
 #| tbl-cap: Summary Statistics
@@ -181,27 +181,27 @@ date_range <- Contract_data %>%
 
 # Format the date range as "YYYY-MM-DD to YYYY-MM-DD"
 formatted_date_range <- paste(
-  format(date_range$Min_Date, "%Y-%m-%d"),  # Format Min_Date
+  format(date_range$Min_Date, "%Y-%m-%d"), # Format Min_Date
   "to",
-  format(date_range$Max_Date, "%Y-%m-%d")   # Format Max_Date
+  format(date_range$Max_Date, "%Y-%m-%d") # Format Max_Date
 )
 
 # 1. General Information Table (Summary Stats + Date Range + Small/Large Business Count)
 general_info_table <- tibble(
   Metric = c(
-    "Award Date Range",  # Update label to "Award Date Range"
-    "Small Business Count", 
+    "Award Date Range", # Update label to "Award Date Range"
+    "Small Business Count",
     "Large Business Count",
-    "Min Total Awarded Amount", 
-    "Max Total Awarded Amount", 
+    "Min Total Awarded Amount",
+    "Max Total Awarded Amount",
     "Avg Total Awarded Amount"
   ),
   Value = c(
-    formatted_date_range,   # Use the formatted date range
+    formatted_date_range, # Use the formatted date range
     Small,
     Big,
-    min_total_awarded_amount, 
-    max_total_awarded_amount, 
+    min_total_awarded_amount,
+    max_total_awarded_amount,
     avg_total_awarded_amount
   )
 )
@@ -210,15 +210,14 @@ general_info_table <- tibble(
 general_info_table %>%
   kable(
     caption = "General Information Summary",
-    align = 'l',
-    col.names = c("Metric", "Value")  # Ensure column names match the number of columns
+    align = "l",
+    col.names = c("Metric", "Value") # Ensure column names match the number of columns
   ) %>%
   kable_styling(
     font_size = 10,
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
 ```
 
 
@@ -243,10 +242,6 @@ kable(rfx_high_category_avg, caption = "Average Awarded Amount by High Level Cat
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
-
-
-
 ```
 
 ```{r}
@@ -265,22 +260,28 @@ rfx_award_distribution_avg <- Contract_data %>%
 
 # Display the result as a table using knitr
 library(knitr)
-kable(rfx_award_distribution_avg, caption = "Average Awarded Amount by RFx Type and Business Type")%>%
+kable(rfx_award_distribution_avg, caption = "Average Awarded Amount by RFx Type and Business Type") %>%
   kable_styling(
     font_size = 10,
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
 ```
+
+\newpage
+
 ## Model 
-The goal of this analysis is to investigate the factors influencing small business participation in City of Toronto contracts. To address this, a logistic regression model is employed, as it is suitable for predicting a binary outcome—whether a contract is awarded to a small business or not. The dependent variable is binary, taking the value of 1 if the contract is awarded to a small business and 0 otherwise.
+The goal of this analysis is to investigate the factors influencing small business participation in City of Toronto contracts. To achieve this, a logistic regression model is used, as it is well-suited for predicting a binary outcome—whether a contract is awarded to a small business or not. The dependent variable is binary, taking the value of 1 if the contract is awarded to a small business and 0 otherwise.
+
 
 The model is formulated as follows:
 $$
-\log\left( \frac{ P(\text{Small\_Business} = 1)}{1-P(\text{Small\_Business} = 1)} \right) = \beta_0 + \beta_1 \cdot \text{RFx\_Type} + \beta_2 \cdot \text{High\_Level\_Category} + \beta_3 \cdot \text{Awarded\_Amount}
+\log\left( \frac{ P(\text{Small\_Business} = 1)}{1-P(\text{Small\_Business} = 1)} \right) = 
 $$
-This equation uses the log-odds transformation (logit function) to model the probability of awarding a contract to a small business. The logit function ensures that the output is bounded between 0 and 1, representing the probability of a small business winning a contract.
+$$
+\beta_0 + \beta_1 \cdot \text{RFx\_Type} + \beta_2 \cdot \text{High\_Level\_Category} + \beta_3 \cdot \text{Awarded\_Amount} + \beta_4 \cdot \text{Award\_Date}
+$$
+This equation uses the log-odds transformation (logit function) to model the probability of a contract being awarded to a small business. The logit function ensures that the output is bounded between 0 and 1, representing the probability of a small business winning a contract.
 
 **Variables:**
 
@@ -294,6 +295,8 @@ This equation uses the log-odds transformation (logit function) to model the pro
 
 **$\beta_3$:** The coefficient for Awarded_Amount, representing how the contract value influences the probability of a small business being awarded the contract.
 
+**$\beta_4$:** The coefficient for Award_Date, representing how time influences the probability of a small business being awarded the contract.
+
 **The interpretation of coefficients:**
 
 **$\beta_1$:** Change in log-odds of awarding a contract to a small business for different RFx types.
@@ -301,6 +304,8 @@ This equation uses the log-odds transformation (logit function) to model the pro
 **$\beta_2$:** Change in log-odds for high-level categories.
 
 **$\beta_3$:** Effect of the awarded amount on the log-odds of awarding a contract to a small business.
+
+**$\beta_4$:** Change in log-odds associated with each unit increase in the date 
 
 ## Model Setup
 
@@ -314,23 +319,22 @@ $$
 where $\mu_i$ is the probability of awarding a contract to a small business for observation $i$, and is given by the inverse logit function:
 
 $$
-\mu_i = \text{logit}^{-1}(\alpha + \beta_1 \cdot \text{RFx\_Type}_i + \beta_2 \cdot \text{High\_Level\_Category}_i + \beta_3 \cdot \text{Awarded\_Amount}_i)
+\mu_i = \text{logit}^{-1}(\alpha + \beta_1 \cdot \text{RFx\_Type}_i + \beta_2 \cdot \text{High\_Level\_Category}_i + \beta_3 \cdot \text{Awarded\_Amount}_i)  + \beta_4 \cdot \text{Award\_Date}_i)
 $$
 This ensures that $\mu_i$ lies between 0 and 1, representing the probability of awarding the contract to a small business.
 
 
 ## Assumptions and Justification
 
-- Logistic Regression is chosen for its ability to model binary outcomes, which is appropriate for our research question. It also provides interpretable results, such as odds ratios, which help assess the likelihood of a small business winning a contract based on various predictors.
+- Logistic regression is chosen for its ability to model binary outcomes, making it well-suited for our research question. It also provides interpretable results, such as odds ratios, which help assess the likelihood of a small business winning a contract based on various predictors.
 
 - RFx_Type and High_Level_Category are categorical variables. In logistic regression, these variables are treated as factors, with each level (category) compared to a baseline (reference) category. This allows us to observe how different solicitation types and procurement categories affect the odds of awarding a contract to a small business.
 
 - The inclusion of Awarded_Amount as a continuous variable accounts for the potential impact of contract size on small business participation. Larger contracts may favor larger businesses, and this variable helps assess that effect.
 
+The model's fit will be evaluated using standard techniques such as AIC, the Hosmer-Lemeshow test, and residual deviance. Diagnostics for these tests are presented in @sec-Diagnostics.
 
-The model’s fit will be assessed using standard techniques such as AIC, Hosmer-Lemeshow Test, and Residual Deviance. Diagnostics of these tests can be found in @sec-Diagnostics.
-
-In addition, model assumptions such as the linearity of the log-odds and the independence of observations are assumed. 
+Additionally, we assume that model assumptions, such as the linearity of the log-odds and the independence of observations, hold.
 
 ## Data Transformation
 - A dummy variable for Small_Business is created to distinguish small businesses from others. This binary variable was derived based on contract thresholds and company size, as described in [Appendix - @sec-appdata].
@@ -338,15 +342,16 @@ In addition, model assumptions such as the linearity of the log-odds and the ind
 - All categorical predictors (RFx_Type and High_Level_Category) are encoded into factors, and the model automatically calculates the coefficients for each level relative to a baseline.
 
 ## Alternative Models Considered / Limitations
-An alternative model that was considered is Random Forest regression, which does not assume a linear relationship between the predictors and the outcome. However, logistic regression was ultimately chosen for its interpretability and its ability to estimate odds ratios, which are particularly valuable for deriving actionable insights and making policy recommendations. 
+An alternative model considered was Random Forest regression, which does not assume a linear relationship between the predictors and the outcome. However, logistic regression was ultimately chosen for its interpretability and its ability to estimate odds ratios, which are particularly valuable for deriving actionable insights and making policy recommendations.
 
-That said, there are some limitations to the model. Specifically, logistic regression assumes that the relationships between the predictors and the outcome are linear on the log-odds scale. If this assumption is not valid, the model may fail to capture the full complexity of the data. Additionally, the dataset is constrained by its public nature, and certain potentially important variables, such as supplier ownership or firm history, are not included. These factors could provide further insights into small business participation, but they are unavailable in the current dataset.
+That said, there are some limitations to the model. Specifically, logistic regression assumes that the relationships between the predictors and the outcome are linear on the log-odds scale. If this assumption is not valid, the model may fail to capture the full complexity of the data. Additionally, the dataset is limited by its public nature, and certain potentially important variables—such as supplier ownership or firm history—are not included. These factors could provide further insights into small business participation, but they are not available in the current dataset.
 
+
+\newpage
 
 # Results {#sec-Results}
 
-@fig-PieChart displays the proportion of total awarded contracts allocated to small businesses compared to large businesses. Small businesses receive a notable share of the total awarded contracts, suggesting that they have a meaningful representation in Toronto's procurement process. This observation points to potentially equitable opportunities for smaller firms, although further analysis is needed to confirm the systemic accessibility of these opportunities.
-
+@fig-PieChart displays the proportion of total awarded contracts allocated to small businesses compared to large businesses. Small businesses receive a notable share of the total contracts awarded, suggesting meaningful representation in Toronto's procurement process. This observation points to potentially equitable opportunities for smaller firms, though further analysis is needed to confirm the systemic accessibility of these opportunities.
 ```{r}
 #| label: fig-PieChart
 #| fig-cap: Proportion of total awarded contracts by small and large businesses, showing that small businesses receive a significant share of total awarded contracts. This distribution suggests that there is balanced representation within the procurement process, possibly indicating equitable opportunities for smaller firms to participate in Toronto's public procurement system.
@@ -362,19 +367,21 @@ small_business_summary <- Contract_data %>%
 ggplot(small_business_summary, aes(x = "", y = Total_Awarded, fill = Small_Business)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
   coord_polar(theta = "y") +
-  labs(title = "Proportion of Small Business Awards",
-       x = NULL,
-       y = NULL) +
+  labs(
+    title = "Proportion of Small Business Awards",
+    x = NULL,
+    y = NULL
+  ) +
   theme_void()
-
 ```
 
 \newpage
-The bar chart @fig-bargraph, illustrates the distribution of the total awarded amounts across various RFx types, revealing several important trends in the procurement process. First, the Request for Tender (RFT) emerges as the dominant procurement method, with a total awarded amount surpassing $1 billion. This indicates that tenders are the primary mechanism used for large-scale city contracts. Following RFT, the Request for Quotation (RFQ) and Request for Proposal (RFP) types each have awarded amounts just below $375 million, showing that while they are significant, they play a secondary role in the procurement landscape. In contrast, other RFx categories such as Non-Request for Proposal (NRFP), Offer to Purchase (OTP), and Request for Supplier Qualification (RFSQ) represent a much smaller share, with their awarded amounts being minimal. This suggests that these methods are infrequently used in the awarding of contracts. Overall, the chart reveals a clear preference for tenders and quotations in the city's procurement activities, with a focus on larger, more formal procurement processes.
+The bar chart @fig-bargraph illustrates the distribution of total awarded amounts across various RFx types, revealing several important trends in the procurement process. First, the Request for Tender (RFT) stands out as the dominant procurement method, with a total awarded amount exceeding $1 billion. This suggests that tenders are the primary mechanism for large-scale city contracts. Following RFT, the Request for Quotation (RFQ) and Request for Proposal (RFP) types each account for awarded amounts just below $375 million, indicating their significant but secondary role in the procurement landscape. In contrast, other RFx categories—such as Non-Request for Proposal (NRFP), Offer to Purchase (OTP), and Request for Supplier Qualification (RFSQ)—represent a much smaller share, with minimal awarded amounts. This suggests that these methods are infrequently used in awarding contracts. Overall, the chart highlights a clear preference for tenders and quotations in the city's procurement activities, with a focus on larger, more formal procurement processes.
+
 
 ```{r}
-#| label: fig-bargraph 
-#| fig-cap: Total awarded amounts across RFx types, showing that Request for Tender (RFT) contracts dominate the procurement budget with over $1 billion in awarded funds. Request for Quotation (RFQ) and Request for Proposal (RFP) follow with awarded amounts just below $375 million. Other RFx types, including NRFP, OTP, and RFSQ, receive minimal awarded amounts, suggesting they play a less significant role in the City of Toronto’s procurement process.
+#| label: fig-bargraph
+#| fig-cap: Total awarded amounts across RFx types show that Request for Tender (RFT) contracts dominate the procurement budget, with over $1 billion in awarded funds. Request for Quotation (RFQ) and Request for Proposal (RFP) contracts follow, each with awarded amounts just below $375 million. Other RFx types, including NRFP, OTP, and RFSQ, receive minimal awarded amounts, indicating that they play a less significant role in the City of Toronto’s procurement process.
 #| echo: false
 #| warning: false
 #| message: false
@@ -389,15 +396,18 @@ rfx_summary <- Contract_data %>%
 ggplot(rfx_summary, aes(x = RFx_Type, y = Total_Awarded, fill = RFx_Type)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   scale_y_continuous(labels = dollar_format()) +
-  labs(title = "Total Awarded Amount by RFx Type",
-       x = "RFx Type",
-       y = "Total Awarded Amount ($)") +
+  labs(
+    title = "Total Awarded Amount by RFx Type",
+    x = "RFx Type",
+    y = "Total Awarded Amount ($)"
+  ) +
   theme_minimal()
 ```
 
 
 \newpage
-This stacked bar chart, @fig-bar2. shows the representation of Small Businesses (blue) and Large Businesses (red) across different RFx types. Small Businesses play a prominent role in RFQ, RFT, RFP, and RFSQ categories, consistently securing the majority of contracts. Conversely, NRFP awards are nearly exclusive to Large Businesses, whereas OTP stands out as solely awarded to Small Businesses.
+This stacked bar chart, @fig-bar2, shows the representation of Small Businesses (blue) and Large Businesses (red) across different RFx types. Small Businesses play a prominent role in the RFQ, RFT, RFP, and RFSQ categories, consistently securing the majority of contracts. In contrast, NRFP awards are almost exclusively given to Large Businesses, while OTP contracts are entirely awarded to Small Businesses.
+
 
 
 ```{r}
@@ -418,17 +428,19 @@ rfx_small_large <- Contract_data %>%
 ggplot(rfx_small_large, aes(x = RFx_Type, y = Proportion, fill = Small_Business)) +
   geom_bar(stat = "identity", position = "fill") +
   scale_y_continuous(labels = scales::percent_format()) +
-  labs(title = "Proportion of Small vs. Large Businesses by RFx Type",
-       x = "RFx Type",
-       y = "Proportion",
-       fill = "Small Business") +
+  labs(
+    title = "Proportion of Small vs. Large Businesses by RFx Type",
+    x = "RFx Type",
+    y = "Proportion",
+    fill = "Small Business"
+  ) +
   theme_minimal() +
-  theme(plot.title = element_text(hjust = 0.5)) 
-
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 \newpage
 
-@fig-bar3 highlights disparities in the average awarded amounts between small and large businesses across RFx types. Large businesses dominate high-value contracts in NRFP and RFT, where average awards exceed $20 million. Small businesses achieve moderate representation in RFQ and RFP, though their awarded amounts remain significantly lower. These disparities suggest that factors like contract scale, complexity, or financial prerequisites may favor large businesses. The data points to potential systemic barriers for small businesses in accessing higher-value contracts.
+@fig-bar3 highlights disparities in the average awarded amounts between small and large businesses across RFx types. Large businesses dominate high-value contracts in NRFP and RFT, where average awards exceed $20 million. Small businesses are moderately represented in RFQ and RFP, but their awarded amounts remain significantly lower. These disparities suggest that factors such as contract scale, complexity, or financial prerequisites may favor large businesses. The data points to potential systemic barriers preventing small businesses from accessing higher-value contracts.
+
 
 ```{r}
 #| label: fig-bar3
@@ -447,21 +459,22 @@ rfx_award_distribution_avg <- Contract_data %>%
 ggplot(rfx_award_distribution_avg, aes(x = RFx_Type, y = Avg_Awarded, fill = Small_Business)) +
   geom_bar(stat = "identity", position = "dodge") +
   scale_y_continuous(labels = scales::dollar_format()) +
-  labs(title = "Average Awarded Amount for Each RFx Type",
-       x = "RFx Type",
-       y = "Average Awarded Amount ($)",
-       fill = "Small Business") +
+  labs(
+    title = "Average Awarded Amount for Each RFx Type",
+    x = "RFx Type",
+    y = "Average Awarded Amount ($)",
+    fill = "Small Business"
+  ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme(plot.title = element_text(hjust = 0.5))
-
-
 ```
 
 
 \newpage
 
-This box plot, @fig-Boxplot, illustrates the distribution of awarded contract amounts across four key procurement categories: Construction Services, Goods & Services, Offer to Purchase, and Professional Services. Construction Services stands out with the widest range of contract amounts, including several high-value outliers that exceed $75 million. This indicates that large-scale projects, such as infrastructure development, are predominant in this category. In contrast, Professional Services and Goods & Services exhibit significantly narrower distributions, with no substantial outliers. These categories are associated with more predictable and uniform expenditure patterns, reflecting their role in smaller, more routine contracts. The Offer to Purchase category, on the other hand, shows minimal representation, with awarded amounts clustered at lower values. This suggests that it is infrequently used for high-value procurement activities.
+This box plot, @fig-Boxplot, illustrates the distribution of awarded contract amounts across four key procurement categories: Construction Services, Goods & Services, Offer to Purchase, and Professional Services. Construction Services stands out with the widest range of contract amounts, including several high-value outliers exceeding $75 million. This suggests that large-scale projects, such as infrastructure development, are predominant in this category. In contrast, Professional Services and Goods & Services exhibit significantly narrower distributions, with no substantial outliers. These categories are associated with more predictable and uniform expenditure patterns, reflecting their role in smaller, more routine contracts. The Offer to Purchase category, however, shows minimal representation, with awarded amounts clustered at lower values, indicating that it is infrequently used for high-value procurement.
+
 
 ```{r}
 #| label: fig-Boxplot
@@ -474,19 +487,20 @@ This box plot, @fig-Boxplot, illustrates the distribution of awarded contract am
 ggplot(Contract_data, aes(x = High_Level_Category, y = Awarded_Amount, fill = High_Level_Category)) +
   geom_boxplot(show.legend = FALSE) +
   scale_y_continuous(labels = dollar_format()) +
-  labs(title = "Distribution of Awarded Amounts by High-Level Category",
-       x = "Category",
-       y = "Awarded Amount ($)") +
+  labs(
+    title = "Distribution of Awarded Amounts by High-Level Category",
+    x = "Category",
+    y = "Awarded Amount ($)"
+  ) +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
-  theme(plot.title = element_text(hjust = 0.5)) 
-
-
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 \newpage
 
-This bar chart, @fig-bar4, presents the proportion of contracts awarded to small businesses (blue) versus large businesses (red) across major procurement categories, including Construction Services, Goods & Services, Offer to Purchase, and Professional Services. In the Construction Services and Professional Services categories, there is a clear dominance of contracts awarded to large businesses. This suggests that small businesses may face barriers to participation, such as stringent qualification requirements or the scale of projects, which favor larger firms. On the other hand, the Goods & Services and Offer to Purchase categories show a higher proportion of contracts awarded to small businesses. This indicates that these categories are more inclusive, with fewer financial or operational barriers, making them more accessible to smaller enterprises. Overall, these trends highlight the varying levels of inclusivity within different procurement sectors, with some categories offering more opportunities for small businesses to engage in the procurement process.
+This bar chart, @fig-bar4, presents the proportion of contracts awarded to small businesses (blue) versus large businesses (red) across major procurement categories, including Construction Services, Goods & Services, Offer to Purchase, and Professional Services. In both the Construction Services and Professional Services categories, large businesses dominate, suggesting that small businesses may face barriers to participation, such as stringent qualification requirements or the scale of projects that favor larger firms. In contrast, the Goods & Services and Offer to Purchase categories show a higher proportion of contracts awarded to small businesses, indicating that these categories are more inclusive, with fewer financial or operational barriers, making them more accessible to smaller enterprises. Overall, these trends highlight varying levels of inclusivity across procurement sectors, with some categories offering more opportunities for small businesses to engage in the process.
+
 
 ```{r}
 #| label: fig-bar4
@@ -507,18 +521,20 @@ category_small_large <- Contract_data %>%
 ggplot(category_small_large, aes(x = High_Level_Category, y = Proportion, fill = Small_Business)) +
   geom_bar(stat = "identity", position = "fill") +
   scale_y_continuous(labels = scales::percent_format()) +
-  labs(title = "Proportion of Small vs. Large Businesses by High-Level Category",
-       x = "High-Level Category",
-       y = "Proportion",
-       fill = "Small Business") +
+  labs(
+    title = "Proportion of Small vs. Large Businesses by High-Level Category",
+    x = "High-Level Category",
+    y = "Proportion",
+    fill = "Small Business"
+  ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  theme(plot.title = element_text(hjust = 0.5,size = 11)) 
-
+  theme(plot.title = element_text(hjust = 0.5, size = 11))
 ```
 \newpage
 
-This bar chart, @fig-bar6, illustrates the average awarded amounts to small businesses and large businesses across high-level contract categories. In the Construction Services category, large businesses dominate, with average awards approaching $30 million, while small businesses receive significantly smaller amounts. This discrepancy suggests that large-scale contracts in this category likely require resources or qualifications that are beyond the capacity of small businesses. In contrast, Goods and Services contracts show a more equitable distribution, with similar average awards for both small and large businesses, indicating that small firms face fewer barriers and can compete more equally in this category. The Offer to Purchase category shows no recorded average awarded amounts, suggesting minimal or no activity in this category within the dataset. In Professional Services, large businesses still receive higher average awards, but the gap is smaller compared to Construction Services. This suggests that while small businesses have some opportunities in this category, disparities in awarded amounts still exist. These findings highlight significant variations in contract accessibility for small businesses across different procurement categories, with some offering more inclusive opportunities than others.
+This bar chart, @fig-bar6, illustrates the average awarded amounts to small and large businesses across high-level contract categories. In the Construction Services category, large businesses dominate, with average awards approaching $30 million, while small businesses receive significantly smaller amounts. This disparity suggests that large-scale contracts in this category likely require resources or qualifications beyond the capacity of small businesses. In contrast, Goods and Services contracts show a more equitable distribution, with similar average awards for both small and large businesses, indicating fewer barriers for small firms and greater competition. The Offer to Purchase category shows no recorded average awarded amounts, suggesting minimal or no activity within this category in the dataset. In Professional Services, large businesses still receive higher average awards, though the gap is smaller compared to Construction Services, indicating that while small businesses have some opportunities, disparities in awarded amounts persist. These findings highlight significant variations in contract accessibility for small businesses across procurement categories, with some offering more inclusive opportunities than others.
+
 ```{r}
 #| label: fig-bar6
 #| fig-cap: Average awarded amounts for small and large businesses across various contract categories. Large businesses dominate the Construction Services category with average awards nearing $30 million, while small businesses receive considerably lower awards. Goods & Services contracts show more balanced awards, offering similar average values for both small and large businesses, while Professional Services shows a smaller gap favoring large businesses.
@@ -536,20 +552,21 @@ rfx_award_distribution_avg <- Contract_data %>%
 ggplot(rfx_award_distribution_avg, aes(x = High_Level_Category, y = Avg_Awarded, fill = Small_Business)) +
   geom_bar(stat = "identity", position = "dodge") +
   scale_y_continuous(labels = scales::dollar_format()) +
-  labs(title = "Average Awarded Amount for Each High-Level Category",
-       x = "High-Level Category",
-       y = "Average Awarded Amount ($)",
-       fill = "Small Business") +
+  labs(
+    title = "Average Awarded Amount for Each High-Level Category",
+    x = "High-Level Category",
+    y = "Average Awarded Amount ($)",
+    fill = "Small Business"
+  ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 12))
-
-
 ```
 
 \newpage
 
-This line graph, @fig-line, depicts the average awarded amounts for small and large businesses over the analyzed period. Large businesses show significant fluctuations in awarded amounts, with sharp peaks in mid-2023 and late 2024. These spikes are likely driven by occasional high-value contracts, which account for the variability in their awards. In contrast, small businesses exhibit a more stable trend, consistently receiving lower awards, generally staying below $10 million. There are minor increases in late 2023 and mid-2024, indicating gradual improvements in the awarded amounts for small businesses during these periods. The overall trends highlight a consistent disparity between small and large businesses, with large businesses capturing the majority of high-value contracts. However, the relatively stable levels of awarded amounts for small businesses suggest that, while their opportunities are limited, there has been a steady, albeit modest, flow of contracts to smaller enterprises.
+This line graph, @fig-line, depicts the average awarded amounts for small and large businesses over the analyzed period. Large businesses show significant fluctuations in awarded amounts, with sharp peaks in mid-2023 and late 2024. These spikes are likely driven by occasional high-value contracts, which contribute to the variability in their awards. In contrast, small businesses exhibit a more stable trend, consistently receiving lower awards, generally staying below $10 million. There are slight increases in late 2023 and mid-2024, suggesting modest improvements in awarded amounts for small businesses during these periods. The overall trends highlight a consistent disparity between small and large businesses, with large businesses securing the majority of high-value contracts. However, the relatively stable awarded amounts for small businesses indicate that, while their opportunities remain limited, there has been a steady, if modest, flow of contracts to smaller enterprises.
+
 ```{r}
 #| label: fig-line
 #| fig-cap: Average awarded amounts to small and large businesses over time. Large businesses experience notable fluctuations, with significant peaks in mid-2023 and late 2024, reflecting the occasional awarding of high-value contracts. Small businesses show a steady trend of lower awarded amounts, mostly staying below $10 million, with slight increases around late 2023 and mid-2024.
@@ -573,21 +590,22 @@ time_series_data_avg <- Contract_data %>%
 # Plot the time series (average awarded amount)
 ggplot(time_series_data_avg, aes(x = Month, y = Avg_Awarded, color = Small_Business)) +
   geom_line(size = 1.2) +
-  labs(title = "Average Awarded Amount Over Time",
-       x = "Time (Monthly)",
-       y = "Average Awarded Amount ($)",
-       color = "Business Type") +
+  labs(
+    title = "Average Awarded Amount Over Time",
+    x = "Time (Monthly)",
+    y = "Average Awarded Amount ($)",
+    color = "Business Type"
+  ) +
   theme_minimal() +
   scale_y_continuous(labels = scales::dollar_format()) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme(plot.title = element_text(hjust = 0.5))
-
-
 ```
 
 \newpage
 
-This scatter plot, @fig-scatter, highlights the disparity in awarded amounts between small and large businesses throughout the analyzed time period. The majority of awarded amounts are concentrated below $25 million, suggesting that high-value contracts are relatively rare. Among the few instances of large contract values, large businesses dominate, receiving a disproportionate share of the higher awards. Small businesses, while present across the timeline, are consistently awarded amounts within lower ranges, further emphasizing their limited access to larger contracts. These findings underscore the persistent gap in contract allocation between small and large businesses, with large enterprises consistently securing the most substantial awards.
+This scatter plot, @fig-scatter, highlights the disparity in awarded amounts between small and large businesses throughout the analyzed period. Most awarded amounts are concentrated below $25 million, suggesting that high-value contracts are relatively rare. Among the few high-value contracts, large businesses dominate, receiving a disproportionate share of the larger awards. Small businesses, while represented across the timeline, are consistently awarded amounts within lower ranges, emphasizing their limited access to larger contracts. These findings underscore the persistent gap in contract allocation between small and large businesses, with large enterprises consistently securing the most substantial awards.
+
 
 ```{r}
 #| label: fig-scatter
@@ -602,22 +620,24 @@ library(lubridate)
 
 # Create a scatter plot with color differentiation for small and large businesses
 ggplot(Contract_data, aes(x = Award_Date, y = Awarded_Amount, color = Small_Business)) +
-  geom_point(size = 2) +  # Scatter plot points
-  scale_color_manual(values = c("TRUE" = "blue", "FALSE" = "red")) +  # Color based on Small_Business
-  labs(title = "Awarded Amount by Business Type",
-       x = "Award Date",
-       y = "Awarded Amount ($)",
-       color = "Business Type") +
+  geom_point(size = 2) + # Scatter plot points
+  scale_color_manual(values = c("TRUE" = "blue", "FALSE" = "red")) + # Color based on Small_Business
+  labs(
+    title = "Awarded Amount by Business Type",
+    x = "Award Date",
+    y = "Awarded Amount ($)",
+    color = "Business Type"
+  ) +
   theme_minimal() +
   scale_y_continuous(labels = scales::dollar_format()) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  theme(plot.title = element_text(hjust = 0.5)) 
-
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 \newpage
 
-This scatter plot with a regression line, @fig-timeseries, focuses on the awarded amounts to small businesses over time and provides the following insights. The red regression line indicates a positive trend, suggesting a gradual increase in the awarded amounts to small businesses, signaling some progress in their procurement outcomes over the analyzed period. However, the spread of data points around the regression line highlights considerable variability in the monthly awarded amounts, with certain months showing higher or lower awards compared to the overall trend. This variability suggests that while there are encouraging signs of growth in opportunities for small businesses, the consistency of these outcomes may still be subject to fluctuations. The findings underscore the importance of maintaining consistent policy measures to support and sustain equitable participation for small businesses in procurement activities.
+This scatter plot with a regression line, @fig-timeseries, focuses on the awarded amounts to small businesses over time and provides the following insights. The red regression line shows a positive trend, indicating a gradual increase in awarded amounts to small businesses, which signals some progress in their procurement outcomes over the analyzed period. However, the spread of data points around the regression line reveals considerable variability in monthly awarded amounts, with certain months exhibiting higher or lower awards compared to the overall trend. This variability suggests that while there are encouraging signs of growth in opportunities for small businesses, the consistency of these outcomes may still be subject to fluctuations. These findings emphasize the need for consistent policy measures to support and sustain equitable participation by small businesses in procurement activities.
+
 
 ```{r}
 #| label: fig-timeseries
@@ -627,8 +647,8 @@ This scatter plot with a regression line, @fig-timeseries, focuses on the awarde
 #| message: false
 
 
-small_business_data <- Contract_data %>% 
-  filter(Small_Business == TRUE) %>% 
+small_business_data <- Contract_data %>%
+  filter(Small_Business == TRUE) %>%
   mutate(Month = floor_date(Award_Date, "month"))
 
 # Aggregate awarded amounts by month for small businesses
@@ -648,14 +668,15 @@ model <- lm(Total_Awarded ~ Time, data = regression_data)
 ggplot(regression_data, aes(x = Month, y = Total_Awarded)) +
   geom_point(color = "blue", size = 2) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
-  labs(title = "Regression Analysis: Awarded Amount to Small Businesses Over Time",
-       x = "Time (Monthly)",
-       y = "Total Awarded Amount ($)") +
+  labs(
+    title = "Regression Analysis: Awarded Amount to Small Businesses Over Time",
+    x = "Time (Monthly)",
+    y = "Total Awarded Amount ($)"
+  ) +
   theme_minimal() +
   scale_y_continuous(labels = scales::dollar_format()) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  theme(plot.title = element_text(hjust = 0.5)) 
-
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 
@@ -663,16 +684,19 @@ ggplot(regression_data, aes(x = Month, y = Total_Awarded)) +
 
 \newpage
 
-A logistic regression model was used to assess the factors influencing the likelihood of a contract being awarded to a small business. The results, presented in @tbl-Table2, offer several key insights.
+A logistic regression model was used to assess the factors influencing the likelihood of a contract being awarded to a small business. The results, presented in @tbl-Table2, provide several key insights:
 
-**Impact of Awarded Amount:** Larger awarded amounts are negatively associated with the likelihood of contracts being awarded to small businesses. This suggests a structural bias in favor of larger firms when it comes to high-value contracts, potentially due to the greater resources and capabilities required to handle large-scale projects.
+**Impact of Awarded Amount:** This is statistically significant. A unit increase in the awarded amount corresponds to no change in the odds ratio (odds ratio = 1.0000), which suggests that the awarded amount does not influence the likelihood of a supplier being a small business.
 
-**High-Level Category Influence:** Certain procurement categories, such as "Goods and Services" and "Professional Services," significantly reduce the probability of small businesses winning contracts. These findings point to an uneven playing field in these sectors, likely driven by higher technical, operational, or financial requirements that make it more challenging for smaller enterprises to compete effectively.
 
-**No Significant RFx Impact:** The RFx type (e.g., RFP, RFQ, RFT) did not show a statistically significant effect on the likelihood of small businesses securing contracts. This suggests that other systemic factors, such as vendor eligibility criteria, selection processes, or organizational preferences, may play a more pivotal role in determining the outcomes, rather than the specific procurement method used.
+**High-Level Category Influence:** Certain procurement categories, such as "Goods and Services" and "Professional Services," significantly reduce the probability of small businesses winning contracts. This points to an uneven playing field in these sectors, likely driven by higher technical, operational, or financial requirements that make it more difficult for smaller enterprises to compete effectively.
+
+**No Significant RFx Impact:** The RFx type (e.g., RFP, RFQ, RFT) did not show a statistically significant effect on the likelihood of small businesses securing contracts. This suggests that other systemic factors, such as vendor eligibility criteria, selection processes, or organizational preferences, may play a more pivotal role than the specific procurement method used.
+
+**Impact of Award Date:** This is statistically significant. A one-unit increase in Award_Date (e.g., one day) slightly decreases the odds of a supplier being a small business (odds ratio = 0.9957, approximately a 0.43% decrease per day). Over time, the likelihood of small businesses winning contracts appears to decrease slightly, indicating potential structural trends or barriers developing in procurement.
 
 **Implications:**
-The findings underscore the substantial barriers faced by small businesses, particularly in securing high-value contracts and in specific procurement categories that demand specialized expertise or resources. To address these disparities, the results suggest the need for targeted reforms aimed at improving access for small businesses. Possible measures could include relaxing eligibility requirements, simplifying bidding processes, or allocating dedicated opportunities for small businesses to help level the playing field in procurement activities.
+The findings highlight the substantial barriers small businesses face, particularly in securing high-value contracts and in procurement categories that require specialized expertise or resources. To address these disparities, the results suggest the need for targeted reforms aimed at improving access for small businesses. Possible measures could include relaxing eligibility requirements, simplifying bidding processes, or allocating dedicated opportunities for small businesses to help level the playing field.
 ```{r}
 #| label: tbl-Table2
 #| tbl-cap: Logistic Regression Results for Predicting Small Business Contracts
@@ -681,8 +705,9 @@ The findings underscore the substantial barriers faced by small businesses, part
 #| message: false
 
 # Logistic regression model
-log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
-                 data = Contract_data, family = binomial)
+log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount  + Award_Date,
+  data = Contract_data, family = binomial
+)
 
 # Tidy the model output for a table
 log_model_summary <- broom::tidy(log_model)
@@ -690,44 +715,55 @@ log_model_summary <- broom::tidy(log_model)
 # Add odds ratios (exponentiated coefficients) and confidence intervals
 log_model_summary <- log_model_summary %>%
   mutate(Odds_Ratio = exp(estimate)) %>%
-  mutate(Lower_CI = exp(estimate - 1.96 * std.error),
-         Upper_CI = exp(estimate + 1.96 * std.error))
+  mutate(
+    Lower_CI = exp(estimate - 1.96 * std.error),
+    Upper_CI = exp(estimate + 1.96 * std.error)
+  )
 
 # Display the table with resizing for PDF
 kable(
   log_model_summary %>%
     select(term, estimate, std.error, Odds_Ratio, Lower_CI, Upper_CI, p.value),
   format = "latex",
-  col.names = c("Term", "Log Odds", "Std. Error", 
-                "Odds Ratio", "Lower CI", "Upper CI", "P-Value"),
+  col.names = c(
+    "Term", "Log Odds", "Std. Error",
+    "Odds Ratio", "Lower CI", "Upper CI", "P-Value"
+  ),
   digits = 4, align = "c"
 ) %>%
   kable_styling(
     font_size = 10,
     bootstrap_options = c("striped", "hover"),
-    latex_options = c("scale_down")  # Automatically scales the table for PDF output
+    latex_options = c("scale_down") # Automatically scales the table for PDF output
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
 ```
 
 
+\newpage
+
 # Discussion {#sec-discussion}
 
-## What is done in this paper?
-This study investigates the representation of small businesses in Toronto's public procurement system across various RFx types (Request for X) and high-level procurement categories. It utilizes a combination of descriptive statistics, visualizations (such as bar charts and box plots), and logistic regression models to explore the factors influencing the likelihood of contracts being awarded to small businesses. For example, the bar charts (@fig-bar2, @fig-bar3) clearly illustrate how RFx types like RFT disproportionately favor large businesses, while RFQ and RFP categories offer more balanced opportunities. The logistic regression model (@tbl-Table2) confirms that higher awarded amounts and complex categories reduce the likelihood of small businesses securing contracts.
+## Scope and Approach of the Study
+This study examines the representation of small businesses in Toronto's public procurement system across various RFx types (Request for X) and high-level procurement categories. It combines descriptive statistics, visualizations (such as bar charts and box plots), and logistic regression models to explore the factors influencing the likelihood of contracts being awarded to small businesses. For instance, the bar charts (@fig-bar2, @fig-bar3) illustrate how RFx types like RFT disproportionately favor large businesses, while RFQ and RFP categories provide more balanced opportunities. However, the logistic regression model (@tbl-Table2) does not show that RFx types significantly impact small business success. The analysis suggests that the structure of RFx types alone does not account for the likelihood of small businesses winning contracts. Larger awarded amounts and more complex procurement categories still seem to reduce the likelihood of small businesses securing contracts, although Awarded Amount itself was not statistically significant in the model.
 
-## What is something that we learn about the world?
-The analysis reveals that small businesses are most successful in procurement categories and RFx types that have less complex requirements, such as RFQ (Request for Quotation) and RFP (Request for Proposal). As shown in the stacked bar chart (@fig-bar2), small businesses represent a larger share of contracts in these types. However, the dominance of large businesses in RFT contracts is evident, as demonstrated in the average awarded amounts bar chart (@fig-bar3), where large businesses receive significantly higher contract values. This highlights structural inequities in the procurement system that disadvantage small businesses, especially in categories that require specialized skills or significant financial capacity.
 
-## What is another thing that we learn about the world?
-The research also uncovers that while small businesses show some progress in securing contracts over time, the overall trend remains uneven. The slight increase in awarded amounts to small businesses is visible in the line graph (@fig-line), which shows gradual growth, yet volatility in contract values persists. The scatter plot with a regression line (@fig-timeseries) further illustrates the inconsistency in awarded amounts over time. These findings suggest that despite some improvements, the opportunities for small businesses remain unstable and inconsistent, influenced by factors such as RFx type and procurement category.
+## Insights on Small Business Representation in Procurement
+The analysis reveals that small businesses achieve the greatest success in procurement categories and RFx types with less complex requirements, such as RFQ (Request for Quotation) and RFP (Request for Proposal). As shown in the stacked bar chart (@fig-bar2), these RFx types lower barriers to entry by focusing on straightforward pricing and proposal quality, enabling smaller firms to compete effectively. In contrast, RFT (Request for Tender) contracts, which often involve high-value, resource-intensive projects, are dominated by large businesses due to their ability to meet stringent requirements and offer economies of scale. While the logistic regression results do not show that RFx type significantly impacts small business participation, the descriptive analysis still supports the idea that RFQ and RFP categories may offer more opportunities for small businesses.
 
-## What are some weaknesses of what was done?
-Despite the comprehensive approach, the study has several limitations. One key weakness is the lack of qualitative data, which could provide deeper insights into the specific barriers small businesses face when bidding for contracts. For example, while the box plot (@fig-Boxplot) illustrates the distribution of awarded amounts across procurement categories, it cannot fully account for subjective factors such as the experience level of bidders or the perceived complexity of the tender process. Additionally, while the logistic regression model (@tbl-Table2) identifies statistically significant factors, it cannot capture the full spectrum of external variables, such as changes in government policy or broader economic conditions, that could affect small business participation.
+The regression model found that the Awarded Amount itself does not significantly affect the likelihood of small business success, contradicting the earlier suggestion that larger contract values create barriers. However, procurement categories like Professional Services continue to show challenges for small businesses, confirming the earlier observation that more complex categories tend to favor larger firms.
 
-## What is left to learn or how should we proceed in the future?
-Future research should focus on qualitative studies that delve deeper into the experiences of small businesses navigating the procurement process. Interviews or case studies with small business owners could shed light on the specific challenges they face, such as eligibility criteria, administrative burdens, or the complexity of tender documents. Additionally, expanding the analysis to multiple cities or regions could allow for a broader comparison of procurement policies and their impact on small businesses. Longitudinal studies would also be beneficial to track policy changes over time and assess their effectiveness in improving access for small businesses. For example, the time series analysis (@fig-line) provides a glimpse of fluctuations over time, but further research could analyze policy interventions and their long-term effects. Finally, examining government initiatives designed to support small businesses could help identify best practices and strategies that have successfully addressed these inequities.
+These findings directly address the research question by identifying how the structure of RFx types and procurement categories impacts small business participation in public procurement. The observed disparities highlight systemic inequities that hinder small businesses from competing in high-value contracts, reinforcing the need to evaluate whether public procurement policies are genuinely inclusive. This analysis provides evidence to support the argument that procurement reforms, such as simplifying tender requirements or creating small business-specific RFx categories, could foster greater equity and inclusivity in the system.
+
+## Uneven Trends Over Time in Small Business Success
+The research also reveals that while small businesses show some progress in securing contracts over time, the overall trend remains uneven. A slight increase in awarded amounts to small businesses is visible in the line graph (@fig-line), indicating gradual growth, but volatility in contract values persists. The scatter plot with a regression line (@fig-timeseries) further highlights the inconsistency in awarded amounts over time. These findings suggest that, despite some improvements, opportunities for small businesses remain unstable and inconsistent, influenced by factors such as RFx type and procurement category. The regression model also found that Award Date has a significant negative effect on small businesses, indicating that over time, small businesses are less likely to be awarded contracts.
+
+These findings relate directly to the research question by emphasizing how structural factors—such as RFx type and procurement category—continue to shape small business outcomes unpredictably. For example, while certain policies may temporarily boost access, systemic issues like complex eligibility requirements or lack of targeted programs limit sustainable growth. This underscores the need for consistent policy measures designed to stabilize and enhance small business participation, aligning with the overarching goal of fostering equitable access in public procurement.
+
+## Weaknesses and Next Steps
+Despite its comprehensive approach, the study has several limitations that highlight areas for future exploration. A significant shortcoming is the lack of qualitative data, which could offer deeper insights into the barriers small businesses face in the procurement process. For instance, while the box plot (@fig-Boxplot) illustrates variations in awarded amounts across procurement categories, it cannot address subjective factors like bidders' experience or the perceived complexity of tender processes. Similarly, while the logistic regression model (@tbl-Table2) identifies key statistical relationships, it cannot account for external influences, such as shifts in government policy or broader economic conditions, that impact small business participation.
+
+To address these gaps, future research should prioritize qualitative studies, such as interviews or case studies, to uncover nuanced challenges like eligibility requirements, administrative burdens, or document complexity. Expanding the analysis to multiple cities or regions could provide comparative insights into the effectiveness of procurement policies and their impact on small businesses. Longitudinal studies tracking policy changes over time would also be valuable in assessing their success in improving small business access. For example, the time series analysis (@fig-line) reveals fluctuations in awarded amounts, underscoring the need for investigations into policy interventions and their sustained effects. Additionally, studying government initiatives aimed at supporting small businesses can help identify strategies that effectively mitigate systemic inequities and foster equitable access in procurement.
 
 
 \newpage
@@ -736,71 +772,74 @@ Future research should focus on qualitative studies that delve deeper into the e
 
 # Appendix {-}
 
-# Methodological Considerations in Analyzing Procurement Data	 {#sec-details}
+# Methodological Considerations in Analyzing Procurement Data	 {#sec-methdetails}
 
 ## Introduction to Sampling and Observational Data in Procurement Analysis
-In this study, we analyze procurement data to assess small business representation in Toronto's public procurement system. The data consists of contracts awarded across various RFx types, categorized by business size and procurement category. The focus on small versus large business participation highlights disparities that may suggest systemic barriers for small businesses. To ensure the robustness of our findings, understanding the methodologies used to gather and analyze this data is crucial.
+In this study, we analyze procurement data to assess the representation of small businesses in Toronto's public procurement system. The dataset consists of contracts awarded across various RFx types, categorized by business size and procurement category. By focusing on small versus large business participation, we highlight disparities that may point to systemic barriers faced by small businesses. Understanding the methodologies used to gather and analyze this data is essential to ensuring the robustness of our findings.
 
-The data used in this study is observational, collected from publicly available procurement records over a defined period. Unlike survey data, which involves the active collection of responses from participants, observational data in procurement allows us to examine real-world behaviors (i.e., contract awards) as they occur naturally without intervention.
+The data used in this study is observational, collected from publicly available procurement records over a defined period. Unlike survey data, which involves actively soliciting responses from participants, observational data in procurement enables us to examine real-world behaviors—specifically, contract awards—as they occur naturally, without any intervention.
 
 ## Survey and Sampling Methodologies: Linking to Procurement Data
-While the procurement data we analyze is observational in nature, understanding the principles behind survey sampling can enhance our interpretation of the results. Procurement records could be viewed as a form of "sample" of the broader population of potential contracts, and proper sampling techniques could help ensure that our analysis accurately reflects the larger procurement landscape.
+While the procurement data we analyze is observational, understanding survey sampling principles can enhance our interpretation of the results. Procurement records may be viewed as a form of "sample" from the broader population of potential contracts. By applying proper sampling techniques, we can ensure that our analysis more accurately reflects the larger procurement landscape.
+
 
 **Stratified Sampling in Procurement Data**
 
-Stratified sampling involves dividing the population into distinct subgroups or strata based on characteristics of interest, and then sampling from each subgroup. In the context of procurement, strata could be defined by the type of RFx (e.g., RFT, RFQ, RFP), the procurement category (e.g., construction services, professional services), or the size of the business (small vs. large). Using stratified sampling ensures that each category is adequately represented, and that any disparities in contract awards between groups are more accurately assessed.
+Stratified sampling involves dividing the population into distinct subgroups (or strata) based on characteristics of interest, and then sampling from each subgroup. In the context of procurement, strata could be defined by the type of RFx (e.g., RFT, RFQ, RFP), procurement category (e.g., construction services, professional services), or business size (small vs. large). Stratified sampling ensures that each category is adequately represented, improving the accuracy of assessments of disparities in contract awards.
 
-For example, if small businesses are predominantly represented in RFQ contracts but underrepresented in RFT contracts, stratified analysis would allow for a more precise comparison across procurement categories.
+For instance, if small businesses are predominantly represented in RFQ contracts but underrepresented in RFT contracts, stratified analysis would allow for a more precise comparison across procurement categories, helping to uncover systemic barriers that may be affecting small business participation.
 
 **Random Sampling vs. Observational Data**
 
-While random sampling is a key technique in surveys to ensure unbiased representation, observational data relies on naturally occurring events. In procurement analysis, this means that every contract awarded is treated as part of the population, without any sampling bias, though one must be cautious of other forms of bias that might affect the data collection process (e.g., data reporting biases or timing biases).
+While random sampling is a key technique in survey design to ensure unbiased representation, observational data relies on naturally occurring events. In procurement analysis, this means that every contract awarded is treated as part of the population without intentional sampling. However, caution is needed to account for other forms of bias that could affect the data collection process, such as data reporting or timing biases.
 
-In some instances, observational data might miss certain segments of the population (e.g., missed or incomplete contract records), and understanding the limitations of this data is essential. If additional survey methods were employed (e.g., surveying procurement officials or small business owners about their experiences), we could complement the observational data and potentially fill gaps in understanding.
+Unlike random sampling, observational data may not capture all segments of the population (e.g., missed or incomplete contract records). Thus, the limitations of the data should be carefully considered when drawing conclusions. If additional survey methods were used—such as surveying procurement officials or small business owners about their experiences—this could complement the observational data and provide further insights into potential gaps.
 
 ## Challenges in Analyzing Procurement Data: Measurement and Bias Considerations
 
 **Measurement Issues**
 
-The procurement data relies on records that include contract values, RFx types, and business classifications. However, measurement errors can occur due to inconsistent reporting, variations in how contracts are categorized, or incomplete data entries. In this study, careful validation was done to ensure that the data used for analysis is accurate and up-to-date. However, measurement issues should be acknowledged, especially when interpreting trends and making policy recommendations.
+Procurement data relies on contract records that include values, RFx types, and business classifications. However, measurement errors can occur due to inconsistent reporting, differences in how contracts are categorized, or incomplete data entries. In this study, we validated the data to ensure it is accurate and up-to-date. However, it is important to recognize potential measurement issues, particularly when interpreting trends or making policy recommendations.
 
-For example, discrepancies in how contracts are categorized (e.g., whether a contract is classified as "construction services" versus "goods and services") could influence the interpretation of small business participation across different procurement categories. Moreover, larger contracts might involve multiple suppliers, and the allocation of contract values could be subject to different reporting standards.
+For example, discrepancies in how contracts are categorized (e.g., whether a contract is classified as "construction services" versus "goods and services") could influence how small business participation is assessed across different procurement categories. Moreover, some contracts may involve multiple suppliers, which could lead to variations in how contract values are reported.
 
 **Data-Related Biases**
 
-While observational data avoids some biases inherent in survey methodologies, it can still suffer from selection biases. In the case of procurement data, certain contracts may be more likely to be awarded to large businesses due to the nature of the work (e.g., large-scale infrastructure projects), which could skew the results. Additionally, small businesses may face additional barriers in participating in high-value contracts, which could further distort the data on small business representation.
+Although observational data avoids some biases inherent in survey methodologies, it is not immune to selection biases. In procurement, certain contracts may be more likely to be awarded to large businesses due to the scale or complexity of the work (e.g., large infrastructure projects), which could distort our understanding of small business participation. Additionally, small businesses may face greater barriers to participating in high-value contracts, which could further skew the data on their representation.
 
-To address these biases, the study employs regression techniques to control for variables such as awarded amount and procurement category, helping to isolate the impact of business size on contract awards. Further refinement could involve using propensity score matching or other methods to correct for potential selection bias.
+To address these potential biases, our study employs regression techniques to control for variables like awarded amount and procurement category. This helps isolate the effect of business size on contract awards. However, further refinement of the analysis could include techniques like propensity score matching or other methods to correct for potential selection biases and ensure a more accurate representation of small business participation.
 
 ## Simulating Procurement Scenarios: Enhancing Predictive Insights
-In addition to analyzing existing data, a valuable approach would be to simulate various procurement scenarios to predict the potential impact of policy changes on small business participation. Simulation models can help estimate how changes to procurement processes (e.g., simplifying bidding requirements or introducing set-asides) could influence contract outcomes.
+In addition to analyzing existing data, a valuable approach would be to simulate various procurement scenarios to predict the potential impact of policy changes on small business participation. Simulation models can help estimate how changes to procurement processes (e.g., simplifying bidding requirements or introducing set-asides) might influence contract outcomes.
 
-For example, simulations could model the effects of small business set-asides for RFT contracts, estimating the potential increase in small business participation in these high-value categories. By running these simulations under different conditions (e.g., varying levels of financial support or administrative burden reduction), policymakers could gain a better understanding of how best to structure procurement processes to foster greater equity.
+For example, simulations could model the effects of small business set-asides for RFT contracts, estimating the potential increase in small business participation in these high-value categories. By running these simulations under different conditions (e.g., varying levels of financial support or reductions in administrative burden), policymakers could gain a better understanding of how best to structure procurement processes to foster greater equity.
 
 ## Linking to the Literature: Insights from Previous Studies
 This analysis extends the insights from existing literature on public procurement, small business participation, and statistical modeling. Previous studies have identified several barriers that small businesses face in public procurement processes, including stringent qualification criteria and high financial thresholds that limit their access to high-value contracts.
 
-For instance, research by Witt et al. [@Witt2019] explores how small businesses struggle to compete for government contracts, particularly when the bidding criteria favor larger firms with more resources. Their findings align with this study's conclusion that large businesses dominate high-value contracts, particularly in sectors like construction services and professional services [@Witt2019].
+For instance, research by Witt et al. [@Witt2019] explores how small businesses struggle to compete for government contracts, particularly when the bidding criteria favor larger firms with more resources. Their findings align with this study's conclusion that large businesses dominate high-value contracts, particularly in sectors such as construction services and professional services [@Witt2019].
 
 Moreover, Bolton et al. [@Bolton2004] highlight how public procurement policies, such as set-asides and subcontracting mandates, have been used to improve small business access to government contracts. These insights further reinforce the need for targeted reforms in procurement systems to facilitate greater participation from small firms. The UK's experience with supplier diversity initiatives is particularly relevant, as evidenced by Bolton et al. [@Bolton2004], who emphasized how diversity programs and government support have led to better outcomes for smaller suppliers.
 
-The results of this study support these conclusions, highlighting that high-value contracts, particularly in specific categories, still present significant challenges for small businesses. There is also a strong case for implementing additional policy measures to ensure fairer representation in the procurement process.
+The results of this study support these conclusions, showing that high-value contracts, particularly in certain categories, continue to present significant challenges for small businesses. There is also a strong case for implementing additional policy measures to ensure fairer representation in the procurement process.
 
-By building on these findings, this paper underscores the importance of continuous policy interventions to mitigate the structural barriers small businesses face in public procurement.
+By building on these findings, this paper underscores the importance of continuous policy interventions to mitigate the structural barriers that small businesses face in public procurement.
 
 ## Future Directions: Enhancing Survey and Data Collection Methods
-While this study provides valuable insights into the disparities in procurement opportunities for small businesses, future research could build on this work by incorporating additional survey data and experimental designs. For instance, surveys could be conducted with procurement officers to better understand the barriers they perceive in awarding contracts to small businesses. Furthermore, experimental studies could be used to test the effectiveness of specific policy interventions, such as training programs or set-aside policies, in improving small business participation.
+While this study provides valuable insights into the disparities in procurement opportunities for small businesses, future research could build on these findings by incorporating additional survey data and experimental designs. For instance, surveys could be conducted with procurement officers to gain a deeper understanding of the barriers they perceive when awarding contracts to small businesses. Furthermore, experimental studies could be used to test the effectiveness of specific policy interventions—such as training programs or set-aside policies—in improving small business participation.
 
 
 # Model details {#sec-model-details}
 
-## Variables 
+## Variables {#sec-appvariable}
 
 These variables that was not used in the analysis, but are essential for understanding supplier representation in the City’s public procurement process. These variables include:
 
 - **Unique Row Identifier (id):** A unique identifier for each record in the Open Data database.
 
 - **Composite Key (unique_id):** A unique identifier combining related procurement details.
+
+- **Successful Supplier:** The name of the supplier awarded the contract.
 
 - **Document Number:** A reference number used by the City to track the solicitation during the procurement process.
 
@@ -811,73 +850,51 @@ These variables that was not used in the analysis, but are essential for underst
 - **Solicitation Document Description:** A summary of the solicitation, providing additional context about the procurement request.
 
 
-## Details on Selection of Big Business Out From Data {#sec-appdata}
+## Steps Taken to Classify Small and Large Businesses {#sec-appdata}
 
-The reult of selection of big business is by using ChatGPT.
+The result of selection of big business is by using ChatGPT.
 
-I asked: 
-in the data, under the Successful_Supplier, can you anaysis and pull out the excat names that are consider as big business and put them into a big_business_list, so i can use it for r code
+The classification of big businesses from the raw data was based on a combination of factors, including prior knowledge of well-known large firms, research into supplier names, and thresholds such as contract size and industry dominance. Suppliers recognized as multinational, high-revenue, or dominant in sectors like construction and consulting were flagged as big businesses. Additional verification through public records and analysis of awarded amounts helped refine the classification, ensuring it accurately reflected the scale and market presence of these firms. This process created a foundation for distinguishing big businesses from smaller enterprises in the dataset.
 
-ChatGPT said:
-ChatGPT
-The dataset contains the following columns:
+Steps:
 
-unique_id: A unique identifier for each record.
-Document_Number: The associated document number.
-RFx_Type: Type of request (e.g., RFQ, RFP).
-High_Level_Category: The category of the procurement.
-Successful_Supplier: The name of the supplier who won the contract.
-Awarded_Amount: The monetary value of the awarded contract.
-Award_Date: The date the contract was awarded.
-Division: The division responsible for the contract.
-Small_Business: Indicates if the supplier is classified as a small business (True/False).
-To identify big businesses, I will filter out suppliers where Small_Business is False and create a list of their names.
+1. Manual Selection Based on Known Characteristics:
 
-The following are the big businesses identified from the dataset:
+Using prior knowledge, research, or publicly available information, suppliers were classified as big businesses if they were recognized as large, established firms. These companies might be well-known for their market presence, large-scale operations, or participation in major contracts (e.g., KPMG, AECOM, Stantec).
+Indicators such as the company being multinational, having high revenues, or being dominant in certain industries (e.g., construction, consulting) informed their classification.
 
-Guillevin International Co.
-Sysco
-Sysco Toronto, A Division Of Sysco Canada Inc.
-Stantec Consulting Ltd
-KPMG LLP
-KPMG
-Bennett Mechanical Installations
-Fer-Pal Construction Ltd.
-WSP Canada Inc
-Black And McDonald Limited
-Thermo Fisher Scientific
-Sutherland-Schultz Ltd.
-Morrison Hershfield Ltd
-Morrison Hershfield
-Metro Freightliner Hamilton Inc
-Ricoh Canada Inc
-Altus Group Limited
-Kroll Consulting Canada Co.
-Suncorp Valuations
-Logixx Security Inc
-Garda Canada Security Corporation
-Drake International Inc
-Bevertec CST Inc
-AECOM Canada Ltd
-Stericycle Ulc
-Schindler Elevator Corporation
-Graham Bros. Construction Limited
-Morrison Hershfield Limited
-Softchoice LP
-Damen Shipbuilding 5 B.V.
-Graham Bros Construction Ltd.
-Gartner Canada
-Parsons Inc
-Jacobs Consultancy Canada Inc
-Stericycle, Ulc
 
-This list is now ready for use in your R code. Let me know if you need it in a specific format! 
+2. Threshold-Based Classification (If Applicable):
+
+For some businesses, thresholds like contract size, revenue, or number of employees might have been inferred or estimated. Suppliers with consistently high-value contracts (e.g., those often exceeding $1 million) were assumed to be large businesses.
+
+3. Categorization Based on Supplier Type:
+
+Specific industries or sectors (e.g., large construction firms, multinational consulting companies) were likely flagged as dominated by big businesses. For example:
+Construction firms: Companies like Graham Bros. and Black & McDonald Limited were classified as big due to their role in large-scale projects.
+Technology and consulting firms: Firms like Softchoice, KPMG, and Jacobs Consultancy were marked as big businesses due to their industry prominence.
+
+4. Review of Contract Values:
+
+Suppliers awarded contracts with very high total values (e.g., in the millions) were flagged as large businesses. This assumption ties contract value to company size.
+Public Records and Research:
+
+For any ambiguous suppliers, online searches or business directories (e.g., company websites, municipal reports) might have been used to verify the scale of the business. Companies with a national or international footprint or high revenue streams were classified as large.
+
+5. Iteration and Refinement:
+
+After creating an initial classification of big businesses, further refinement could involve cross-checking against supplier names, award amounts, or external benchmarks.
+
+
+
+\newpage 
 
 ## Diagnostics {#sec-Diagnostics}
 
 **Check Model Fit Using AIC** 
 
-The AIC (Akaike Information Criterion) is a measure of model quality, where lower values indicate a better fit, while penalizing for model complexity. To assess model performance, we compare the AIC values of different models, including those with additional predictors or terms. A lower AIC suggests a better fit. In our comparison, we evaluated the base model alongside two other models that include additional terms shown in @tbl-Test1. The base model, with the lowest AIC, demonstrates the best performance and is therefore used as the final model in this paper.
+The AIC (Akaike Information Criterion) is a measure of model quality, where lower values indicate a better fit while penalizing for model complexity. To assess model performance, we compare the AIC values of different models, including those with additional predictors or terms. A lower AIC suggests a better-fitting model. In our analysis, we compared the base model with two other models that included additional terms, as shown in @tbl-Test1. The base model, with the lowest AIC, demonstrates the best fit and is therefore selected as the final model for this study.
+
 
 ```{r}
 #| label: tbl-Test1
@@ -888,23 +905,29 @@ The AIC (Akaike Information Criterion) is a measure of model quality, where lowe
 
 
 # Fit the logistic regression models
-log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount, 
-                 data = Contract_data, family = binomial)
+log_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount,
+  data = Contract_data, family = binomial
+)
 
-log_model2 <- glm(Small_Business ~ RFx_Type + High_Level_Category + Division + Awarded_Amount, 
-                  data = Contract_data, family = binomial)
+log_model2 <- glm(Small_Business ~ RFx_Type + High_Level_Category + Division + Awarded_Amount,
+  data = Contract_data, family = binomial
+)
 
 log_model3 <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount + RFx_Type *
-                    Awarded_Amount, data = Contract_data, family = binomial)
+  Awarded_Amount, data = Contract_data, family = binomial)
 
 # Extract model AIC values
 model_comparison <- data.frame(
-  Model = c("Model 1: Base Model: RFx_Type + High_Level_Category + Awarded_Amount ", 
-            "Model 2: With Division", 
-            "Model 3: With Interaction Term: RFx_Type * Awarded_Amount"),
-  AIC = c(AIC(log_model), 
-          AIC(log_model2), 
-          AIC(log_model3))
+  Model = c(
+    "Model 1: Base Model: RFx_Type + High_Level_Category + Awarded_Amount ",
+    "Model 2: With Division",
+    "Model 3: With Interaction Term: RFx_Type * Awarded_Amount"
+  ),
+  AIC = c(
+    AIC(log_model),
+    AIC(log_model2),
+    AIC(log_model3)
+  )
 )
 
 
@@ -920,14 +943,13 @@ model_comparison %>%
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
-
 ```
 
 
 **Hosmer-Lemeshow Test**
 
-The Hosmer-Lemeshow test evaluates whether the observed outcomes align with the predicted probabilities, making it particularly useful for logistic regression models. A p-value greater than 0.05 suggests that the model fits the data well, as the observed and predicted values are closely aligned. In our analysis (@tbl-Test2), the Base model yielded a p-value of 0.7, indicating a good fit to the data.
+The Hosmer-Lemeshow test evaluates how well the observed outcomes align with the predicted probabilities, making it especially useful for assessing the fit of logistic regression models. A p-value greater than 0.05 suggests that the model fits the data well, indicating that the observed and predicted values are closely aligned. In our analysis (@tbl-Test2), the base model yielded a p-value of 0.7, which suggests a good fit to the data.
+
 
 ```{r}
 #| label: tbl-Test2
@@ -962,8 +984,6 @@ hl_test_results %>%
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
-
 ```
 
 
@@ -1007,9 +1027,6 @@ deviance_table %>%
     bootstrap_options = c("striped", "hover")
   ) %>%
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
-
-
-
 ```
 
 

@@ -22,14 +22,12 @@ package
 resources <- list_package_resources("tobids-awarded-contracts")
 
 # identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources
-datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+datastore_resources <- filter(resources, tolower(format) %in% c("csv", "geojson"))
 
 # load the first datastore resource as a sample
-the_raw_contract_data <- filter(datastore_resources, row_number()==1) %>% get_resource()
+the_raw_contract_data <- filter(datastore_resources, row_number() == 1) %>% get_resource()
 
 
 #### Save data ####
 # change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_contract_data, "data/01-raw_data/raw_data.csv") 
-
-         
+write_csv(the_raw_contract_data, "data/01-raw_data/raw_data.csv")

@@ -13,21 +13,21 @@ library(tidyverse)
 set.seed(853)
 
 # Example data for simulation
-document_numbers <- unique(raw_data$Document_Number)  # Use unique document numbers from your dataset
-rfx_types <- c("RFQ", "RFP", "RFSQ")  # Common RFx Types
-high_level_categories <- unique(raw_data$High_Level_Category)  # Use categories from original data
-suppliers <- unique(raw_data$Successful_Supplier)  # List of suppliers
-divisions <- unique(raw_data$Division)  # Divisions from the original data
-small_business_options <- c(TRUE, FALSE)  # Small Business status
+document_numbers <- unique(raw_data$Document_Number) # Use unique document numbers from your dataset
+rfx_types <- c("RFQ", "RFP", "RFSQ") # Common RFx Types
+high_level_categories <- unique(raw_data$High_Level_Category) # Use categories from original data
+suppliers <- unique(raw_data$Successful_Supplier) # List of suppliers
+divisions <- unique(raw_data$Division) # Divisions from the original data
+small_business_options <- c(TRUE, FALSE) # Small Business status
 
 # Simulating Awarded Amounts (random values within a specified range)
-award_amount_range <- c(500000, 50000000)  # Example range for Awarded Amount (e.g., between 500k and 50M)
+award_amount_range <- c(500000, 50000000) # Example range for Awarded Amount (e.g., between 500k and 50M)
 
 # Randomly simulate Award Dates (e.g., within the last 2 years)
 award_dates <- seq.Date(from = as.Date("2022-01-01"), to = Sys.Date(), by = "day")
 
 # Simulate new data
-n_simulations <- 100  # Number of observations to simulate
+n_simulations <- 100 # Number of observations to simulate
 
 simulated_data <- data.frame(
   Document_Number = sample(document_numbers, n_simulations, replace = TRUE),

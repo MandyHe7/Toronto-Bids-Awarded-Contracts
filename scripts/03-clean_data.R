@@ -8,10 +8,10 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(dplyr)       # For data manipulation
-library(tidyr)       # For handling missing data
-library(stringr)     # For string operations
-library(readr)       # For reading CSV files
+library(dplyr) # For data manipulation
+library(tidyr) # For handling missing data
+library(stringr) # For string operations
+library(readr) # For reading CSV files
 
 
 #### Clean Data ####
@@ -30,19 +30,19 @@ raw$Awarded_Amount <- as.numeric(raw$Awarded_Amount)
 
 # Handle missing values by filtering out rows with critical missing data
 contract_cleaned <- raw %>%
-  filter(!is.na(Awarded_Amount) & Awarded_Amount > 0) %>%         # Remove rows where Awarded_Amount is missing
-  filter(!is.na(Successful_Supplier)) %>%    # Remove rows with missing supplier names
-  filter(!is.na(Division)) %>%               # Remove rows with missing Division
-  filter(!is.na(Award_Date))                 # Remove rows with missing Award Date
+  filter(!is.na(Awarded_Amount) & Awarded_Amount > 0) %>% # Remove rows where Awarded_Amount is missing
+  filter(!is.na(Successful_Supplier)) %>% # Remove rows with missing supplier names
+  filter(!is.na(Division)) %>% # Remove rows with missing Division
+  filter(!is.na(Award_Date)) # Remove rows with missing Award Date
 
 
 # Step 4: Standardize the supplier names by converting to Title Case
 contract_cleaned <- contract_cleaned %>%
-  mutate(Successful_Supplier = str_to_title(Successful_Supplier))  # Capitalize each word in supplier names
+  mutate(Successful_Supplier = str_to_title(Successful_Supplier)) # Capitalize each word in supplier names
 
 # Step 5: Remove exact duplicate rows
 contract_cleaned <- contract_cleaned %>%
-  distinct()  # Removes duplicate rows
+  distinct() # Removes duplicate rows
 
 # Step 6: Select relevant columns for analysis
 contract_cleaned <- contract_cleaned %>%
@@ -106,9 +106,9 @@ contract_cleaned$Lowercase_Supplier <- tolower(contract_cleaned$Successful_Suppl
 
 # Perform the comparison to classify as Small_Business
 contract_cleaned$Small_Business <- ifelse(
-  contract_cleaned$Lowercase_Supplier %in% tolower(big_business_list), 
-  FALSE,  # If the supplier (in lowercase) is in the big business list, it's not a small business
-  TRUE    # Otherwise, it's considered a small business
+  contract_cleaned$Lowercase_Supplier %in% tolower(big_business_list),
+  FALSE, # If the supplier (in lowercase) is in the big business list, it's not a small business
+  TRUE # Otherwise, it's considered a small business
 )
 
 # Optionally, remove the Lowercase_Supplier column after classification
@@ -116,12 +116,10 @@ contract_cleaned <- contract_cleaned %>%
   select(-Lowercase_Supplier)
 
 # Step 8: Check for any remaining missing values after the cleaning process
-summary(contract_cleaned)  # Summary of cleaned data
+summary(contract_cleaned) # Summary of cleaned data
 
 # Step 9: Save the cleaned data to a new CSV file for analysis
 write_csv(contract_cleaned, "data/02-analysis_data/analysis_data.csv")
 
 # Preview the cleaned data
 head(contract_cleaned)
-
-

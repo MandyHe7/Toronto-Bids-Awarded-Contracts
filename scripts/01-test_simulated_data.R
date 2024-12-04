@@ -4,9 +4,9 @@
 # Date: 23 November 2024
 # Contact: mandyxy.he@mail.utoronto.ca
 # License: N/A
-# Pre-requisites: 
-  # - The `tidyverse` package must be installed and loaded
-  # - 00-simulate_data.R must have been run
+# Pre-requisites:
+# - The `tidyverse` package must be installed and loaded
+# - 00-simulate_data.R must have been run
 # Any other information needed? Make sure you are in the `starter_folder` rproj
 
 

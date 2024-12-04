@@ -1,37 +1,46 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Testing and verify that the Clean data is not missing any value and it is ready to use.
+# Author: Mandy He
+# Date: 23 November 2024
+# Contact: mandyxy.he@mail.utoronto.ca
+# License: N/A
+# Pre-requisites:
+# - The `dplyr` package must be installed and loaded
+# - 02-analysis_data.R must have been run
+# Any other information needed? Make sure you are in the `starter_folder` rproj
+
 
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
+library(dplyr)
 
 #### Read data ####
-analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
+Contract_data <- read_csv("data/02-analysis_data/analysis_data.csv")
 
 ### Model data ####
-first_model <-
-  stan_glm(
-    formula = flying_time ~ length + width,
-    data = analysis_data,
-    family = gaussian(),
-    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
-    seed = 853
-  )
 
 
-#### Save model ####
-saveRDS(
-  first_model,
-  file = "models/first_model.rds"
+# Prepare the data: Ensure predictors are formatted correctly
+Contract_data <- Contract_data %>%
+  mutate(across(where(is.character), as.factor))
+
+# Define the base model (starting with the three specified variables)
+base_model <- glm(Small_Business ~ RFx_Type + High_Level_Category + Awarded_Amount,
+  data = Contract_data, family = binomial
 )
 
+# Define the full model (including all variables as predictors)
+full_model <- glm(Small_Business ~ .,
+  data = Contract_data, family = binomial
+)
+
+# Perform forward selection
+final_model <- step(base_model,
+  scope = list(lower = base_model, upper = full_model),
+  direction = "forward"
+)
+
+# Display the summary of the final model
+summary(final_model)
 
