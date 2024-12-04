@@ -2,7 +2,7 @@
 
 ## Overview
 
-This paper utilized data obtained from Open Data Toronto, specifically the "Toronto Bids Awarded Contracts" data set. The "Toronto Bids Awarded Contracts" dataset provides a valuable overview of the procurement activities of the City of Toronto. This study evaluates Toronto's public contracts to assess how well supplier diversity objectives are being met.
+This paper utilized data obtained from Open Data Toronto, specifically the "Toronto Bids Awarded Contracts" data set. The "Toronto Bids Awarded Contracts" dataset provides a valuable overview of the procurement activities of the City of Toronto. This study evaluates Toronto's public contracts to assess how well supplier diversity objectives are being met. It analyzes trends related to contract values, with particular attention to which suppliers are winning high-value contracts in sectors like construction services, which tend to favor larger businesses.
 
 
 ## File Structure
@@ -14,7 +14,7 @@ The repo is structured as:
 -   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
 -   `paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper. 
--   `scripts` contains the R scripts used to simulate, download and clean data.
+-   `scripts` contains the R scripts used to simulate, download and clean data, and styler code formatting.
 
 
 ## Statement on LLM usage
